@@ -361,7 +361,7 @@ URL query parameters:
 - `end=<rfc3339 | unix_timestamp>`: End timestamp.
 
 ```json
-$ curl -g 'http://localhost:9090/api/v1/query_exemplars?query=test_exemplar_metric_total&start=2020-09-14T15:22:25.479Z&end=020-09-14T15:23:25.479Z'
+$ curl -g 'http://localhost:9090/api/v1/query_exemplars?query=test_exemplar_metric_total&start=2020-09-14T15:22:25.479Z&end=2020-09-14T15:23:25.479Z'
 {
     "status": "success",
     "data": [
@@ -620,6 +620,7 @@ $ curl http://localhost:9090/api/v1/rules
                 ],
                 "file": "/rules.yaml",
                 "interval": 60,
+                "limit": 0,
                 "name": "example"
             }
         ]
@@ -1145,3 +1146,17 @@ $ curl -XPOST http://localhost:9090/api/v1/admin/tsdb/clean_tombstones
 ```
 
 *New in v2.1 and supports PUT from v2.9*
+
+## Remote Write Receiver
+
+Prometheus can be configured as a receiver for the Prometheus remote write
+protocol. This is not considered an efficient way of ingesting samples. Use it
+with caution for specific low-volume use cases. It is not suitable for
+replacing the ingestion via scraping and turning Prometheus into a push-based
+metrics collection system.
+
+Enable the remote write receiver by setting
+`--web.enable-remote-write-receiver`. When enabled, the remote write receiver
+endpoint is `/api/v1/write`. Find more details [here](../storage.md#overview).
+
+*New in v2.33*
