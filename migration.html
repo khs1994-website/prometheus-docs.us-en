@@ -1,0 +1,700 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Migration · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="stability.html" />
+    
+    
+    <link rel="prev" href="management_api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="configuration/alerting_rules.html">
+            
+                <a href="configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="configuration/">
+            
+                <a href="configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="configuration/https.html">
+            
+                <a href="configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="configuration/recording_rules.html">
+            
+                <a href="configuration/recording_rules.html">
+            
+                    
+                    Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="configuration/template_examples.html">
+            
+                <a href="configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="configuration/template_reference.html">
+            
+                <a href="configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="configuration/unit_testing_rules.html">
+            
+                <a href="configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="querying/api.html">
+            
+                <a href="querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="querying/basics.html">
+            
+                <a href="querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="querying/examples.html">
+            
+                <a href="querying/examples.html">
+            
+                    
+                    Querying Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="querying/functions.html">
+            
+                <a href="querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="querying/">
+            
+                <a href="querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="querying/operators.html">
+            
+                <a href="querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="feature_flags.html">
+            
+                <a href="feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="getting_started.html">
+            
+                <a href="getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="http_sd.html">
+            
+                <a href="http_sd.html">
+            
+                    
+                    HTTP SD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="management_api.html">
+            
+                <a href="management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="stability.html">
+            
+                <a href="stability.html">
+            
+                    
+                    API Stability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Migration</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="prometheus-20-migration-guide">Prometheus 2.0 migration guide</h1>
+<p>In line with our <a href="https://prometheus.io/blog/2016/07/18/prometheus-1-0-released/#fine-print" target="_blank">stability promise</a>,
+the Prometheus 2.0 release contains a number of backwards incompatible changes.
+This document offers guidance on migrating from Prometheus 1.8 to Prometheus 2.0 and newer versions.</p>
+<h2 id="flags">Flags</h2>
+<p>The format of Prometheus command line flags has changed. Instead of a
+single dash, all flags now use a double dash. Common flags (<code>--config.file</code>,
+<code>--web.listen-address</code> and <code>--web.external-url</code>) remain but
+almost all storage-related flags have been removed.</p>
+<p>Some notable flags which have been removed:</p>
+<ul>
+<li><p><code>-alertmanager.url</code> In Prometheus 2.0, the command line flags for configuring
+a static Alertmanager URL have been removed. Alertmanager must now be
+discovered via service discovery, see <a href="#alertmanager-service-discovery">Alertmanager service discovery</a>.</p>
+</li>
+<li><p><code>-log.format</code> In Prometheus 2.0 logs can only be streamed to standard error.</p>
+</li>
+<li><p><code>-query.staleness-delta</code> has been renamed to <code>--query.lookback-delta</code>; Prometheus
+2.0 introduces a new mechanism for handling staleness, see <a href="querying/basics.html#staleness">staleness</a>.</p>
+</li>
+<li><p><code>-storage.local.*</code> Prometheus 2.0 introduces a new storage engine; as such all
+flags relating to the old engine have been removed.  For information on the
+new engine, see <a href="#storage">Storage</a>.</p>
+</li>
+<li><p><code>-storage.remote.*</code> Prometheus 2.0 has removed the deprecated remote
+storage flags, and will fail to start if they are supplied. To write to
+InfluxDB, Graphite, or OpenTSDB use the relevant storage adapter.</p>
+</li>
+</ul>
+<h2 id="alertmanager-service-discovery">Alertmanager service discovery</h2>
+<p>Alertmanager service discovery was introduced in Prometheus 1.4, allowing Prometheus
+to dynamically discover Alertmanager replicas using the same mechanism as scrape
+targets. In Prometheus 2.0, the command line flags for static Alertmanager config
+have been removed, so the following command line flag:</p>
+<pre class="language-"><code>./prometheus -alertmanager.url=http://alertmanager:9093/
+</code></pre><p>Would be replaced with the following in the <code>prometheus.yml</code> config file:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">alerting</span><span class="token punctuation">:</span>
+  <span class="token key atrule">alertmanagers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">static_configs</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">targets</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> alertmanager<span class="token punctuation">:</span><span class="token number">9093</span>
+</code></pre>
+<p>You can also use all the usual Prometheus service discovery integrations and
+relabeling in your Alertmanager configuration. This snippet instructs
+Prometheus to search for Kubernetes pods, in the <code>default</code> namespace, with the
+label <code>name: alertmanager</code> and with a non-empty port.</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">alerting</span><span class="token punctuation">:</span>
+  <span class="token key atrule">alertmanagers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">kubernetes_sd_configs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">role</span><span class="token punctuation">:</span> pod
+    <span class="token key atrule">tls_config</span><span class="token punctuation">:</span>
+      <span class="token key atrule">ca_file</span><span class="token punctuation">:</span> /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    <span class="token key atrule">bearer_token_file</span><span class="token punctuation">:</span> /var/run/secrets/kubernetes.io/serviceaccount/token
+    <span class="token key atrule">relabel_configs</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">source_labels</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>__meta_kubernetes_pod_label_name<span class="token punctuation">]</span>
+      <span class="token key atrule">regex</span><span class="token punctuation">:</span> alertmanager
+      <span class="token key atrule">action</span><span class="token punctuation">:</span> keep
+    <span class="token punctuation">-</span> <span class="token key atrule">source_labels</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>__meta_kubernetes_namespace<span class="token punctuation">]</span>
+      <span class="token key atrule">regex</span><span class="token punctuation">:</span> default
+      <span class="token key atrule">action</span><span class="token punctuation">:</span> keep
+    <span class="token punctuation">-</span> <span class="token key atrule">source_labels</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>__meta_kubernetes_pod_container_port_number<span class="token punctuation">]</span>
+      <span class="token key atrule">regex</span><span class="token punctuation">:</span>
+      <span class="token key atrule">action</span><span class="token punctuation">:</span> drop
+</code></pre>
+<h2 id="recording-rules-and-alerts">Recording rules and alerts</h2>
+<p>The format for configuring alerting and recording rules has been changed to YAML.
+An example of a recording rule and alert in the old format:</p>
+<pre class="language-"><code>job:request_duration_seconds:histogram_quantile99 =
+  histogram_quantile(0.99, sum by (le, job) (rate(request_duration_seconds_bucket[1m])))
+
+ALERT FrontendRequestLatency
+  IF job:request_duration_seconds:histogram_quantile99{job=&quot;frontend&quot;} &gt; 0.1
+  FOR 5m
+  ANNOTATIONS {
+    summary = &quot;High frontend request latency&quot;,
+  }
+</code></pre><p>Would look like this:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">groups</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> example.rules
+  <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">record</span><span class="token punctuation">:</span> job<span class="token punctuation">:</span>request_duration_seconds<span class="token punctuation">:</span>histogram_quantile99
+    <span class="token key atrule">expr</span><span class="token punctuation">:</span> histogram_quantile(0.99<span class="token punctuation">,</span> sum by (le<span class="token punctuation">,</span> job) (rate(request_duration_seconds_bucket<span class="token punctuation">[</span>1m<span class="token punctuation">]</span>)))
+  <span class="token punctuation">-</span> <span class="token key atrule">alert</span><span class="token punctuation">:</span> FrontendRequestLatency
+    <span class="token key atrule">expr</span><span class="token punctuation">:</span> job<span class="token punctuation">:</span>request_duration_seconds<span class="token punctuation">:</span>histogram_quantile99<span class="token punctuation">{</span>job=&quot;frontend&quot;<span class="token punctuation">}</span> <span class="token punctuation">&gt;</span> 0.1
+    <span class="token key atrule">for</span><span class="token punctuation">:</span> 5m
+    <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+      <span class="token key atrule">summary</span><span class="token punctuation">:</span> High frontend request latency
+</code></pre>
+<p>To help with the change, the <code>promtool</code> tool has a mode to automate the rules conversion.  Given a <code>.rules</code> file, it will output a <code>.rules.yml</code> file in the
+new format. For example:</p>
+<pre class="language-"><code>$ promtool update rules example.rules
+</code></pre><p>You will need to use <code>promtool</code> from <a href="https://github.com/prometheus/prometheus/releases/tag/v2.5.0" target="_blank">Prometheus 2.5</a> as later versions no longer contain the above subcommand.</p>
+<h2 id="storage">Storage</h2>
+<p>The data format in Prometheus 2.0 has completely changed and is not backwards
+compatible with 1.8 and older versions. To retain access to your historic monitoring data we
+recommend you run a non-scraping Prometheus instance running at least version
+1.8.1 in parallel with your Prometheus 2.0 instance, and have the new server
+read existing data from the old one via the remote read protocol.</p>
+<p>Your Prometheus 1.8 instance should be started with the following flags and an
+config file containing only the <code>external_labels</code> setting (if any):</p>
+<pre class="language-"><code>$ ./prometheus-1.8.1.linux-amd64/prometheus -web.listen-address &quot;:9094&quot; -config.file old.yml
+</code></pre><p>Prometheus 2.0 can then be started (on the same machine) with the following flags:</p>
+<pre class="language-"><code>$ ./prometheus-2.0.0.linux-amd64/prometheus --config.file prometheus.yml
+</code></pre><p>Where <code>prometheus.yml</code> contains in addition to your full existing configuration, the stanza:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">remote_read</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">&quot;http://localhost:9094/api/v1/read&quot;</span>
+</code></pre>
+<h2 id="promql">PromQL</h2>
+<p>The following features have been removed from PromQL:</p>
+<ul>
+<li><code>drop_common_labels</code> function - the <code>without</code> aggregation modifier should be used
+instead.</li>
+<li><code>keep_common</code> aggregation modifier - the <code>by</code> modifier should be used instead.</li>
+<li><code>count_scalar</code> function - use cases are better handled by <code>absent()</code> or correct
+propagation of labels in operations.</li>
+</ul>
+<p>See <a href="https://github.com/prometheus/prometheus/issues/3060" target="_blank">issue #3060</a> for more
+details.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="prometheus-non-root-user">Prometheus non-root user</h3>
+<p>The Prometheus Docker image is now built to <a href="https://github.com/prometheus/prometheus/pull/2859" target="_blank">run Prometheus
+as a non-root user</a>. If you
+want the Prometheus UI/API to listen on a low port number (say, port 80), you&apos;ll
+need to override it. For Kubernetes, you would use the following YAML:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> security<span class="token punctuation">-</span>context<span class="token punctuation">-</span>demo<span class="token punctuation">-</span><span class="token number">2</span>
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span> <span class="token number">0</span>
+<span class="token punctuation">...</span>
+</code></pre>
+<p>See <a href="https://kubernetes.io/docs/tasks/configure-pod-container/security-context/" target="_blank">Configure a Security Context for a Pod or Container</a>
+for more details.</p>
+<p>If you&apos;re using Docker, then the following snippet would be used:</p>
+<pre class="language-"><code>docker run -p 9090:9090 prom/prometheus:latest
+</code></pre><h3 id="prometheus-lifecycle">Prometheus lifecycle</h3>
+<p>If you use the Prometheus <code>/-/reload</code> HTTP endpoint to <a href="configuration/configuration.md">automatically reload your
+Prometheus config when it changes</a>,
+these endpoints are disabled by default for security reasons in Prometheus 2.0.
+To enable them, set the <code>--web.enable-lifecycle</code> flag.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="management_api.html" class="navigation navigation-prev " aria-label="Previous page: Management API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="stability.html" class="navigation navigation-next " aria-label="Next page: API Stability">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Migration","sort_rank":9,"level":"1.10","depth":1,"next":{"title":"API Stability","level":"1.11","depth":1,"path":"stability.md","ref":"stability.md","articles":[]},"previous":{"title":"Management API","level":"1.9","depth":1,"path":"management_api.md","ref":"management_api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"migration.md","mtime":"2022-07-29T02:23:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-29T02:24:22.499Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

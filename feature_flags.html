@@ -1,0 +1,621 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Feature Flags · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="federation.html" />
+    
+    
+    <link rel="prev" href="querying/operators.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="configuration/alerting_rules.html">
+            
+                <a href="configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="configuration/">
+            
+                <a href="configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="configuration/https.html">
+            
+                <a href="configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="configuration/recording_rules.html">
+            
+                <a href="configuration/recording_rules.html">
+            
+                    
+                    Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="configuration/template_examples.html">
+            
+                <a href="configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="configuration/template_reference.html">
+            
+                <a href="configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="configuration/unit_testing_rules.html">
+            
+                <a href="configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="querying/api.html">
+            
+                <a href="querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="querying/basics.html">
+            
+                <a href="querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="querying/examples.html">
+            
+                <a href="querying/examples.html">
+            
+                    
+                    Querying Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="querying/functions.html">
+            
+                <a href="querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="querying/">
+            
+                <a href="querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="querying/operators.html">
+            
+                <a href="querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="feature_flags.html">
+            
+                <a href="feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="getting_started.html">
+            
+                <a href="getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="http_sd.html">
+            
+                <a href="http_sd.html">
+            
+                    
+                    HTTP SD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="management_api.html">
+            
+                <a href="management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    Migration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="stability.html">
+            
+                <a href="stability.html">
+            
+                    
+                    API Stability
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Feature Flags</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="feature-flags">Feature flags</h1>
+<p>Here is a list of features that are disabled by default since they are breaking changes or are considered experimental.
+Their behaviour can change in future releases which will be communicated via the <a href="https://github.com/prometheus/prometheus/blob/main/CHANGELOG.md" target="_blank">release changelog</a>.</p>
+<p>You can enable them using the <code>--enable-feature</code> flag with a comma separated list of features.
+They may be enabled by default in future versions.</p>
+<h2 id="expand-environment-variables-in-external-labels">Expand environment variables in external labels</h2>
+<p><code>--enable-feature=expand-external-labels</code></p>
+<p>Replace <code>${var}</code> or <code>$var</code> in the <a href="configuration/configuration.md#configuration-file"><code>external_labels</code></a>
+values according to the values of the current environment variables. References
+to undefined variables are replaced by the empty string.
+The <code>$</code> character can be escaped by using <code>$$</code>.</p>
+<h2 id="remote-write-receiver">Remote Write Receiver</h2>
+<p><code>--enable-feature=remote-write-receiver</code></p>
+<p>The remote write receiver allows Prometheus to accept remote write requests from other Prometheus servers. More details can be found <a href="storage.html#overview">here</a>.</p>
+<p>Activating the remote write receiver via a feature flag is deprecated. Use <code>--web.enable-remote-write-receiver</code> instead. This feature flag will be ignored in future versions of Prometheus.</p>
+<h2 id="exemplars-storage">Exemplars storage</h2>
+<p><code>--enable-feature=exemplar-storage</code></p>
+<p><a href="https://github.com/OpenObservability/OpenMetrics/blob/main/specification/OpenMetrics.md#exemplars" target="_blank">OpenMetrics</a> introduces the ability for scrape targets to add exemplars to certain metrics. Exemplars are references to data outside of the MetricSet. A common use case are IDs of program traces.</p>
+<p>Exemplar storage is implemented as a fixed size circular buffer that stores exemplars in memory for all series. Enabling this feature will enable the storage of exemplars scraped by Prometheus. The config file block <a href="configuration/configuration.md#configuration-file">storage</a>/<a href="configuration/configuration.md#exemplars">exemplars</a> can be used to control the size of circular buffer by # of exemplars. An exemplar with just a <code>traceID=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>jaeger-trace-id</span><span class="token punctuation">&gt;</span></span></code> uses roughly 100 bytes of memory via the in-memory exemplar storage. If the exemplar storage is enabled, we will also append the exemplars to WAL for local persistence (for WAL duration).</p>
+<h2 id="memory-snapshot-on-shutdown">Memory snapshot on shutdown</h2>
+<p><code>--enable-feature=memory-snapshot-on-shutdown</code></p>
+<p>This takes the snapshot of the chunks that are in memory along with the series information when shutting down and stores
+it on disk. This will reduce the startup time since the memory state can be restored with this snapshot and m-mapped
+chunks without the need of WAL replay.</p>
+<h2 id="extra-scrape-metrics">Extra scrape metrics</h2>
+<p><code>--enable-feature=extra-scrape-metrics</code></p>
+<p>When enabled, for each instance scrape, Prometheus stores a sample in the following additional time series:</p>
+<ul>
+<li><code>scrape_timeout_seconds</code>. The configured <code>scrape_timeout</code> for a target. This allows you to measure each target to find out how close they are to timing out with <code>scrape_duration_seconds / scrape_timeout_seconds</code>.</li>
+<li><code>scrape_sample_limit</code>. The configured <code>sample_limit</code> for a target. This allows you to measure each target
+to find out how close they are to reaching the limit with <code>scrape_samples_post_metric_relabeling / scrape_sample_limit</code>. Note that <code>scrape_sample_limit</code> can be zero if there is no limit configured, which means that the query above can return <code>+Inf</code> for targets with no limit (as we divide by zero). If you want to query only for targets that do have a sample limit use this query: <code>scrape_samples_post_metric_relabeling / (scrape_sample_limit &gt; 0)</code>.</li>
+<li><code>scrape_body_size_bytes</code>. The uncompressed size of the most recent scrape response, if successful. Scrapes failing because <code>body_size_limit</code> is exceeded report <code>-1</code>, other scrape failures report <code>0</code>.</li>
+</ul>
+<h2 id="new-service-discovery-manager">New service discovery manager</h2>
+<p><code>--enable-feature=new-service-discovery-manager</code></p>
+<p>When enabled, Prometheus uses a new service discovery manager that does not
+restart unchanged discoveries upon reloading. This makes reloads faster and reduces
+pressure on service discoveries&apos; sources.</p>
+<p>Users are encouraged to test the new service discovery manager and report any
+issues upstream.</p>
+<p>In future releases, this new service discovery manager will become the default and
+this feature flag will be ignored.</p>
+<h2 id="prometheus-agent">Prometheus agent</h2>
+<p><code>--enable-feature=agent</code></p>
+<p>When enabled, Prometheus runs in agent mode. The agent mode is limited to
+discovery, scrape and remote write.</p>
+<p>This is useful when you do not need to query the Prometheus data locally, but
+only from a central <a href="https://prometheus.io/docs/operating/integrations/#remote-endpoints-and-storage" target="_blank">remote endpoint</a>.</p>
+<h2 id="per-step-stats">Per-step stats</h2>
+<p><code>--enable-feature=promql-per-step-stats</code></p>
+<p>When enabled, passing <code>stats=all</code> in a query request returns per-step
+statistics. Currently this is limited to totalQueryableSamples.</p>
+<p>When disabled in either the engine or the query, per-step statistics are not
+computed at all.</p>
+<h2 id="auto-gomaxprocs">Auto GOMAXPROCS</h2>
+<p><code>--enable-feature=auto-gomaxprocs</code></p>
+<p>When enabled, GOMAXPROCS variable is automatically set to match Linux container CPU quota.</p>
+<h2 id="no-default-scrape-port">No default scrape port</h2>
+<p><code>--enable-feature=no-default-scrape-port</code></p>
+<p>When enabled, the default ports for HTTP (<code>:80</code>) or HTTPS (<code>:443</code>) will <em>not</em> be added to
+the address used to scrape a target (the value of the <code>__address_</code> label), contrary to the default behavior.
+In addition, if a default HTTP or HTTPS port has already been added either in a static configuration or
+by a service discovery mechanism and the respective scheme is specified (<code>http</code> or <code>https</code>), that port will be removed.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="querying/operators.html" class="navigation navigation-prev " aria-label="Previous page: Operators">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="federation.html" class="navigation navigation-next " aria-label="Next page: Federation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Feature Flags","sort_rank":11,"level":"1.4","depth":1,"next":{"title":"Federation","level":"1.5","depth":1,"path":"federation.md","ref":"federation.md","articles":[]},"previous":{"title":"Operators","level":"1.3.6","depth":2,"path":"querying/operators.md","ref":"querying/operators.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"feature_flags.md","mtime":"2022-07-29T02:23:51.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-29T02:24:22.499Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
