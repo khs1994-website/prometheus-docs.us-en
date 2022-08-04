@@ -961,8 +961,8 @@ A DNS-based service discovery configuration allows specifying a set of DNS
 domain names which are periodically queried to discover a list of targets. The
 DNS servers to be contacted are read from `/etc/resolv.conf`.
 
-This service discovery method only supports basic DNS A, AAAA and SRV record
-queries, but not the advanced DNS-SD approach specified in
+This service discovery method only supports basic DNS A, AAAA, MX and SRV
+record queries, but not the advanced DNS-SD approach specified in
 [RFC6763](https://tools.ietf.org/html/rfc6763).
 
 The following meta labels are available on targets during [relabeling](#relabel_config):
@@ -970,13 +970,14 @@ The following meta labels are available on targets during [relabeling](#relabel_
 * `__meta_dns_name`: the record name that produced the discovered target.
 * `__meta_dns_srv_record_target`: the target field of the SRV record
 * `__meta_dns_srv_record_port`: the port field of the SRV record
+* `__meta_dns_mx_record_target`: the target field of the MX record
 
 ```yaml
 # A list of DNS domain names to be queried.
 names:
   [ - <string> ]
 
-# The type of DNS query to perform. One of SRV, A, or AAAA.
+# The type of DNS query to perform. One of SRV, A, AAAA or MX.
 [ type: <string> | default = 'SRV' ]
 
 # The port number used if the query type is not SRV.
@@ -1269,6 +1270,7 @@ changes resulting in well-formed target groups are applied.
 Files must contain a list of static configs, using these formats:
 
 **JSON**
+
 ```json
 [
   {
@@ -1282,6 +1284,7 @@ Files must contain a list of static configs, using these formats:
 ```
 
 **YAML**
+
 ```yaml
 - targets:
   [ - '<host>' ]
