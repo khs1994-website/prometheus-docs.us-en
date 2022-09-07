@@ -15,6 +15,7 @@
   * [Query Functions](querying/functions.md)
   * [Querying](querying/index.md)
   * [Operators](querying/operators.md)
+  * [Remote Read API](querying/remote_read_api.md)
 * [Feature Flags](feature_flags.md)
 * [Federation](federation.md)
 * [Getting Started](getting_started.md)
