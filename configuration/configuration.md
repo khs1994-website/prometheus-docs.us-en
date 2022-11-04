@@ -294,6 +294,10 @@ nomad_sd_configs:
 openstack_sd_configs:
   [ - <openstack_sd_config> ... ]
 
+# List of OVHcloud service discovery configurations.
+ovhcloud_sd_configs:
+  [ - <ovhcloud_sd_config> ... ]
+
 # List of PuppetDB service discovery configurations.
 puppetdb_sd_configs:
   [ - <puppetdb_sd_config> ... ]
@@ -1174,6 +1178,66 @@ region: <string>
 # TLS configuration.
 tls_config:
   [ <tls_config> ]
+```
+
+### `<ovhcloud_sd_config>`
+
+OVHcloud SD configurations allow retrieving scrape targets from OVHcloud's [dedicated servers](https://www.ovhcloud.com/en/bare-metal/) and [VPS](https://www.ovhcloud.com/en/vps/) using
+their [API](https://api.ovh.com/).
+Prometheus will periodically check the REST endpoint and create a target for every discovered server.
+The role will try to use the public IPv4 address as default address, if there's none it will try to use the IPv6 one. This may be changed with relabeling.
+For OVHcloud's [public cloud instances](https://www.ovhcloud.com/en/public-cloud/) you can use the [openstack_sd_config](#openstack_sd_config).
+
+#### VPS
+
+* `__meta_ovhcloud_vps_cluster`: the cluster of the server
+* `__meta_ovhcloud_vps_datacenter`: the datacenter of the server
+* `__meta_ovhcloud_vps_disk`: the disk of the server
+* `__meta_ovhcloud_vps_display_name`: the display name of the server
+* `__meta_ovhcloud_vps_ipv4`: the IPv4 of the server
+* `__meta_ovhcloud_vps_ipv6`: the IPv6 of the server
+* `__meta_ovhcloud_vps_keymap`: the KVM keyboard layout of the server
+* `__meta_ovhcloud_vps_maximum_additional_ip`: the maximum additional IPs of the server
+* `__meta_ovhcloud_vps_memory_limit`: the memory limit of the server
+* `__meta_ovhcloud_vps_memory`: the memory of the server
+* `__meta_ovhcloud_vps_monitoring_ip_blocks`: the monitoring IP blocks of the server
+* `__meta_ovhcloud_vps_name`: the name of the server
+* `__meta_ovhcloud_vps_netboot_mode`: the netboot mode of the server
+* `__meta_ovhcloud_vps_offer_type`: the offer type of the server
+* `__meta_ovhcloud_vps_offer`: the offer of the server
+* `__meta_ovhcloud_vps_state`: the state of the server
+* `__meta_ovhcloud_vps_vcore`: the number of virtual cores of the server
+* `__meta_ovhcloud_vps_version`: the version of the server
+* `__meta_ovhcloud_vps_zone`: the zone of the server
+
+#### Dedicated servers
+
+* `__meta_ovhcloud_dedicated_server_commercial_range`: the commercial range of the server
+* `__meta_ovhcloud_dedicated_server_datacenter`: the datacenter of the server
+* `__meta_ovhcloud_dedicated_server_ipv4`: the IPv4 of the server
+* `__meta_ovhcloud_dedicated_server_ipv6`: the IPv6 of the server
+* `__meta_ovhcloud_dedicated_server_link_speed`: the link speed of the server
+* `__meta_ovhcloud_dedicated_server_name`: the name of the server
+* `__meta_ovhcloud_dedicated_server_os`: the operating system of the server
+* `__meta_ovhcloud_dedicated_server_rack`: the rack of the server
+* `__meta_ovhcloud_dedicated_server_reverse`: the reverse DNS name of the server
+* `__meta_ovhcloud_dedicated_server_server_id`: the ID of the server
+* `__meta_ovhcloud_dedicated_server_state`: the state of the server
+* `__meta_ovhcloud_dedicated_server_support_level`: the support level of the server
+
+See below for the configuration options for OVHcloud discovery:
+
+```yaml
+# Access key to use. https://api.ovh.com
+application_key: <string>
+application_secret: <secret>
+consumer_key: <secret>
+# Service of the targets to retrieve. Must be `vps` or `dedicated_server`.
+service: <string>
+# API endpoint. https://github.com/ovh/go-ovh#supported-apis
+[ endpoint: <string> | default = "ovh-eu" ]
+# Refresh interval to re-read the resources list.
+[ refresh_interval: <duration> | default = 60s ]
 ```
 
 ### `<puppetdb_sd_config>`
@@ -2964,6 +3028,10 @@ nomad_sd_configs:
 # List of OpenStack service discovery configurations.
 openstack_sd_configs:
   [ - <openstack_sd_config> ... ]
+
+# List of OVHcloud service discovery configurations.
+ovhcloud_sd_configs:
+  [ - <ovhcloud_sd_config> ... ]
 
 # List of PuppetDB service discovery configurations.
 puppetdb_sd_configs:
