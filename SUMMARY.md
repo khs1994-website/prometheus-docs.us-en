@@ -1,5 +1,9 @@
 # [Prometheus 英文文档](https://github.com/prometheus/prometheus)
 
+- Command Line
+  * [Command Line](command-line/index.md)
+  * [Prometheus](command-line/prometheus.md)
+  * [Promtool](command-line/promtool.md)
 - Configuration
   * [Alerting Rules](configuration/alerting_rules.md)
   * [Configuration](configuration/index.md)
