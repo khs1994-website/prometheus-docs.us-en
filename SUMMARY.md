@@ -8,6 +8,7 @@
   * [Alerting Rules](configuration/alerting_rules.md)
   * [Configuration](configuration/index.md)
   * [HTTPS And Authentication](configuration/https.md)
+  * [HTTP Configuration For Promtool](configuration/promtool.md)
   * [Defining Recording Rules](configuration/recording_rules.md)
   * [Template Examples](configuration/template_examples.md)
   * [Template Reference](configuration/template_reference.md)
