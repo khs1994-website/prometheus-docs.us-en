@@ -28,5 +28,6 @@
 * [Installation](installation.md)
 * [Management API](management_api.md)
 * [Prometheus 3.0 migration guide](migration.md)
+* [Prometheus Agent](prometheus_agent.md)
 * [API Stability Guarantees](stability.md)
 * [Storage](storage.md)
