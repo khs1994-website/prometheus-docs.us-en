@@ -1,0 +1,812 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTTP Configuration For Promtool · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="recording_rules.html" />
+    
+    
+    <link rel="prev" href="https.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../command-line/">
+            
+                <a href="../command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../command-line/prometheus.html">
+            
+                <a href="../command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../command-line/promtool.html">
+            
+                <a href="../command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="alerting_rules.html">
+            
+                <a href="alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="https.html">
+            
+                <a href="https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="promtool.html">
+            
+                <a href="promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="recording_rules.html">
+            
+                <a href="recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="template_examples.html">
+            
+                <a href="template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="template_reference.html">
+            
+                <a href="template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="unit_testing_rules.html">
+            
+                <a href="unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../querying/api.html">
+            
+                <a href="../querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../querying/basics.html">
+            
+                <a href="../querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../querying/examples.html">
+            
+                <a href="../querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../querying/functions.html">
+            
+                <a href="../querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../querying/">
+            
+                <a href="../querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../querying/operators.html">
+            
+                <a href="../querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../querying/remote_read_api.html">
+            
+                <a href="../querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../feature_flags.html">
+            
+                <a href="../feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../federation.html">
+            
+                <a href="../federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../getting_started.html">
+            
+                <a href="../getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http_sd.html">
+            
+                <a href="../http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../management_api.html">
+            
+                <a href="../management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../prometheus_agent.html">
+            
+                <a href="../prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../stability.html">
+            
+                <a href="../stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../storage.html">
+            
+                <a href="../storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HTTP Configuration For Promtool</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Promtool is a versatile CLI tool for Prometheus that supports validation, debugging, querying, unit testing, tsdb management, pushing data, and experimental PromQL editing.</p>
+<p>Prometheus supports basic authentication and TLS. Since promtool needs to connect to Prometheus, we need to provide the authentication details. To specify those authentication details, use the <code>--http.config.file</code> for all requests that need to communicate with Prometheus.
+For instance, if you would like to check whether your local Prometheus server is healthy, you would use:</p>
+<pre class="language-"><code class="lang-bash">promtool check healthy --url<span class="token operator">=</span>http://localhost:9090 --http.config.file<span class="token operator">=</span>http-config-file.yml
+</code></pre>
+<p>The file is written in <a href="https://en.wikipedia.org/wiki/YAML" target="_blank">YAML format</a>, defined by the schema described below.
+Brackets indicate that a parameter is optional. For non-list parameters the value is set to the specified default.</p>
+<p>The file is read upon every http request, such as any change in the
+configuration and the certificates is picked up immediately.</p>
+<p>Generic placeholders are defined as follows:</p>
+<ul>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bool</span><span class="token punctuation">&gt;</span></span></code>: a boolean that can take the values <code>true</code> or <code>false</code></li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filename</span><span class="token punctuation">&gt;</span></span></code>: a valid path to a file</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>secret</span><span class="token punctuation">&gt;</span></span></code>: a regular string that is a secret, such as a password</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: a regular string</li>
+</ul>
+<p>A valid example file can be found <a href="../documentation/examples/promtool-http-config-file.yml">here</a>.</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># Note that `basic_auth` and `authorization` options are mutually exclusive.</span>
+
+<span class="token comment"># Sets the `Authorization` header with the configured username and password.</span>
+<span class="token comment"># `username_ref` and `password_ref`refer to the name of the secret within the secret manager.</span>
+<span class="token comment"># `password`, `password_file` and `password_ref` are mutually exclusive.</span>
+<span class="token key atrule">basic_auth</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">username</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">username_file</span><span class="token punctuation">:</span> &lt;filename<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">username_ref</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">password</span><span class="token punctuation">:</span> &lt;secret<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">password_file</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">password_ref</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Optional the `Authorization` header configuration.</span>
+<span class="token key atrule">authorization</span><span class="token punctuation">:</span>
+  <span class="token comment"># Sets the authentication type.</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default<span class="token punctuation">:</span> Bearer <span class="token punctuation">]</span>
+  <span class="token comment"># Sets the credentials. It is mutually exclusive with</span>
+  <span class="token comment"># `credentials_file`.</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">credentials</span><span class="token punctuation">:</span> &lt;secret<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+  <span class="token comment"># Sets the credentials with the credentials read from the configured file.</span>
+  <span class="token comment"># It is mutually exclusive with `credentials`.</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">credentials_file</span><span class="token punctuation">:</span> &lt;filename<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">credentials_ref</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Optional OAuth 2.0 configuration.</span>
+<span class="token comment"># Cannot be used at the same time as basic_auth or authorization.</span>
+<span class="token key atrule">oauth2</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> &lt;oauth2<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token key atrule">tls_config</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> &lt;tls_config<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token punctuation">[</span> <span class="token key atrule">follow_redirects</span><span class="token punctuation">:</span> &lt;bool<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default<span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token punctuation">]</span>
+
+<span class="token comment"># Whether to enable HTTP2.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">enable_http2</span><span class="token punctuation">:</span> &lt;bool<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default<span class="token punctuation">:</span> <span class="token boolean important">true </span><span class="token punctuation">]</span>
+
+<span class="token comment"># Optional proxy URL.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">proxy_url</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># Comma-separated string that can contain IPs, CIDR notation, domain names</span>
+<span class="token comment"># that should be excluded from proxying. IP and domain names can</span>
+<span class="token comment"># contain port numbers.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">no_proxy</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token key atrule">proxy_from_environment</span><span class="token punctuation">:</span> &lt;bool<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token key atrule">proxy_connect_header</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;string&gt;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span> &lt;secret<span class="token punctuation">&gt;</span><span class="token punctuation">,</span> <span class="token punctuation">...</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># `http_headers` specifies a set of headers that will be injected into each request.</span>
+<span class="token key atrule">http_headers</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;string&gt;</span><span class="token punctuation">:</span> &lt;header<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h2 id="">\<oauth2\></oauth2\></h2>
+<p>OAuth 2.0 authentication using the client credentials grant type.</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># `client_id` and `client_secret` are used to authenticate your</span>
+<span class="token comment"># application with the authorization server in order to get</span>
+<span class="token comment"># an access token.</span>
+<span class="token comment"># `client_secret`, `client_secret_file` and `client_secret_ref` are mutually exclusive.</span>
+<span class="token key atrule">client_id</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+<span class="token punctuation">[</span> <span class="token key atrule">client_secret</span><span class="token punctuation">:</span> &lt;secret<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token key atrule">client_secret_file</span><span class="token punctuation">:</span> &lt;filename<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token key atrule">client_secret_ref</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># `scopes` specify the reason for the resource access.</span>
+<span class="token key atrule">scopes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">...</span><span class="token punctuation">]</span>
+
+<span class="token comment"># The URL to fetch the token from.</span>
+<span class="token key atrule">token_url</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># Optional parameters to append to the token URL.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">endpoint_params</span><span class="token punctuation">:</span>
+    <span class="token key atrule">&lt;string&gt;</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">...</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Configures the token request&apos;s TLS settings.</span>
+<span class="token key atrule">tls_config</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> &lt;tls_config<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Optional proxy URL.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">proxy_url</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># Comma-separated string that can contain IPs, CIDR notation, domain names</span>
+<span class="token comment"># that should be excluded from proxying. IP and domain names can</span>
+<span class="token comment"># contain port numbers.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">no_proxy</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token key atrule">proxy_from_environment</span><span class="token punctuation">:</span> &lt;bool<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token punctuation">[</span> <span class="token key atrule">proxy_connect_header</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;string&gt;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span> &lt;secret<span class="token punctuation">&gt;</span><span class="token punctuation">,</span> <span class="token punctuation">...</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span>
+</code></pre>
+<h2 id=""><tls_config></tls_config></h2>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># For the following configurations, use either `ca`, `cert` and `key` or `ca_file`, `cert_file` and `key_file` or use `ca_ref`, `cert_ref` or `key_ref`.</span>
+<span class="token comment"># Text of the CA certificate to use for the server.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">ca</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># CA certificate to validate the server certificate with.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">ca_file</span><span class="token punctuation">:</span> &lt;filename<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># `ca_ref` is the name of the secret within the secret manager to use as the CA cert.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">ca_ref</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Text of the client cert file for the server.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">cert</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># Certificate file for client certificate authentication.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">cert_file</span><span class="token punctuation">:</span> &lt;filename<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># `cert_ref` is the name of the secret within the secret manager to use as the client certificate.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">cert_ref</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Text of the client key file for the server.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> &lt;secret<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># Key file for client certificate authentication.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">key_file</span><span class="token punctuation">:</span> &lt;filename<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># `key_ref` is the name of the secret within the secret manager to use as the client key.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">key_ref</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># ServerName extension to indicate the name of the server.</span>
+<span class="token comment"># http://tools.ietf.org/html/rfc4366#section-3.1</span>
+<span class="token punctuation">[</span> <span class="token key atrule">server_name</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Disable validation of the server certificate.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">insecure_skip_verify</span><span class="token punctuation">:</span> &lt;bool<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Minimum acceptable TLS version. Accepted values: TLS10 (TLS 1.0), TLS11 (TLS</span>
+<span class="token comment"># 1.1), TLS12 (TLS 1.2), TLS13 (TLS 1.3).</span>
+<span class="token comment"># If unset, promtool will use Go default minimum version, which is TLS 1.2.</span>
+<span class="token comment"># See MinVersion in https://pkg.go.dev/crypto/tls#Config.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">min_version</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token comment"># Maximum acceptable TLS version. Accepted values: TLS10 (TLS 1.0), TLS11 (TLS</span>
+<span class="token comment"># 1.1), TLS12 (TLS 1.2), TLS13 (TLS 1.3).</span>
+<span class="token comment"># If unset, promtool will use Go default maximum version, which is TLS 1.3.</span>
+<span class="token comment"># See MaxVersion in https://pkg.go.dev/crypto/tls#Config.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">max_version</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h2 id="">\<header\></header\></h2>
+<p><code>header</code> represents the configuration for a single HTTP header.</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">[</span> <span class="token key atrule">values</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">...</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span>
+
+<span class="token punctuation">[</span> <span class="token key atrule">secrets</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;secret<span class="token punctuation">&gt;</span> <span class="token punctuation">...</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span>
+
+<span class="token punctuation">[</span> <span class="token key atrule">files</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;filename<span class="token punctuation">&gt;</span> <span class="token punctuation">...</span> <span class="token punctuation">]</span> <span class="token punctuation">]</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="https.html" class="navigation navigation-prev " aria-label="Previous page: HTTPS And Authentication">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="recording_rules.html" class="navigation navigation-next " aria-label="Next page: Defining Recording Rules">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTTP Configuration For Promtool","sort_rank":6,"level":"1.3.4","depth":2,"next":{"title":"Defining Recording Rules","level":"1.3.5","depth":2,"path":"configuration/recording_rules.md","ref":"configuration/recording_rules.md","articles":[]},"previous":{"title":"HTTPS And Authentication","level":"1.3.3","depth":2,"path":"configuration/https.md","ref":"configuration/https.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"configuration/promtool.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,922 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Unit Testing For Rules · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="template_reference.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../command-line/">
+            
+                <a href="../command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../command-line/prometheus.html">
+            
+                <a href="../command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../command-line/promtool.html">
+            
+                <a href="../command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="alerting_rules.html">
+            
+                <a href="alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="https.html">
+            
+                <a href="https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="promtool.html">
+            
+                <a href="promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="recording_rules.html">
+            
+                <a href="recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="template_examples.html">
+            
+                <a href="template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="template_reference.html">
+            
+                <a href="template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.8" data-path="unit_testing_rules.html">
+            
+                <a href="unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../querying/api.html">
+            
+                <a href="../querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../querying/basics.html">
+            
+                <a href="../querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../querying/examples.html">
+            
+                <a href="../querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../querying/functions.html">
+            
+                <a href="../querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../querying/">
+            
+                <a href="../querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../querying/operators.html">
+            
+                <a href="../querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../querying/remote_read_api.html">
+            
+                <a href="../querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../feature_flags.html">
+            
+                <a href="../feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../federation.html">
+            
+                <a href="../federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../getting_started.html">
+            
+                <a href="../getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http_sd.html">
+            
+                <a href="../http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../management_api.html">
+            
+                <a href="../management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../prometheus_agent.html">
+            
+                <a href="../prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../stability.html">
+            
+                <a href="../stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../storage.html">
+            
+                <a href="../storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Unit Testing For Rules</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>You can use <code>promtool</code> to test your rules.</p>
+<pre class="language-"><code class="lang-shell"><span class="token comment"># For a single test file.</span>
+./promtool <span class="token builtin class-name">test</span> rules test.yml
+
+<span class="token comment"># If you have multiple test files, say test1.yml,test2.yml,test3.yml</span>
+./promtool <span class="token builtin class-name">test</span> rules test1.yml test2.yml test3.yml
+</code></pre>
+<h2 id="test-file-format">Test file format</h2>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># This is a list of rule files to consider for testing. Globs are supported.</span>
+<span class="token key atrule">rule_files</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;file_name<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token punctuation">[</span> <span class="token key atrule">evaluation_interval</span><span class="token punctuation">:</span> &lt;duration<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = 1m <span class="token punctuation">]</span>
+
+<span class="token comment"># Setting fuzzy_compare true will very slightly weaken floating point comparisons.</span>
+<span class="token comment"># This will (effectively) ignore differences in the last bit of the mantissa.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">fuzzy_compare</span><span class="token punctuation">:</span> &lt;boolean<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = false <span class="token punctuation">]</span>
+
+<span class="token comment"># The order in which group names are listed below will be the order of evaluation of</span>
+<span class="token comment"># rule groups (at a given evaluation time). The order is guaranteed only for the groups mentioned below.</span>
+<span class="token comment"># All the groups need not be mentioned below.</span>
+<span class="token key atrule">group_eval_order</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;group_name<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># All the tests are listed here.</span>
+<span class="token key atrule">tests</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;test_group<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h3 id="testgroup"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>test_group</span><span class="token punctuation">&gt;</span></span></code></h3>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># Series data</span>
+<span class="token punctuation">[</span> <span class="token key atrule">interval</span><span class="token punctuation">:</span> &lt;duration<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = evaluation_interval <span class="token punctuation">]</span>
+<span class="token key atrule">input_series</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;series<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Name of the test group</span>
+<span class="token punctuation">[</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Start timestamp for the test group. This sets the base time for all samples</span>
+<span class="token comment"># and evaluations in this test group.</span>
+<span class="token comment"># Accepts either a Unix timestamp (e.g., 1609459200) or an RFC3339 formatted</span>
+<span class="token comment"># timestamp (e.g., &quot;2021-01-01T00:00:00Z&quot;).</span>
+<span class="token comment"># Default: 0 (Unix epoch: 1970-01-01 00:00:00 UTC)</span>
+<span class="token comment">#</span>
+<span class="token comment"># When set:</span>
+<span class="token comment"># - All input_series samples are timestamped starting from start_timestamp</span>
+<span class="token comment"># - The eval_time in test cases is relative to start_timestamp</span>
+<span class="token comment"># - The time() function returns start_timestamp + eval_time</span>
+<span class="token punctuation">[</span> <span class="token key atrule">start_timestamp</span><span class="token punctuation">:</span> &lt;int<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> &lt;rfc3339_string<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = 0 <span class="token punctuation">]</span>
+
+<span class="token comment"># Unit tests for the above data.</span>
+
+<span class="token comment"># Unit tests for alerting rules. We consider the alerting rules from the input file.</span>
+<span class="token key atrule">alert_rule_test</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;alert_test_case<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Unit tests for PromQL expressions.</span>
+<span class="token key atrule">promql_expr_test</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;promql_test_case<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># External labels accessible to the alert template.</span>
+<span class="token key atrule">external_labels</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;labelname&gt;</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">...</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># External URL accessible to the alert template.</span>
+<span class="token comment"># Usually set using --web.external-url.</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">external_url</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h3 id="series"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>series</span><span class="token punctuation">&gt;</span></span></code></h3>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># This follows the usual series notation &apos;&lt;metric name&gt;{&lt;label name&gt;=&lt;label value&gt;, ...}&apos;</span>
+<span class="token comment"># Examples:</span>
+<span class="token comment">#      series_name{label1=&quot;value1&quot;, label2=&quot;value2&quot;}</span>
+<span class="token comment">#      go_goroutines{job=&quot;prometheus&quot;, instance=&quot;localhost:9090&quot;}</span>
+<span class="token key atrule">series</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># This uses expanding notation.</span>
+<span class="token comment"># Expanding notation:</span>
+<span class="token comment">#     &apos;a+bxn&apos; becomes &apos;a a+b a+(2*b) a+(3*b) &#x2026; a+(n*b)&apos;</span>
+<span class="token comment">#     Read this as series starts at a, then n further samples incrementing by b.</span>
+<span class="token comment">#     &apos;a-bxn&apos; becomes &apos;a a-b a-(2*b) a-(3*b) &#x2026; a-(n*b)&apos;</span>
+<span class="token comment">#     Read this as series starts at a, then n further samples decrementing by b (or incrementing by negative b).</span>
+<span class="token comment">#     &apos;axn&apos; becomes &apos;a a a &#x2026; a&apos; (a n+1 times) - it&apos;s a shorthand for &apos;a+0xn&apos;</span>
+<span class="token comment"># There are special values to indicate missing and stale samples:</span>
+<span class="token comment">#     &apos;_&apos; represents a missing sample from scrape</span>
+<span class="token comment">#     &apos;stale&apos; indicates a stale sample</span>
+<span class="token comment"># Examples:</span>
+<span class="token comment">#     1. &apos;-2+4x3&apos; becomes &apos;-2 2 6 10&apos; - series starts at -2, then 3 further samples incrementing by 4.</span>
+<span class="token comment">#     2. &apos; 1-2x4&apos; becomes &apos;1 -1 -3 -5 -7&apos; - series starts at 1, then 4 further samples decrementing by 2.</span>
+<span class="token comment">#     3. &apos; 1x4&apos; becomes &apos;1 1 1 1 1&apos; - shorthand for &apos;1+0x4&apos;, series starts at 1, then 4 further samples incrementing by 0.</span>
+<span class="token comment">#     4. &apos; 1 _x3 stale&apos; becomes &apos;1 _ _ _ stale&apos; - the missing sample cannot increment, so 3 missing samples are produced by the &apos;_x3&apos; expression.</span>
+<span class="token comment">#</span>
+<span class="token comment"># Native histogram notation:</span>
+<span class="token comment">#     Native histograms can be used instead of floating point numbers using the following notation:</span>
+<span class="token comment">#     {{schema:1 sum:-0.3 count:3.1 z_bucket:7.1 z_bucket_w:0.05 buckets:[5.1 10 7] offset:-3 n_buckets:[4.1 5] n_offset:-5 counter_reset_hint:gauge}}</span>
+<span class="token comment">#     Native histograms support the same expanding notation as floating point numbers, i.e. &apos;axn&apos;, &apos;a+bxn&apos; and &apos;a-bxn&apos;.</span>
+<span class="token comment">#     All properties are optional and default to 0. The order is not important. The following properties are supported:</span>
+<span class="token comment">#     - schema (int):</span>
+<span class="token comment">#         Currently valid schema numbers are -53 and -4 &lt;= n &lt;= 8.</span>
+<span class="token comment">#         Schema -53 is the custom buckets schema, upper bucket boundaries are defined in custom_values</span>
+<span class="token comment">#         like for classic histograms, and you shouldn&apos;t use z_bucket, z_bucket_w, n_buckets, n_offset.</span>
+<span class="token comment">#         The rest are base-2 standard schemas, where 1.0 is a bucket boundary in each case, and</span>
+<span class="token comment">#         then each power of two is divided into 2^n logarithmic buckets.  Or</span>
+<span class="token comment">#         in other words, each bucket boundary is the previous boundary times</span>
+<span class="token comment">#         2^(2^-n).</span>
+<span class="token comment">#     - sum (float):</span>
+<span class="token comment">#         The sum of all observations, including the zero bucket.</span>
+<span class="token comment">#     - count (non-negative float):</span>
+<span class="token comment">#         The number of observations, including those that are NaN and including the zero bucket.</span>
+<span class="token comment">#     - z_bucket (non-negative float):</span>
+<span class="token comment">#         The sum of all observations in the zero bucket.</span>
+<span class="token comment">#     - z_bucket_w (non-negative float):</span>
+<span class="token comment">#         The width of the zero bucket.</span>
+<span class="token comment">#         If z_bucket_w &gt; 0, the zero bucket contains all observations -z_bucket_w &lt;= x &lt;= z_bucket_w.</span>
+<span class="token comment">#         Otherwise, the zero bucket only contains observations that are exactly 0.</span>
+<span class="token comment">#     - buckets (list of non-negative floats):</span>
+<span class="token comment">#         Observation counts in positive buckets. Each represents an absolute count.</span>
+<span class="token comment">#     - offset (int):</span>
+<span class="token comment">#         The starting index of the first entry in the positive buckets.</span>
+<span class="token comment">#     - n_buckets (list of non-negative floats):</span>
+<span class="token comment">#         Observation counts in negative buckets. Each represents an absolute count.</span>
+<span class="token comment">#     - n_offset (int):</span>
+<span class="token comment">#         The starting index of the first entry in the negative buckets.</span>
+<span class="token comment">#     - counter_reset_hint (one of &apos;unknown&apos;, &apos;reset&apos;, &apos;not_reset&apos; or &apos;gauge&apos;)</span>
+<span class="token comment">#         The counter reset hint associated with this histogram. Defaults to &apos;unknown&apos; if not set.</span>
+<span class="token comment">#     - custom_values (list of floats in ascending order):</span>
+<span class="token comment">#         The upper limits for custom buckets when schema is -53. </span>
+<span class="token comment">#         These have the same role as the &apos;le&apos; numbers in classic histograms.</span>
+<span class="token comment">#         Do not append &apos;+Inf&apos; at the end, it is implicit.</span>
+<span class="token key atrule">values</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+</code></pre>
+<h3 id="alerttestcase"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>alert_test_case</span><span class="token punctuation">&gt;</span></span></code></h3>
+<p>Prometheus allows you to have same alertname for different alerting rules. Hence in this unit testing, you have to list the union of all the firing alerts for the alertname under a single <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>alert_test_case</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># The time elapsed from start_timestamp when the alerts have to be checked.</span>
+<span class="token comment"># This is a duration relative to start_timestamp (which defaults to 0).</span>
+<span class="token key atrule">eval_time</span><span class="token punctuation">:</span> &lt;duration<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># Name of the alert to be tested.</span>
+<span class="token key atrule">alertname</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># List of expected alerts which are firing under the given alertname at</span>
+<span class="token comment"># given evaluation time. If you want to test if an alerting rule should</span>
+<span class="token comment"># not be firing, then you can mention the above fields and leave &apos;exp_alerts&apos; empty.</span>
+<span class="token key atrule">exp_alerts</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;alert<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h3 id="alert"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>alert</span><span class="token punctuation">&gt;</span></span></code></h3>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># These are the expanded labels and annotations of the expected alert.</span>
+<span class="token comment"># Note: labels also include the labels of the sample associated with the</span>
+<span class="token comment"># alert (same as what you see in `/alerts`, without series `__name__` and `alertname`)</span>
+<span class="token key atrule">exp_labels</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;labelname&gt;</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+<span class="token key atrule">exp_annotations</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;labelname&gt;</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h3 id="promqltestcase"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>promql_test_case</span><span class="token punctuation">&gt;</span></span></code></h3>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># Expression to evaluate</span>
+<span class="token key atrule">expr</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># The time elapsed from start_timestamp when the expression has to be evaluated.</span>
+<span class="token comment"># This is a duration relative to start_timestamp (which defaults to 0).</span>
+<span class="token key atrule">eval_time</span><span class="token punctuation">:</span> &lt;duration<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># Expected samples at the given evaluation time.</span>
+<span class="token key atrule">exp_samples</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;sample<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h3 id="sample"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sample</span><span class="token punctuation">&gt;</span></span></code></h3>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># Labels of the sample in usual series notation &apos;&lt;metric name&gt;{&lt;label name&gt;=&lt;label value&gt;, ...}&apos;</span>
+<span class="token comment"># Examples:</span>
+<span class="token comment">#      series_name{label1=&quot;value1&quot;, label2=&quot;value2&quot;}</span>
+<span class="token comment">#      go_goroutines{job=&quot;prometheus&quot;, instance=&quot;localhost:9090&quot;}</span>
+<span class="token key atrule">labels</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># The expected value of the PromQL expression.</span>
+<span class="token key atrule">value</span><span class="token punctuation">:</span> &lt;number<span class="token punctuation">&gt;</span>
+</code></pre>
+<h2 id="example">Example</h2>
+<p>This is an example input file for unit testing which passes the test. <code>test.yml</code> is the test file which follows the syntax above and <code>alerts.yml</code> contains the alerting rules.</p>
+<p>With <code>alerts.yml</code> in the same directory, run <code>./promtool test rules test.yml</code>.</p>
+<h3 id="testyml"><code>test.yml</code></h3>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># This is the main input for unit testing.</span>
+<span class="token comment"># Only this file is passed as command line argument.</span>
+
+<span class="token key atrule">rule_files</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> alerts.yml
+
+<span class="token key atrule">evaluation_interval</span><span class="token punctuation">:</span> 1m
+
+<span class="token key atrule">tests</span><span class="token punctuation">:</span>
+    <span class="token comment"># Test 1.</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">interval</span><span class="token punctuation">:</span> 1m
+      <span class="token comment"># Series data.</span>
+      <span class="token key atrule">input_series</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">series</span><span class="token punctuation">:</span> <span class="token string">&apos;up{job=&quot;prometheus&quot;, instance=&quot;localhost:9090&quot;}&apos;</span>
+            <span class="token key atrule">values</span><span class="token punctuation">:</span> <span class="token string">&apos;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0&apos;</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">series</span><span class="token punctuation">:</span> <span class="token string">&apos;up{job=&quot;node_exporter&quot;, instance=&quot;localhost:9100&quot;}&apos;</span>
+            <span class="token key atrule">values</span><span class="token punctuation">:</span> <span class="token string">&apos;1+0x6 0 0 0 0 0 0 0 0&apos;</span> <span class="token comment"># 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">series</span><span class="token punctuation">:</span> <span class="token string">&apos;go_goroutines{job=&quot;prometheus&quot;, instance=&quot;localhost:9090&quot;}&apos;</span>
+            <span class="token key atrule">values</span><span class="token punctuation">:</span> <span class="token string">&apos;10+10x2 30+20x5&apos;</span> <span class="token comment"># 10 20 30 30 50 70 90 110 130</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">series</span><span class="token punctuation">:</span> <span class="token string">&apos;go_goroutines{job=&quot;node_exporter&quot;, instance=&quot;localhost:9100&quot;}&apos;</span>
+            <span class="token key atrule">values</span><span class="token punctuation">:</span> <span class="token string">&apos;10+10x7 10+30x4&apos;</span> <span class="token comment"># 10 20 30 40 50 60 70 80 10 40 70 100 130</span>
+
+      <span class="token comment"># Unit test for alerting rules.</span>
+      <span class="token key atrule">alert_rule_test</span><span class="token punctuation">:</span>
+          <span class="token comment"># Unit test 1.</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">eval_time</span><span class="token punctuation">:</span> 10m
+            <span class="token key atrule">alertname</span><span class="token punctuation">:</span> InstanceDown
+            <span class="token key atrule">exp_alerts</span><span class="token punctuation">:</span>
+                <span class="token comment"># Alert 1.</span>
+                <span class="token punctuation">-</span> <span class="token key atrule">exp_labels</span><span class="token punctuation">:</span>
+                      <span class="token key atrule">severity</span><span class="token punctuation">:</span> page
+                      <span class="token key atrule">instance</span><span class="token punctuation">:</span> localhost<span class="token punctuation">:</span><span class="token number">9090</span>
+                      <span class="token key atrule">job</span><span class="token punctuation">:</span> prometheus
+                  <span class="token key atrule">exp_annotations</span><span class="token punctuation">:</span>
+                      <span class="token key atrule">summary</span><span class="token punctuation">:</span> <span class="token string">&quot;Instance localhost:9090 down&quot;</span>
+                      <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">&quot;localhost:9090 of job prometheus has been down for more than 5 minutes.&quot;</span>
+      <span class="token comment"># Unit tests for promql expressions.</span>
+      <span class="token key atrule">promql_expr_test</span><span class="token punctuation">:</span>
+          <span class="token comment"># Unit test 1.</span>
+          <span class="token punctuation">-</span> <span class="token key atrule">expr</span><span class="token punctuation">:</span> go_goroutines <span class="token punctuation">&gt;</span> 5
+            <span class="token key atrule">eval_time</span><span class="token punctuation">:</span> 4m
+            <span class="token key atrule">exp_samples</span><span class="token punctuation">:</span>
+                <span class="token comment"># Sample 1.</span>
+                <span class="token punctuation">-</span> <span class="token key atrule">labels</span><span class="token punctuation">:</span> <span class="token string">&apos;go_goroutines{job=&quot;prometheus&quot;,instance=&quot;localhost:9090&quot;}&apos;</span>
+                  <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token number">50</span>
+                <span class="token comment"># Sample 2.</span>
+                <span class="token punctuation">-</span> <span class="token key atrule">labels</span><span class="token punctuation">:</span> <span class="token string">&apos;go_goroutines{job=&quot;node_exporter&quot;,instance=&quot;localhost:9100&quot;}&apos;</span>
+                  <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token number">50</span>
+</code></pre>
+<h3 id="alertsyml"><code>alerts.yml</code></h3>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># This is the rules file.</span>
+
+<span class="token key atrule">groups</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> example
+  <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+
+  <span class="token punctuation">-</span> <span class="token key atrule">alert</span><span class="token punctuation">:</span> InstanceDown
+    <span class="token key atrule">expr</span><span class="token punctuation">:</span> up == 0
+    <span class="token key atrule">for</span><span class="token punctuation">:</span> 5m
+    <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">severity</span><span class="token punctuation">:</span> page
+    <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+        <span class="token key atrule">summary</span><span class="token punctuation">:</span> <span class="token string">&quot;Instance {{ $labels.instance }} down&quot;</span>
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">&quot;{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes.&quot;</span>
+
+  <span class="token punctuation">-</span> <span class="token key atrule">alert</span><span class="token punctuation">:</span> AnotherInstanceDown
+    <span class="token key atrule">expr</span><span class="token punctuation">:</span> up == 0
+    <span class="token key atrule">for</span><span class="token punctuation">:</span> 10m
+    <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+        <span class="token key atrule">severity</span><span class="token punctuation">:</span> page
+    <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+        <span class="token key atrule">summary</span><span class="token punctuation">:</span> <span class="token string">&quot;Instance {{ $labels.instance }} down&quot;</span>
+        <span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">&quot;{{ $labels.instance }} of job {{ $labels.job }} has been down for more than 5 minutes.&quot;</span>
+</code></pre>
+<h3 id="time-within-tests">Time within tests</h3>
+<p>It should be noted that in all tests, either in <code>alert_test_case</code> or
+<code>promql_test_case</code>, the output from all functions related to the current time,
+for example the <code>time()</code> and <code>day_of_*()</code> functions, will output a consistent value
+for tests.</p>
+<p>By default, at the start of the test evaluation, <code>time()</code> returns 0 (Unix epoch:
+January 1, 1970 00:00:00 UTC). The <code>eval_time</code> field specifies a duration relative
+to <code>start_timestamp</code>, so by default <code>time()</code> will return a value of <code>0 + eval_time</code>.</p>
+<p>You can configure a custom start timestamp for your tests by setting the <code>start_timestamp</code>
+field in your test group. This field accepts either:</p>
+<ul>
+<li>A Unix timestamp (e.g., <code>1609459200</code> for January 1, 2021 00:00:00 UTC)</li>
+<li>An RFC3339 formatted timestamp (e.g., <code>&quot;2021-01-01T00:00:00Z&quot;</code>)</li>
+</ul>
+<p>When you set <code>start_timestamp</code>:</p>
+<ul>
+<li>All <code>input_series</code> samples will be timestamped starting from <code>start_timestamp</code></li>
+<li>The <code>eval_time</code> field in test cases is interpreted as a duration relative to <code>start_timestamp</code></li>
+<li>The <code>time()</code> function will return <code>start_timestamp + eval_time</code></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="template_reference.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Template Reference">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Unit Testing For Rules","sort_rank":6,"level":"1.3.8","depth":2,"next":{"title":"Querying","level":"1.4","depth":1,"ref":"","articles":[{"title":"HTTP API","level":"1.4.1","depth":2,"path":"querying/api.md","ref":"querying/api.md","articles":[]},{"title":"Querying Basics","level":"1.4.2","depth":2,"path":"querying/basics.md","ref":"querying/basics.md","articles":[]},{"title":"Query Examples","level":"1.4.3","depth":2,"path":"querying/examples.md","ref":"querying/examples.md","articles":[]},{"title":"Query Functions","level":"1.4.4","depth":2,"path":"querying/functions.md","ref":"querying/functions.md","articles":[]},{"title":"Querying","level":"1.4.5","depth":2,"path":"querying/index.md","ref":"querying/index.md","articles":[]},{"title":"Operators","level":"1.4.6","depth":2,"path":"querying/operators.md","ref":"querying/operators.md","articles":[]},{"title":"Remote Read API","level":"1.4.7","depth":2,"path":"querying/remote_read_api.md","ref":"querying/remote_read_api.md","articles":[]}]},"previous":{"title":"Template Reference","level":"1.3.7","depth":2,"path":"configuration/template_reference.md","ref":"configuration/template_reference.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"configuration/unit_testing_rules.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

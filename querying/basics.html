@@ -1,0 +1,974 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Querying Basics · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="examples.html" />
+    
+    
+    <link rel="prev" href="api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../command-line/">
+            
+                <a href="../command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../command-line/prometheus.html">
+            
+                <a href="../command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../command-line/promtool.html">
+            
+                <a href="../command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../configuration/alerting_rules.html">
+            
+                <a href="../configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../configuration/">
+            
+                <a href="../configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../configuration/https.html">
+            
+                <a href="../configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../configuration/promtool.html">
+            
+                <a href="../configuration/promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../configuration/recording_rules.html">
+            
+                <a href="../configuration/recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../configuration/template_examples.html">
+            
+                <a href="../configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../configuration/template_reference.html">
+            
+                <a href="../configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../configuration/unit_testing_rules.html">
+            
+                <a href="../configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="examples.html">
+            
+                <a href="examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="operators.html">
+            
+                <a href="operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="remote_read_api.html">
+            
+                <a href="remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../feature_flags.html">
+            
+                <a href="../feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../federation.html">
+            
+                <a href="../federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../getting_started.html">
+            
+                <a href="../getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http_sd.html">
+            
+                <a href="../http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../management_api.html">
+            
+                <a href="../management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../prometheus_agent.html">
+            
+                <a href="../prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../stability.html">
+            
+                <a href="../stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../storage.html">
+            
+                <a href="../storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Querying Basics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Prometheus provides a functional query language called PromQL (Prometheus Query
+Language) that lets the user select and aggregate time series data in real
+time.</p>
+<p>When you send a query request to Prometheus, it can be an <em>instant query</em>, evaluated at one point in time,
+or a <em>range query</em> at equally-spaced steps between a start and an end time. PromQL works exactly the same
+in each case; the range query is just like an instant query run multiple times at different timestamps.</p>
+<p>In the Prometheus UI, the &quot;Table&quot; tab is for instant queries and the &quot;Graph&quot; tab is for range queries.</p>
+<p>Other programs can fetch the result of a PromQL expression via the <a href="api.html">HTTP API</a>.</p>
+<h2 id="examples">Examples</h2>
+<p>This document is a Prometheus basic language reference. For learning, it may be easier to
+start with a couple of <a href="examples.html">examples</a>.</p>
+<h2 id="samples">Samples</h2>
+<p>The value of a sample at a given timestamp returned by PromQL may be a float or
+a <a href="https://prometheus.io/docs/specs/native_histograms" target="_blank">native histogram</a>. A
+float sample is a simple floating point number, whereas a native histograms
+sample contains a full histogram including count, sum, and buckets.</p>
+<p>Note that the term &#x201C;histogram sample&#x201D; in the PromQL documentation always refers
+to a native histogram. The term &quot;classic histogram&quot; refers to a set of time
+series containing float samples with the <code>_bucket</code>, <code>_count</code>, and <code>_sum</code> 
+suffixes that together describe a histogram. From the perspective of PromQL,
+these contain just float samples, there are no &#x201C;classic histogram samples&#x201D;.</p>
+<p>Both float samples and histogram samples can have a counter or a gauge &#x201C;flavor&#x201D;.
+Float samples with a counter or gauge flavor are generally simply called
+&#x201C;counters&#x201D; or &#x201C;gauges&#x201D;, respectively, while their histogram counterparts are
+called &#x201C;counter histograms&#x201D; or &#x201C;gauge histograms&#x201D;. Float samples do not store
+their flavor, leaving it to the user to take their flavor into account when
+writing PromQL queries. (By convention, time series containing float counters
+have a name ending on <code>_total</code> to help with the distinction.)</p>
+<p>Since histogram samples &#x201C;know&#x201D; their counter or gauge flavor, this allows
+reliable warnings about mismatched operations. For example, applying the <code>rate</code>
+function to gauge floats will most likely produce a
+nonsensical result, but the query will be processed without complains. However,
+if applied to gauge histograms, the result of the query will be
+annotated with a warning.</p>
+<h2 id="expression-language-data-types">Expression language data types</h2>
+<p>In Prometheus&apos;s expression language, an expression or sub-expression can
+evaluate to one of four types:</p>
+<ul>
+<li><strong>Instant vector</strong> - a set of time series containing a single sample for each time series, all sharing the same timestamp</li>
+<li><strong>Range vector</strong> - a set of time series containing a range of data points over time for each time series</li>
+<li><strong>Scalar</strong> - a simple numeric floating point value</li>
+<li><strong>String</strong> - a simple string value; currently unused</li>
+</ul>
+<p>Depending on the use case (e.g. when graphing vs. displaying the output of an
+expression), only some of these types are legal as the result of a
+user-specified expression.
+For <a href="api.html#instant-queries">instant queries</a>, any of the above data types are allowed as the root of the expression.
+<a href="api.html#range-queries">Range queries</a> only support scalar-typed and instant-vector-typed expressions.</p>
+<p>Both vectors and time series may contain a mix of float samples and histogram
+samples.</p>
+<h2 id="reconciliation-of-histogram-bucket-layouts">Reconciliation of histogram bucket layouts</h2>
+<p>Native histograms can have different bucket layouts, but they are generally
+convertible to compatible versions to apply binary and aggregation operations
+to them. Functions acting on range vectors that are applicable to native
+histograms also perform such reconciliation. In binary operations this
+reconciliation is performed pairwise, in aggregation operations and functions
+all histogram samples are reconciled to one compatible bucket layout.</p>
+<p>Not all bucket layouts can be reconciled, if incompatible histograms are
+encountered in an operation, the corresponding output vector element is removed
+from the result, flagged with a warn-level annotation.
+More details can be found in the
+<a href="https://prometheus.io/docs/specs/native_histograms/#compatibility-between-histograms" target="_blank">native histogram specification</a>.</p>
+<h2 id="literals">Literals</h2>
+<p>The following section describes literal values of various kinds.
+Note that there is no &#x201C;histogram literal&#x201D;.</p>
+<h3 id="string-literals">String literals</h3>
+<p>String literals are designated by single quotes, double quotes or backticks.</p>
+<p>PromQL follows the same <a href="https://golang.org/ref/spec#String_literals" target="_blank">escaping rules as
+Go</a>. For string literals in single or double quotes, a
+backslash begins an escape sequence, which may be followed by <code>a</code>, <code>b</code>, <code>f</code>,
+<code>n</code>, <code>r</code>, <code>t</code>, <code>v</code> or <code>\</code>.  Specific characters can be provided using octal
+(<code>\nnn</code>) or hexadecimal (<code>\xnn</code>, <code>\unnnn</code> and <code>\Unnnnnnnn</code>) notations.</p>
+<p>Conversely, escape characters are not parsed in string literals designated by backticks. It is important to note that, unlike Go, Prometheus does not discard newlines inside backticks.</p>
+<p>Example:</p>
+<pre class="language-"><code>&quot;this is a string&quot;
+&apos;these are unescaped: \n \\ \t&apos;
+`these are not unescaped: \n &apos; &quot; \t`
+</code></pre><h3 id="float-literals-and-time-durations">Float literals and time durations</h3>
+<p>Scalar float values can be written as literal integer or floating-point numbers
+in the format (whitespace only included for better readability):</p>
+<pre class="language-"><code>[-+]?(
+      [0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?
+    | 0[xX][0-9a-fA-F]+
+    | [nN][aA][nN]
+    | [iI][nN][fF]
+)
+</code></pre><p>Examples:</p>
+<pre class="language-"><code>23
+-2.43
+3.4e-9
+0x8f
+-Inf
+NaN
+</code></pre><p>Additionally, underscores (<code>_</code>) can be used in between decimal or hexadecimal
+digits to improve readability.</p>
+<p>Examples:</p>
+<pre class="language-"><code>1_000_000
+.123_456_789
+0x_53_AB_F3_82
+</code></pre><p>Float literals are also used to specify durations in seconds. For convenience,
+decimal integer numbers may be combined with the following
+time units:</p>
+<ul>
+<li><code>ms</code> &#x2013; milliseconds</li>
+<li><code>s</code> &#x2013; seconds &#x2013; 1s equals 1000ms</li>
+<li><code>m</code> &#x2013; minutes &#x2013; 1m equals 60s (ignoring leap seconds)</li>
+<li><code>h</code> &#x2013; hours &#x2013; 1h equals 60m</li>
+<li><code>d</code> &#x2013; days &#x2013; 1d equals 24h (ignoring so-called daylight saving time)</li>
+<li><code>w</code> &#x2013; weeks &#x2013; 1w equals 7d</li>
+<li><code>y</code> &#x2013; years &#x2013; 1y equals 365d (ignoring leap days)</li>
+</ul>
+<p>Suffixing a decimal integer number with one of the units above is a different
+representation of the equivalent number of seconds as a bare float literal.</p>
+<p>Examples:</p>
+<pre class="language-"><code>1s # Equivalent to 1.
+2m # Equivalent to 120.
+1ms # Equivalent to 0.001.
+-2h # Equivalent to -7200.
+</code></pre><p>The following examples do <em>not</em> work:</p>
+<pre class="language-"><code>0xABm # No suffixing of hexadecimal numbers.
+1.5h # Time units cannot be combined with a floating point.
++Infd # No suffixing of &#xB1;Inf or NaN.
+</code></pre><p>Multiple units can be combined by concatenation of suffixed integers. Units
+must be ordered from the longest to the shortest. A given unit must only appear
+once per float literal.</p>
+<p>Examples:</p>
+<pre class="language-"><code>1h30m # Equivalent to 5400s and thus 5400.
+12h34m56s # Equivalent to 45296s and thus 45296.
+54s321ms # Equivalent to 54.321.
+</code></pre><h2 id="time-series-selectors">Time series selectors</h2>
+<p>These are the basic building-blocks that instruct PromQL what data to fetch.</p>
+<h3 id="instant-vector-selectors">Instant vector selectors</h3>
+<p>Instant vector selectors allow the selection of a set of time series and a
+single sample value for each at a given timestamp (point in time).  In the simplest
+form, only a metric name is specified, which results in an instant vector
+containing elements for all time series that have this metric name.</p>
+<p>The value returned will be that of the most recent sample at or before the
+query&apos;s evaluation timestamp (in the case of an
+<a href="api.html#instant-queries">instant query</a>)
+or the current step within the query (in the case of a
+<a href="api.html#range-queries">range query</a>).
+The <a href="#modifier"><code>@</code> modifier</a> allows overriding the timestamp relative to which
+the selection takes place. Time series are only returned if their most recent sample is less than the <a href="#staleness">lookback period</a> ago.</p>
+<p>This example selects all time series that have the <code>http_requests_total</code> metric
+name, returning the most recent sample for each:</p>
+<pre class="language-"><code>http_requests_total
+</code></pre><p>It is possible to filter these time series further by appending a comma-separated list of label
+matchers in curly braces (<code>{}</code>).</p>
+<p>This example selects only those time series with the <code>http_requests_total</code>
+metric name that also have the <code>job</code> label set to <code>prometheus</code> and their
+<code>group</code> label set to <code>canary</code>:</p>
+<pre class="language-"><code>http_requests_total{job=&quot;prometheus&quot;,group=&quot;canary&quot;}
+</code></pre><p>It is also possible to negatively match a label value, or to match label values
+against regular expressions. The following label matching operators exist:</p>
+<ul>
+<li><code>=</code>: Select labels that are exactly equal to the provided string.</li>
+<li><code>!=</code>: Select labels that are not equal to the provided string.</li>
+<li><code>=~</code>: Select labels that regex-match the provided string.</li>
+<li><code>!~</code>: Select labels that do not regex-match the provided string.</li>
+</ul>
+<p><a href="#regular-expressions">Regex</a> matches are fully anchored. A match of <code>env=~&quot;foo&quot;</code> is treated as <code>env=~&quot;^foo$&quot;</code>.</p>
+<p>For example, this selects all <code>http_requests_total</code> time series for <code>staging</code>,
+<code>testing</code>, and <code>development</code> environments and HTTP methods other than <code>GET</code>.</p>
+<pre class="language-"><code>http_requests_total{environment=~&quot;staging|testing|development&quot;,method!=&quot;GET&quot;}
+</code></pre><p>Label matchers that match empty label values also select all time series that
+do not have the specific label set at all. It is possible to have multiple matchers for the same label name.</p>
+<p>For example, given the dataset:</p>
+<pre class="language-"><code>http_requests_total
+http_requests_total{replica=&quot;rep-a&quot;}
+http_requests_total{replica=&quot;rep-b&quot;}
+http_requests_total{environment=&quot;development&quot;}
+</code></pre><p>The query <code>http_requests_total{environment=&quot;&quot;}</code> would match and return:</p>
+<pre class="language-"><code>http_requests_total
+http_requests_total{replica=&quot;rep-a&quot;}
+http_requests_total{replica=&quot;rep-b&quot;}
+</code></pre><p>and would exclude:</p>
+<pre class="language-"><code>http_requests_total{environment=&quot;development&quot;}
+</code></pre><p>Multiple matchers can be used for the same label name; they all must pass for a result to be returned.</p>
+<p>The query:</p>
+<pre class="language-"><code>http_requests_total{replica!=&quot;rep-a&quot;,replica=~&quot;rep.*&quot;}
+</code></pre><p>Would then match:</p>
+<pre class="language-"><code>http_requests_total{replica=&quot;rep-b&quot;}
+</code></pre><p>Vector selectors must either specify a name or at least one label matcher
+that does not match the empty string. The following expression is illegal:</p>
+<pre class="language-"><code>{job=~&quot;.*&quot;} # Bad!
+</code></pre><p>In contrast, these expressions are valid as they both have a selector that does not
+match empty label values.</p>
+<pre class="language-"><code>{job=~&quot;.+&quot;}              # Good!
+{job=~&quot;.*&quot;,method=&quot;get&quot;} # Good!
+</code></pre><p>Label matchers can also be applied to metric names by matching against the internal
+<code>__name__</code> label. For example, the expression <code>http_requests_total</code> is equivalent to
+<code>{__name__=&quot;http_requests_total&quot;}</code>. Matchers other than <code>=</code> (<code>!=</code>, <code>=~</code>, <code>!~</code>) may also be used.
+The following expression selects all metrics that have a name starting with <code>job:</code>:</p>
+<pre class="language-"><code>{__name__=~&quot;job:.*&quot;}
+</code></pre><p>The metric name must not be one of the keywords <code>bool</code>, <code>on</code>, <code>ignoring</code>, <code>group_left</code> and <code>group_right</code>. The following expression is illegal:</p>
+<pre class="language-"><code>on{} # Bad!
+</code></pre><p>A workaround for this restriction is to use the <code>__name__</code> label:</p>
+<pre class="language-"><code>{__name__=&quot;on&quot;} # Good!
+</code></pre><h3 id="range-vector-selectors">Range Vector Selectors</h3>
+<p>Range vector literals work like instant vector literals, except that they
+select a range of samples back from the current instant. Syntactically, a
+<a href="#float-literals-and-time-durations">float literal</a> is appended in square
+brackets (<code>[]</code>) at the end of a vector selector to specify for how many seconds
+back in time values should be fetched for each resulting range vector element.
+Commonly, the float literal uses the syntax with one or more time units, e.g.
+<code>[5m]</code>. The range is a left-open and right-closed interval, i.e. samples with
+timestamps coinciding with the left boundary of the range are excluded from the
+selection, while samples coinciding with the right boundary of the range are
+included in the selection.</p>
+<p>In this example, we select all the values recorded less than 5m ago for all
+time series that have the metric name <code>http_requests_total</code> and a <code>job</code> label
+set to <code>prometheus</code>:</p>
+<pre class="language-"><code>http_requests_total{job=&quot;prometheus&quot;}[5m]
+</code></pre><h3 id="offset-modifier">Offset modifier</h3>
+<p>The <code>offset</code> modifier allows changing the time offset for individual
+instant and range vectors in a query.</p>
+<p>For example, the following expression returns the value of
+<code>http_requests_total</code> 5 minutes in the past relative to the current
+query evaluation time:</p>
+<pre class="language-"><code>http_requests_total offset 5m
+</code></pre><p>Note that the <code>offset</code> modifier always needs to follow the selector
+immediately, i.e. the following would be correct:</p>
+<pre class="language-"><code>sum(http_requests_total{method=&quot;GET&quot;} offset 5m) // GOOD.
+</code></pre><p>While the following would be <em>incorrect</em>:</p>
+<pre class="language-"><code>sum(http_requests_total{method=&quot;GET&quot;}) offset 5m // INVALID.
+</code></pre><p>The same works for range vectors. This returns the 5-minute <a href="functions.html#rate">rate</a>
+that <code>http_requests_total</code> had a week ago:</p>
+<pre class="language-"><code>rate(http_requests_total[5m] offset 1w)
+</code></pre><p>When querying for samples in the past, a negative offset will enable temporal comparisons forward in time:</p>
+<pre class="language-"><code>rate(http_requests_total[5m] offset -1w)
+</code></pre><p>Note that this allows a query to look ahead of its evaluation time.</p>
+<h3 id="modifier">@ modifier</h3>
+<p>The <code>@</code> modifier allows changing the evaluation time for individual instant
+and range vectors in a query. The time supplied to the <code>@</code> modifier
+is a Unix timestamp and described with a float literal.</p>
+<p>For example, the following expression returns the value of
+<code>http_requests_total</code> at <code>2021-01-04T07:40:00+00:00</code>:</p>
+<pre class="language-"><code>http_requests_total @ 1609746000
+</code></pre><p>Note that the <code>@</code> modifier always needs to follow the selector
+immediately, i.e. the following would be correct:</p>
+<pre class="language-"><code>sum(http_requests_total{method=&quot;GET&quot;} @ 1609746000) // GOOD.
+</code></pre><p>While the following would be <em>incorrect</em>:</p>
+<pre class="language-"><code>sum(http_requests_total{method=&quot;GET&quot;}) @ 1609746000 // INVALID.
+</code></pre><p>The same works for range vectors. This returns the 5-minute rate that
+<code>http_requests_total</code> had at <code>2021-01-04T07:40:00+00:00</code>:</p>
+<pre class="language-"><code>rate(http_requests_total[5m] @ 1609746000)
+</code></pre><p>The <code>@</code> modifier supports all representations of numeric literals described above.
+It works with the <code>offset</code> modifier where the offset is applied relative to the <code>@</code>
+modifier time.  The results are the same irrespective of the order of the modifiers.</p>
+<p>For example, these two queries will produce the same result:</p>
+<pre class="language-"><code># offset after @
+http_requests_total @ 1609746000 offset 5m
+# offset before @
+http_requests_total offset 5m @ 1609746000
+</code></pre><p>Additionally, <code>start()</code> and <code>end()</code> can also be used as values for the <code>@</code> modifier as special values.</p>
+<p>For a range query, they resolve to the start and end of the range query respectively and remain the same for all steps.</p>
+<p>For an instant query, <code>start()</code> and <code>end()</code> both resolve to the evaluation time.</p>
+<pre class="language-"><code>http_requests_total @ start()
+rate(http_requests_total[5m] @ end())
+</code></pre><p>Note that the <code>@</code> modifier allows a query to look ahead of its evaluation time.</p>
+<h2 id="subquery">Subquery</h2>
+<p>Subquery allows you to run an instant query for a given range and resolution. The result of a subquery is a range vector.</p>
+<p>Syntax: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>instant_query</span><span class="token punctuation">&gt;</span></span> &apos;[&apos; <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>range</span><span class="token punctuation">&gt;</span></span> &apos;:&apos; [<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resolution</span><span class="token punctuation">&gt;</span></span>] &apos;]&apos; [ @ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>float_literal</span><span class="token punctuation">&gt;</span></span> ] [ offset <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>float_literal</span><span class="token punctuation">&gt;</span></span> ]</code></p>
+<ul>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>resolution</span><span class="token punctuation">&gt;</span></span></code> is optional. Default is the global evaluation interval.</li>
+</ul>
+<h2 id="operators">Operators</h2>
+<p>Prometheus supports many binary and aggregation operators. These are described
+in detail in the <a href="operators.html">expression language operators</a> page.</p>
+<h2 id="functions">Functions</h2>
+<p>Prometheus supports several functions to operate on data. These are described
+in detail in the <a href="functions.html">expression language functions</a> page.</p>
+<h2 id="comments">Comments</h2>
+<p>PromQL supports line comments that start with <code>#</code>. Example:</p>
+<pre class="language-"><code>    # This is a comment
+</code></pre><h2 id="regular-expressions">Regular expressions</h2>
+<p>All regular expressions in Prometheus use <a href="https://github.com/google/re2/wiki/Syntax" target="_blank">RE2 syntax</a>.</p>
+<p>Regex matches are always fully anchored.</p>
+<h2 id="gotchas">Gotchas</h2>
+<h3 id="staleness">Staleness</h3>
+<p>The timestamps at which to sample data, during a query, are selected
+independently of the actual present time series data. This is mainly to support
+cases like aggregation (<code>sum</code>, <code>avg</code>, and so on), where multiple aggregated
+time series do not precisely align in time. Because of their independence,
+Prometheus needs to assign a value at those timestamps for each relevant time
+series. It does so by taking the newest sample that is less than the lookback period ago.
+The lookback period is 5 minutes by default, but can be
+<a href="../command-line/prometheus.html">set with the <code>--query.lookback-delta</code> flag</a>
+or overridden on an individual query via the <code>lookback_delta</code> parameter.</p>
+<p>If a target scrape or rule evaluation no longer returns a sample for a time
+series that was previously present, this time series will be marked as stale.
+If a target is removed, the previously retrieved time series will be marked as
+stale soon after removal.</p>
+<p>If a query is evaluated at a sampling timestamp after a time series is marked
+as stale, then no value is returned for that time series. If new samples are
+subsequently ingested for that time series, they will be returned as expected.</p>
+<p>A time series will go stale when it is no longer exported, or the target no
+longer exists. Such time series will disappear from graphs
+at the times of their latest collected sample, and they will not be returned
+in queries after they are marked stale.</p>
+<p>Some exporters, which put their own timestamps on samples, get a different behaviour:
+series that stop being exported take the last value for (by default) 5 minutes before
+disappearing. The <code>track_timestamps_staleness</code> setting can change this.</p>
+<h3 id="avoiding-slow-queries-and-overloads">Avoiding slow queries and overloads</h3>
+<p>If a query needs to operate on a substantial amount of data, graphing it might
+time out or overload the server or browser. Thus, when constructing queries
+over unknown data, always start building the query in the tabular view of
+Prometheus&apos;s expression browser until the result set seems reasonable
+(hundreds, not thousands, of time series at most).  Only when you have filtered
+or aggregated your data sufficiently, switch to graph mode. If the expression
+still takes too long to graph ad-hoc, pre-record it via a <a href="../configuration/recording_rules.html#recording-rules">recording
+rule</a>.</p>
+<p>This is especially relevant for Prometheus&apos;s query language, where a bare
+metric name selector like <code>api_http_requests_total</code> could expand to thousands
+of time series with different labels. Also, keep in mind that expressions that
+aggregate over many time series will generate load on the server even if the
+output is only a small number of time series. This is similar to how it would
+be slow to sum all values of a column in a relational database, even if the
+output value is only a single number.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="api.html" class="navigation navigation-prev " aria-label="Previous page: HTTP API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="examples.html" class="navigation navigation-next " aria-label="Next page: Query Examples">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Querying Basics","nav_title":"Basics","sort_rank":1,"level":"1.4.2","depth":2,"next":{"title":"Query Examples","level":"1.4.3","depth":2,"path":"querying/examples.md","ref":"querying/examples.md","articles":[]},"previous":{"title":"HTTP API","level":"1.4.1","depth":2,"path":"querying/api.md","ref":"querying/api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"querying/basics.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

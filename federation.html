@@ -1,0 +1,727 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Federation · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="getting_started.html" />
+    
+    
+    <link rel="prev" href="feature_flags.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="command-line/">
+            
+                <a href="command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="command-line/prometheus.html">
+            
+                <a href="command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="command-line/promtool.html">
+            
+                <a href="command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="configuration/alerting_rules.html">
+            
+                <a href="configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration/">
+            
+                <a href="configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="configuration/https.html">
+            
+                <a href="configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="configuration/promtool.html">
+            
+                <a href="configuration/promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="configuration/recording_rules.html">
+            
+                <a href="configuration/recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="configuration/template_examples.html">
+            
+                <a href="configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="configuration/template_reference.html">
+            
+                <a href="configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="configuration/unit_testing_rules.html">
+            
+                <a href="configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="querying/api.html">
+            
+                <a href="querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="querying/basics.html">
+            
+                <a href="querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="querying/examples.html">
+            
+                <a href="querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="querying/functions.html">
+            
+                <a href="querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="querying/">
+            
+                <a href="querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="querying/operators.html">
+            
+                <a href="querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="querying/remote_read_api.html">
+            
+                <a href="querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="feature_flags.html">
+            
+                <a href="feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="getting_started.html">
+            
+                <a href="getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="http_sd.html">
+            
+                <a href="http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="management_api.html">
+            
+                <a href="management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="prometheus_agent.html">
+            
+                <a href="prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="stability.html">
+            
+                <a href="stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Federation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Federation allows a Prometheus server to scrape selected time series from
+another Prometheus server.</p>
+<p><em>Note about native histograms: To scrape native histograms via federation, the
+scraping Prometheus server needs to set <code>scrape_native_histograms: true</code> in its
+scrape config, implying that the protobuf format is used for scraping. Should
+the federated metrics contain a mix of different sample types (floats of any
+flavor, counter histograms, or gauge histograms) for the same metric name, the
+federation payload will contain multiple metric families with the same name
+(but different types &#x2013; for technical reasons, float samples are always federated
+as <code>untyped</code>, while histogram samples are federated with their full type
+information). Technically, this violates the rules of the protobuf exposition
+format, but Prometheus is nevertheless able to ingest all metrics correctly.</em></p>
+<h2 id="use-cases">Use cases</h2>
+<p>There are different use cases for federation. Commonly, it is used to either
+achieve scalable Prometheus monitoring setups or to pull related metrics from
+one service&apos;s Prometheus into another.</p>
+<h3 id="hierarchical-federation">Hierarchical federation</h3>
+<p>Hierarchical federation allows Prometheus to scale to environments with tens of
+data centers and millions of nodes. In this use case, the federation topology
+resembles a tree, with higher-level Prometheus servers collecting aggregated
+time series data from a larger number of subordinated servers.</p>
+<p>For example, a setup might consist of many per-datacenter Prometheus servers
+that collect data in high detail (instance-level drill-down), and a set of
+global Prometheus servers which collect and store only aggregated data
+(job-level drill-down) from those local servers. This provides an aggregate
+global view and detailed local views.</p>
+<h3 id="cross-service-federation">Cross-service federation</h3>
+<p>In cross-service federation, a Prometheus server of one service is configured
+to scrape selected data from another service&apos;s Prometheus server to enable
+alerting and queries against both datasets within a single server.</p>
+<p>For example, a cluster scheduler running multiple services might expose
+resource usage information (like memory and CPU usage) about service instances
+running on the cluster. On the other hand, a service running on that cluster
+will only expose application-specific service metrics. Often, these two sets of
+metrics are scraped by separate Prometheus servers. Using federation, the
+Prometheus server containing service-level metrics may pull in the cluster
+resource usage metrics about its specific service from the cluster Prometheus,
+so that both sets of metrics can be used within that server.</p>
+<h2 id="configuring-federation">Configuring federation</h2>
+<p>On any given Prometheus server, the <code>/federate</code> endpoint allows retrieving the
+current value for a selected set of time series in that server. At least one
+<code>match[]</code> URL parameter must be specified to select the series to expose. Each
+<code>match[]</code> argument needs to specify an
+<a href="querying/basics.html#instant-vector-selectors">instant vector selector</a> like
+<code>up</code> or <code>{job=&quot;api-server&quot;}</code>. If multiple <code>match[]</code> parameters are provided,
+the union of all matched series is selected.</p>
+<p>To federate metrics from one server to another, configure your destination
+Prometheus server to scrape from the <code>/federate</code> endpoint of a source server,
+while also enabling the <code>honor_labels</code> scrape option (to not overwrite any
+labels exposed by the source server) and passing in the desired <code>match[]</code>
+parameters. For example, the following <code>scrape_configs</code> federates any series
+with the label <code>job=&quot;prometheus&quot;</code> or a metric name starting with <code>job:</code> from
+the Prometheus servers at <code>source-prometheus-{1,2,3}:9090</code> into the scraping
+Prometheus:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">scrape_configs</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">job_name</span><span class="token punctuation">:</span> <span class="token string">&apos;federate&apos;</span>
+    <span class="token key atrule">scrape_interval</span><span class="token punctuation">:</span> 15s
+
+    <span class="token key atrule">honor_labels</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">metrics_path</span><span class="token punctuation">:</span> <span class="token string">&apos;/federate&apos;</span>
+
+    <span class="token key atrule">params</span><span class="token punctuation">:</span>
+      &apos;match<span class="token punctuation">[</span><span class="token punctuation">]</span>&apos;<span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token string">&apos;{job=&quot;prometheus&quot;}&apos;</span>
+        <span class="token punctuation">-</span> <span class="token string">&apos;{__name__=~&quot;job:.*&quot;}&apos;</span>
+
+    <span class="token key atrule">static_configs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">targets</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token string">&apos;source-prometheus-1:9090&apos;</span>
+        <span class="token punctuation">-</span> <span class="token string">&apos;source-prometheus-2:9090&apos;</span>
+        <span class="token punctuation">-</span> <span class="token string">&apos;source-prometheus-3:9090&apos;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="feature_flags.html" class="navigation navigation-prev " aria-label="Previous page: Feature Flags">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="getting_started.html" class="navigation navigation-next " aria-label="Next page: Getting Started">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Federation","sort_rank":6,"level":"1.6","depth":1,"next":{"title":"Getting Started","level":"1.7","depth":1,"path":"getting_started.md","ref":"getting_started.md","articles":[]},"previous":{"title":"Feature Flags","level":"1.5","depth":1,"path":"feature_flags.md","ref":"feature_flags.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"federation.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

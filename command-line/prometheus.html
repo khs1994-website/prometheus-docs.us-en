@@ -1,0 +1,939 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Prometheus · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="promtool.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="prometheus.html">
+            
+                <a href="prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="promtool.html">
+            
+                <a href="promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../configuration/alerting_rules.html">
+            
+                <a href="../configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../configuration/">
+            
+                <a href="../configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../configuration/https.html">
+            
+                <a href="../configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../configuration/promtool.html">
+            
+                <a href="../configuration/promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../configuration/recording_rules.html">
+            
+                <a href="../configuration/recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../configuration/template_examples.html">
+            
+                <a href="../configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../configuration/template_reference.html">
+            
+                <a href="../configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../configuration/unit_testing_rules.html">
+            
+                <a href="../configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../querying/api.html">
+            
+                <a href="../querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../querying/basics.html">
+            
+                <a href="../querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../querying/examples.html">
+            
+                <a href="../querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../querying/functions.html">
+            
+                <a href="../querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../querying/">
+            
+                <a href="../querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../querying/operators.html">
+            
+                <a href="../querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../querying/remote_read_api.html">
+            
+                <a href="../querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../feature_flags.html">
+            
+                <a href="../feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../federation.html">
+            
+                <a href="../federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../getting_started.html">
+            
+                <a href="../getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http_sd.html">
+            
+                <a href="../http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../management_api.html">
+            
+                <a href="../management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../prometheus_agent.html">
+            
+                <a href="../prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../stability.html">
+            
+                <a href="../stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../storage.html">
+            
+                <a href="../storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Prometheus</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>The Prometheus monitoring server</p>
+<h2 id="flags">Flags</h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">-h</code>, <code class="text-nowrap">--help</code></td>
+<td>Show context-sensitive help (also try --help-long and --help-man).</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--version</code></td>
+<td>Show application version.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--config.file</code></td>
+<td>Prometheus configuration file path.</td>
+<td><code>prometheus.yml</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--config.auto-reload-interval</code></td>
+<td>Specifies the interval for checking and automatically reloading the Prometheus configuration file upon detecting changes.</td>
+<td><code>30s</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.listen-address</code> <code class="text-nowrap">...</code></td>
+<td>Address to listen on for UI, API, and telemetry. Can be repeated.</td>
+<td><code>0.0.0.0:9090</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--auto-gomaxprocs</code></td>
+<td>Automatically set GOMAXPROCS to match Linux container CPU quota</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--auto-gomemlimit</code></td>
+<td>Automatically set GOMEMLIMIT to match Linux container or system memory limit</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--auto-gomemlimit.ratio</code></td>
+<td>The ratio of reserved GOMEMLIMIT memory to the detected maximum container or system memory</td>
+<td><code>0.9</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.config.file</code></td>
+<td>[EXPERIMENTAL] Path to configuration file that can enable TLS or authentication.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.read-timeout</code></td>
+<td>Maximum duration before timing out read of the request, and closing idle connections.</td>
+<td><code>5m</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.max-connections</code></td>
+<td>Maximum number of simultaneous connections across all listeners.</td>
+<td><code>512</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.max-notifications-subscribers</code></td>
+<td>Limits the maximum number of subscribers that can concurrently receive live notifications. If the limit is reached, new subscription requests will be denied until existing connections close.</td>
+<td><code>16</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.external-url</code></td>
+<td>The URL under which Prometheus is externally reachable (for example, if Prometheus is served via a reverse proxy). Used for generating relative and absolute links back to Prometheus itself. If the URL has a path portion, it will be used to prefix all HTTP endpoints served by Prometheus. If omitted, relevant URL components will be derived automatically.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.route-prefix</code></td>
+<td>Prefix for the internal routes of web endpoints. Defaults to path of --web.external-url.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.user-assets</code></td>
+<td>Path to static asset directory, available at /user.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.enable-lifecycle</code></td>
+<td>Enable shutdown and reload via HTTP request.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.enable-admin-api</code></td>
+<td>Enable API endpoints for admin control actions.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.enable-remote-write-receiver</code></td>
+<td>Enable API endpoint accepting remote write requests.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.remote-write-receiver.accepted-protobuf-messages</code></td>
+<td>List of the remote write protobuf messages to accept when receiving the remote writes. Supported values: prometheus.WriteRequest, io.prometheus.write.v2.Request</td>
+<td><code>prometheus.WriteRequest</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.enable-otlp-receiver</code></td>
+<td>Enable API endpoint accepting OTLP write requests.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.console.templates</code></td>
+<td>Path to the console template directory, available at /consoles.</td>
+<td><code>consoles</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.console.libraries</code></td>
+<td>Path to the console library directory.</td>
+<td><code>console_libraries</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.page-title</code></td>
+<td>Document title of Prometheus instance.</td>
+<td><code>Prometheus Time Series Collection and Processing Server</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--web.cors.origin</code></td>
+<td>Regex for CORS origin. It is fully anchored. Example: &apos;https?://(domain1\</td>
+<td>domain2).com&apos;</td>
+<td><code>.*</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.tsdb.path</code></td>
+<td>Base path for metrics storage. Use with server mode only.</td>
+<td><code>data/</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.tsdb.retention.time</code></td>
+<td>[DEPRECATED] How long to retain samples in storage. If neither this flag nor &quot;storage.tsdb.retention.size&quot; is set, the retention time defaults to 15d. Units Supported: y, w, d, h, m, s, ms. This flag has been deprecated, use the storage.tsdb.retention.time field in the config file instead. Use with server mode only.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.tsdb.retention.size</code></td>
+<td>[DEPRECATED] Maximum number of bytes that can be stored for blocks. A unit is required, supported units: B, KB, MB, GB, TB, PB, EB. Ex: &quot;512MB&quot;. Based on powers-of-2, so 1KB is 1024B. This flag has been deprecated, use the storage.tsdb.retention.size field in the config file instead. Use with server mode only.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.tsdb.no-lockfile</code></td>
+<td>Do not create lockfile in data directory. Use with server mode only.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.tsdb.head-chunks-write-queue-size</code></td>
+<td>Size of the queue through which head chunks are written to the disk to be m-mapped, 0 disables the queue completely. Experimental. Use with server mode only.</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.tsdb.delay-compact-file.path</code></td>
+<td>Path to a JSON file with uploaded TSDB blocks e.g. Thanos shipper meta file. If set TSDB will only compact 1 level blocks that are marked as uploaded in that file, improving external storage integrations e.g. with Thanos sidecar. 1+ level compactions won&apos;t be delayed. Use with server mode only.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.agent.path</code></td>
+<td>Base path for metrics storage. Use with agent mode only.</td>
+<td><code>data-agent/</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.agent.wal-compression</code></td>
+<td>Compress the agent WAL. If false, the --storage.agent.wal-compression-type flag is ignored. Use with agent mode only.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.agent.retention.min-time</code></td>
+<td>Minimum age samples may be before being considered for deletion when the WAL is truncated Use with agent mode only.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.agent.retention.max-time</code></td>
+<td>Maximum age samples may be before being forcibly deleted when the WAL is truncated Use with agent mode only.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.agent.no-lockfile</code></td>
+<td>Do not create lockfile in data directory. Use with agent mode only.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.remote.flush-deadline</code></td>
+<td>How long to wait flushing sample on shutdown or config reload.</td>
+<td><code>1m</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.remote.read-sample-limit</code></td>
+<td>Maximum overall number of samples to return via the remote read interface, in a single query. 0 means no limit. This limit is ignored for streamed response types. Use with server mode only.</td>
+<td><code>5e7</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.remote.read-concurrent-limit</code></td>
+<td>Maximum number of concurrent remote read calls. 0 means no limit. Use with server mode only.</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--storage.remote.read-max-bytes-in-frame</code></td>
+<td>Maximum number of bytes in a single frame for streaming remote read response types before marshalling. Note that client might have limit on frame size as well. 1MB as recommended by protobuf by default. Use with server mode only.</td>
+<td><code>1048576</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--rules.alert.for-outage-tolerance</code></td>
+<td>Max time to tolerate prometheus outage for restoring &quot;for&quot; state of alert. Use with server mode only.</td>
+<td><code>1h</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--rules.alert.for-grace-period</code></td>
+<td>Minimum duration between alert and restored &quot;for&quot; state. This is maintained only for alerts with configured &quot;for&quot; time greater than grace period. Use with server mode only.</td>
+<td><code>10m</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--rules.alert.resend-delay</code></td>
+<td>Minimum amount of time to wait before resending an alert to Alertmanager. Use with server mode only.</td>
+<td><code>1m</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--rules.max-concurrent-evals</code></td>
+<td>Global concurrency limit for independent rules that can run concurrently. When set, &quot;query.max-concurrency&quot; may need to be adjusted accordingly. Use with server mode only.</td>
+<td><code>4</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--alertmanager.notification-queue-capacity</code></td>
+<td>The capacity of the queue for pending Alertmanager notifications. Use with server mode only.</td>
+<td><code>10000</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--alertmanager.notification-batch-size</code></td>
+<td>The maximum number of notifications per batch to send to the Alertmanager. Use with server mode only.</td>
+<td><code>256</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--alertmanager.drain-notification-queue-on-shutdown</code></td>
+<td>Send any outstanding Alertmanager notifications when shutting down. If false, any outstanding Alertmanager notifications will be dropped when shutting down. Use with server mode only.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--query.lookback-delta</code></td>
+<td>The maximum lookback duration for retrieving metrics during expression evaluations and federation. Use with server mode only.</td>
+<td><code>5m</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--query.timeout</code></td>
+<td>Maximum time a query may take before being aborted. Use with server mode only.</td>
+<td><code>2m</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--query.max-concurrency</code></td>
+<td>Maximum number of queries executed concurrently. Use with server mode only.</td>
+<td><code>20</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--query.max-samples</code></td>
+<td>Maximum number of samples a single query can load into memory. Note that queries will fail if they try to load more samples than this into memory, so this also limits the number of samples a query can return. Use with server mode only.</td>
+<td><code>50000000</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--enable-feature</code> <code class="text-nowrap">...</code></td>
+<td>Comma separated feature names to enable. Valid options: exemplar-storage, expand-external-labels, memory-snapshot-on-shutdown, promql-per-step-stats, promql-experimental-functions, extra-scrape-metrics, auto-gomaxprocs, created-timestamp-zero-ingestion, concurrent-rule-eval, delayed-compaction, old-ui, otlp-deltatocumulative, promql-duration-expr, use-uncached-io, promql-extended-range-selectors, promql-binop-fill-modifiers. See <a href="https://prometheus.io/docs/prometheus/latest/feature_flags/" target="_blank">https://prometheus.io/docs/prometheus/latest/feature_flags/</a> for more details.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--agent</code></td>
+<td>Run Prometheus in &apos;Agent mode&apos;.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--log.level</code></td>
+<td>Only log messages with the given severity or above. One of: [debug, info, warn, error]</td>
+<td><code>info</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--log.format</code></td>
+<td>Output format of log messages. One of: [logfmt, json]</td>
+<td><code>logfmt</code></td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Command Line">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="promtool.html" class="navigation navigation-next " aria-label="Next page: Promtool">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Prometheus","level":"1.2.2","depth":2,"next":{"title":"Promtool","level":"1.2.3","depth":2,"path":"command-line/promtool.md","ref":"command-line/promtool.md","articles":[]},"previous":{"title":"Command Line","level":"1.2.1","depth":2,"path":"command-line/index.md","ref":"command-line/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"command-line/prometheus.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

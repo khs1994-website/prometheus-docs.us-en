@@ -1,0 +1,932 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Template Reference · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="unit_testing_rules.html" />
+    
+    
+    <link rel="prev" href="template_examples.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../command-line/">
+            
+                <a href="../command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../command-line/prometheus.html">
+            
+                <a href="../command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../command-line/promtool.html">
+            
+                <a href="../command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="alerting_rules.html">
+            
+                <a href="alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="https.html">
+            
+                <a href="https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="promtool.html">
+            
+                <a href="promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="recording_rules.html">
+            
+                <a href="recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="template_examples.html">
+            
+                <a href="template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="template_reference.html">
+            
+                <a href="template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="unit_testing_rules.html">
+            
+                <a href="unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../querying/api.html">
+            
+                <a href="../querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../querying/basics.html">
+            
+                <a href="../querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../querying/examples.html">
+            
+                <a href="../querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../querying/functions.html">
+            
+                <a href="../querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../querying/">
+            
+                <a href="../querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../querying/operators.html">
+            
+                <a href="../querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../querying/remote_read_api.html">
+            
+                <a href="../querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../feature_flags.html">
+            
+                <a href="../feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../federation.html">
+            
+                <a href="../federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../getting_started.html">
+            
+                <a href="../getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http_sd.html">
+            
+                <a href="../http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../management_api.html">
+            
+                <a href="../management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../prometheus_agent.html">
+            
+                <a href="../prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../stability.html">
+            
+                <a href="../stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../storage.html">
+            
+                <a href="../storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Template Reference</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Prometheus supports templating in the annotations and labels of alerts,
+as well as in served console pages. Templates have the ability to run
+queries against the local database, iterate over data, use conditionals,
+format data, etc. The Prometheus templating language is based on the <a href="https://golang.org/pkg/text/template/" target="_blank">Go
+templating</a> system.</p>
+<h2 id="data-structures">Data Structures</h2>
+<p>The primary data structure for dealing with time series data is the sample, defined as:</p>
+<pre class="language-"><code class="lang-go"><span class="token keyword">type</span> sample <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+  Labels <span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+  Value  <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The metric name of the sample is encoded in a special <code>__name__</code> label in the <code>Labels</code> map.</p>
+<p><code>[]sample</code> means a list of samples.</p>
+<p><code>interface{}</code> in Go is similar to a void pointer in C.</p>
+<h2 id="functions">Functions</h2>
+<p>In addition to the <a href="https://golang.org/pkg/text/template/#hdr-Functions" target="_blank">default
+functions</a> provided by Go
+templating, Prometheus provides functions for easier processing of query
+results in templates.</p>
+<p>If functions are used in a pipeline, the pipeline value is passed as the last argument.</p>
+<h3 id="queries">Queries</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Returns</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>query string</td>
+<td>[]sample</td>
+<td>Queries the database, does not support returning range vectors.</td>
+</tr>
+<tr>
+<td>first</td>
+<td>[]sample</td>
+<td>sample</td>
+<td>Equivalent to <code>index a 0</code></td>
+</tr>
+<tr>
+<td>label</td>
+<td>label, sample</td>
+<td>string</td>
+<td>Equivalent to <code>index sample.Labels label</code></td>
+</tr>
+<tr>
+<td>value</td>
+<td>sample</td>
+<td>interface{}</td>
+<td>Equivalent to <code>sample.Value</code></td>
+</tr>
+<tr>
+<td>sortByLabel</td>
+<td>label, []samples</td>
+<td>[]sample</td>
+<td>Sorts the samples by the given label. Is stable.</td>
+</tr>
+</tbody>
+</table>
+<p><code>first</code>, <code>label</code> and <code>value</code> are intended to make query results easily usable in pipelines.</p>
+<h3 id="numbers">Numbers</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Returns</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>humanize</td>
+<td>number or string</td>
+<td>string</td>
+<td>Converts a number to a more readable format, using <a href="https://en.wikipedia.org/wiki/Metric_prefix" target="_blank">metric prefixes</a>.</td>
+</tr>
+<tr>
+<td>humanize1024</td>
+<td>number or string</td>
+<td>string</td>
+<td>Like <code>humanize</code>, but uses 1024 as the base rather than 1000.</td>
+</tr>
+<tr>
+<td>humanizeDuration</td>
+<td>number or string</td>
+<td>string</td>
+<td>Converts a duration in seconds to a more readable format.</td>
+</tr>
+<tr>
+<td>humanizePercentage</td>
+<td>number or string</td>
+<td>string</td>
+<td>Converts a ratio value to a fraction of 100.</td>
+</tr>
+<tr>
+<td>humanizeTimestamp</td>
+<td>number or string</td>
+<td>string</td>
+<td>Converts a Unix timestamp in seconds to a more readable format.</td>
+</tr>
+<tr>
+<td>toTime</td>
+<td>number or string</td>
+<td>*time.Time</td>
+<td>Converts a Unix timestamp in seconds to a time.Time.</td>
+</tr>
+<tr>
+<td>toDuration</td>
+<td>number or string</td>
+<td>*time.Duration</td>
+<td>Converts a duration in seconds to a time.Duration.</td>
+</tr>
+<tr>
+<td>now</td>
+<td>none</td>
+<td>float64</td>
+<td>Returns the Unix timestamp in seconds at the time of the template evaluation.</td>
+</tr>
+</tbody>
+</table>
+<p>Humanizing functions are intended to produce reasonable output for consumption
+by humans, and are not guaranteed to return the same results between Prometheus
+versions.</p>
+<h3 id="strings">Strings</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Returns</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>string</td>
+<td><a href="https://pkg.go.dev/golang.org/x/text/cases#Title" target="_blank">cases.Title</a>, capitalises first character of each word.</td>
+</tr>
+<tr>
+<td>toUpper</td>
+<td>string</td>
+<td>string</td>
+<td><a href="https://golang.org/pkg/strings/#ToUpper" target="_blank">strings.ToUpper</a>, converts all characters to upper case.</td>
+</tr>
+<tr>
+<td>toLower</td>
+<td>string</td>
+<td>string</td>
+<td><a href="https://golang.org/pkg/strings/#ToLower" target="_blank">strings.ToLower</a>, converts all characters to lower case.</td>
+</tr>
+<tr>
+<td>stripPort</td>
+<td>string</td>
+<td>string</td>
+<td><a href="https://pkg.go.dev/net#SplitHostPort" target="_blank">net.SplitHostPort</a>, splits string into host and port, then returns only host.</td>
+</tr>
+<tr>
+<td>match</td>
+<td>pattern, text</td>
+<td>boolean</td>
+<td><a href="https://golang.org/pkg/regexp/#MatchString" target="_blank">regexp.MatchString</a> Tests for a unanchored regexp match.</td>
+</tr>
+<tr>
+<td>reReplaceAll</td>
+<td>pattern, replacement, text</td>
+<td>string</td>
+<td><a href="https://golang.org/pkg/regexp/#Regexp.ReplaceAllString" target="_blank">Regexp.ReplaceAllString</a> Regexp substitution, unanchored.</td>
+</tr>
+<tr>
+<td>graphLink</td>
+<td>expr</td>
+<td>string</td>
+<td>Returns path to graph view in the <a href="https://prometheus.io/docs/visualization/browser/" target="_blank">expression browser</a> for the expression.</td>
+</tr>
+<tr>
+<td>tableLink</td>
+<td>expr</td>
+<td>string</td>
+<td>Returns path to tabular (&quot;Table&quot;) view in the <a href="https://prometheus.io/docs/visualization/browser/" target="_blank">expression browser</a> for the expression.</td>
+</tr>
+<tr>
+<td>parseDuration</td>
+<td>string</td>
+<td>float</td>
+<td>Parses a duration string such as &quot;1h&quot; into the number of seconds it represents.</td>
+</tr>
+<tr>
+<td>stripDomain</td>
+<td>string</td>
+<td>string</td>
+<td>Removes the domain part of a FQDN. Leaves port untouched.</td>
+</tr>
+<tr>
+<td>urlQueryEscape</td>
+<td>string</td>
+<td>string</td>
+<td><a href="https://pkg.go.dev/net/url#QueryEscape" target="_blank">url.QueryEscape</a> Escapes the string so it can be safely placed inside a URL query.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="others">Others</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Arguments</th>
+<th>Returns</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>args</td>
+<td>[]interface{}</td>
+<td>map[string]interface{}</td>
+<td>This converts a list of objects to a map with keys arg0, arg1 etc. This is intended to allow multiple arguments to be passed to templates.</td>
+</tr>
+<tr>
+<td>tmpl</td>
+<td>string, []interface{}</td>
+<td>nothing</td>
+<td>Like the built-in <code>template</code>, but allows non-literals as the template name. Note that the result is assumed to be safe, and will not be auto-escaped. Only available in consoles.</td>
+</tr>
+<tr>
+<td>safeHtml</td>
+<td>string</td>
+<td>string</td>
+<td>Marks string as HTML not requiring auto-escaping.</td>
+</tr>
+<tr>
+<td>externalURL</td>
+<td><em>none</em></td>
+<td>string</td>
+<td>The external URL under which Prometheus is externally reachable.</td>
+</tr>
+<tr>
+<td>pathPrefix</td>
+<td><em>none</em></td>
+<td>string</td>
+<td>The external URL <a href="https://pkg.go.dev/net/url#URL" target="_blank">path</a> for use in console templates.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-type-differences">Template type differences</h2>
+<p>Each of the types of templates provide different information that can be used to
+parameterize templates, and have a few other differences.</p>
+<h3 id="alert-field-templates">Alert field templates</h3>
+<p><code>.Value</code>, <code>.Labels</code>, <code>.ExternalLabels</code>, and <code>.ExternalURL</code> contain the alert value, the alert
+labels, the globally configured external labels, and the external URL (configured with <code>--web.external-url</code>) respectively. They are
+also exposed as the <code>$value</code>, <code>$labels</code>, <code>$externalLabels</code>, and <code>$externalURL</code> variables for
+convenience.</p>
+<h3 id="console-templates">Console templates</h3>
+<p>Consoles are exposed on <code>/consoles/</code>, and sourced from the directory pointed to
+by the <code>-web.console.templates</code> flag.</p>
+<p>Console templates are rendered with
+<a href="https://golang.org/pkg/html/template/" target="_blank">html/template</a>, which provides
+auto-escaping. To bypass the auto-escaping use the <code>safe*</code> functions.,</p>
+<p>URL parameters are available as a map in <code>.Params</code>. To access multiple URL
+parameters by the same name, <code>.RawParams</code> is a map of the list values for each
+parameter. The URL path is available in <code>.Path</code>, excluding the <code>/consoles/</code>
+prefix. The globally configured external labels are available as
+<code>.ExternalLabels</code>. There are also convenience variables for all four:
+<code>$rawParams</code>, <code>$params</code>, <code>$path</code>, and <code>$externalLabels</code>.</p>
+<p>Consoles also have access to all the templates defined with <code>{{define
+&quot;templateName&quot;}}...{{end}}</code> found in <code>*.lib</code> files in the directory pointed to
+by the <code>-web.console.libraries</code> flag. As this is a shared namespace, take care
+to avoid clashes with other users. Template names beginning with <code>prom</code>,
+<code>_prom</code>, and <code>__</code> are reserved for use by Prometheus, as are the functions
+listed above.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="template_examples.html" class="navigation navigation-prev " aria-label="Previous page: Template Examples">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="unit_testing_rules.html" class="navigation navigation-next " aria-label="Next page: Unit Testing For Rules">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Template Reference","sort_rank":5,"level":"1.3.7","depth":2,"next":{"title":"Unit Testing For Rules","level":"1.3.8","depth":2,"path":"configuration/unit_testing_rules.md","ref":"configuration/unit_testing_rules.md","articles":[]},"previous":{"title":"Template Examples","level":"1.3.6","depth":2,"path":"configuration/template_examples.md","ref":"configuration/template_examples.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"configuration/template_reference.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

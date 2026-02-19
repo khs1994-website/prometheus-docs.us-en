@@ -1,0 +1,2058 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTTP API · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="basics.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../command-line/">
+            
+                <a href="../command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../command-line/prometheus.html">
+            
+                <a href="../command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../command-line/promtool.html">
+            
+                <a href="../command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../configuration/alerting_rules.html">
+            
+                <a href="../configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../configuration/">
+            
+                <a href="../configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../configuration/https.html">
+            
+                <a href="../configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../configuration/promtool.html">
+            
+                <a href="../configuration/promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../configuration/recording_rules.html">
+            
+                <a href="../configuration/recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../configuration/template_examples.html">
+            
+                <a href="../configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../configuration/template_reference.html">
+            
+                <a href="../configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../configuration/unit_testing_rules.html">
+            
+                <a href="../configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="api.html">
+            
+                <a href="api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="examples.html">
+            
+                <a href="examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="functions.html">
+            
+                <a href="functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="operators.html">
+            
+                <a href="operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="remote_read_api.html">
+            
+                <a href="remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../feature_flags.html">
+            
+                <a href="../feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../federation.html">
+            
+                <a href="../federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../getting_started.html">
+            
+                <a href="../getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http_sd.html">
+            
+                <a href="../http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../management_api.html">
+            
+                <a href="../management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../prometheus_agent.html">
+            
+                <a href="../prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../stability.html">
+            
+                <a href="../stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../storage.html">
+            
+                <a href="../storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >HTTP API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>The current stable HTTP API is reachable under <code>/api/v1</code> on a Prometheus
+server. Any non-breaking additions will be added under that endpoint.</p>
+<h2 id="openapi-specification">OpenAPI Specification</h2>
+<p>An OpenAPI specification for the HTTP API is available at <code>/api/v1/openapi.yaml</code>.
+By default, it returns OpenAPI 3.1 for broader compatibility. Use <code>?openapi_version=3.2</code>
+for OpenAPI 3.2, which includes advanced features and endpoints like <code>/api/v1/notifications/live</code>.</p>
+<p>This machine-readable specification describes all available endpoints, request parameters,
+response formats, and schemas.</p>
+<p>The OpenAPI specification can be used to:</p>
+<ul>
+<li>Generate client libraries in various programming languages.</li>
+<li>Validate API requests and responses.</li>
+<li>Generate interactive API documentation.</li>
+<li>Test API endpoints.</li>
+</ul>
+<h2 id="format-overview">Format overview</h2>
+<p>The API response format is JSON. Every successful API request returns a <code>2xx</code>
+status code.</p>
+<p>Invalid requests that reach the API handlers return a JSON error object
+and one of the following HTTP response codes:</p>
+<ul>
+<li><code>400 Bad Request</code> when parameters are missing or incorrect.</li>
+<li><code>422 Unprocessable Entity</code> when an expression can&apos;t be executed
+(<a href="https://tools.ietf.org/html/rfc4918#page-78" target="_blank">RFC4918</a>).</li>
+<li><code>503 Service Unavailable</code> when queries time out or abort.</li>
+</ul>
+<p>Other non-<code>2xx</code> codes may be returned for errors occurring before the API
+endpoint is reached.</p>
+<p>An array of warnings may be returned if there are errors that do
+not inhibit the request execution. An additional array of info-level
+annotations may be returned for potential query issues that may or may
+not be false positives. All of the data that was successfully collected
+will be returned in the data field.</p>
+<p>The JSON response envelope format is as follows:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span> | <span class="token string">&quot;error&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> &lt;data&gt;<span class="token punctuation">,</span>
+
+  <span class="token comment">// Only set if status is </span><span class="token string">&quot;error&quot;</span>. The data field may still hold
+  <span class="token comment">// additional data.</span>
+  <span class="token property">&quot;errorType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;string&gt;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;error&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;string&gt;&quot;</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// Only set if there were warnings while executing the request.</span>
+  <span class="token comment">// There will still be data in the data field.</span>
+  <span class="token property">&quot;warnings&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;&lt;string&gt;&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token comment">// Only set if there were info-level annotations while executing the request.</span>
+  <span class="token property">&quot;infos&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;&lt;string&gt;&quot;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Generic placeholders are defined as follows:</p>
+<ul>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: Input timestamps may be provided either in
+<a href="https://www.ietf.org/rfc/rfc3339.txt" target="_blank">RFC3339</a> format or as a Unix timestamp
+in seconds, with optional decimal places for sub-second precision. Output
+timestamps are always represented as Unix timestamps in seconds.</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>series_selector</span><span class="token punctuation">&gt;</span></span></code>: Prometheus <a href="basics.html#time-series-selectors">time series
+selectors</a> like <code>http_requests_total</code> or
+<code>http_requests_total{method=~&quot;(GET|POST)&quot;}</code> and need to be URL-encoded.</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>duration</span><span class="token punctuation">&gt;</span></span></code>: <a href="basics.html#float-literals-and-time-durations">the subset of Prometheus float literals using time units</a>.
+For example, <code>5m</code> refers to a duration of 5 minutes.</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bool</span><span class="token punctuation">&gt;</span></span></code>: boolean values (strings <code>true</code> and <code>false</code>).</li>
+</ul>
+<p>Note: Names of query parameters that may be repeated end with <code>[]</code>.</p>
+<h2 id="expression-queries">Expression queries</h2>
+<p>Query language expressions may be evaluated at a single instant or over a range
+of time. The sections below describe the API endpoints for each type of
+expression query.</p>
+<h3 id="instant-queries">Instant queries</h3>
+<p>The following endpoint evaluates an instant query at a single point in time:</p>
+<pre class="language-"><code>GET /api/v1/query
+POST /api/v1/query
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>query=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: Prometheus expression query string.</li>
+<li><code>time=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: Evaluation timestamp. Optional.</li>
+<li><code>timeout=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>duration</span><span class="token punctuation">&gt;</span></span></code>: Evaluation timeout. Optional. Defaults to and
+ is capped by the value of the <code>-query.timeout</code> flag.</li>
+<li><code>limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Maximum number of returned series. Doesn&apos;t affect scalars or strings but truncates the number of series for matrices and vectors. Optional. 0 means disabled.</li>
+<li><code>lookback_delta=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Override the the <a href="#staleness">lookback period</a> just for this query. Optional.</li>
+<li><code>stats=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: Include query statistics in the response. If set to <code>all</code>, includes detailed statistics. Optional.</li>
+</ul>
+<p>The current server time is used if the <code>time</code> parameter is omitted.</p>
+<p>You can URL-encode these parameters directly in the request body by using the <code>POST</code> method and
+<code>Content-Type: application/x-www-form-urlencoded</code> header. This is useful when specifying a large
+query that may breach server-side URL character limits.</p>
+<p>The <code>data</code> section of the query result has the following format:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;resultType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;matrix&quot;</span> | <span class="token string">&quot;vector&quot;</span> | <span class="token string">&quot;scalar&quot;</span> | <span class="token string">&quot;string&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> &lt;value&gt;
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span></code> refers to the query result data, which has varying formats
+depending on the <code>resultType</code>. See the <a href="#expression-query-result-formats">expression query result
+formats</a>.</p>
+<p>The following example evaluates the expression <code>up</code> at the time
+<code>2015-07-01T20:10:51.781Z</code>:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> <span class="token string">&apos;http://localhost:9090/api/v1/query?query=up&amp;time=2015-07-01T20:10:51.781Z&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;status&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+   <span class="token property">&quot;data&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;resultType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;vector&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;result&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+         <span class="token punctuation">{</span>
+            <span class="token property">&quot;metric&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;__name__&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;up&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;job&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;instance&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:9090&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token number">1435781451.781</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span> <span class="token punctuation">]</span>
+         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span>
+            <span class="token property">&quot;metric&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;__name__&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;up&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;job&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;node&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;instance&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:9100&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token number">1435781451.781</span><span class="token punctuation">,</span> <span class="token string">&quot;0&quot;</span> <span class="token punctuation">]</span>
+         <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="range-queries">Range queries</h3>
+<p>The following endpoint evaluates an expression query over a range of time:</p>
+<pre class="language-"><code>GET /api/v1/query_range
+POST /api/v1/query_range
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>query=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: Prometheus expression query string.</li>
+<li><code>start=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: Start timestamp, inclusive.</li>
+<li><code>end=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: End timestamp, inclusive.</li>
+<li><code>step=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>duration</span> <span class="token attr-name">|</span> <span class="token attr-name">float</span><span class="token punctuation">&gt;</span></span></code>: Query resolution step width in <code>duration</code> format or float number of seconds.</li>
+<li><code>timeout=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>duration</span><span class="token punctuation">&gt;</span></span></code>: Evaluation timeout. Optional. Defaults to and
+ is capped by the value of the <code>-query.timeout</code> flag.</li>
+<li><code>limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Maximum number of returned series. Optional. 0 means disabled.</li>
+<li><code>lookback_delta=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Override the the <a href="#staleness">lookback period</a> just for this query. Optional.</li>
+<li><code>stats=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: Include query statistics in the response. If set to <code>all</code>, includes detailed statistics. Optional.</li>
+</ul>
+<p>You can URL-encode these parameters directly in the request body by using the <code>POST</code> method and
+<code>Content-Type: application/x-www-form-urlencoded</code> header. This is useful when specifying a large
+query that may breach server-side URL character limits.</p>
+<p>The <code>data</code> section of the query result has the following format:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;resultType&quot;</span><span class="token operator">:</span> <span class="token string">&quot;matrix&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> &lt;value&gt;
+<span class="token punctuation">}</span>
+</code></pre>
+<p>For the format of the <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">&gt;</span></span></code> placeholder, see the <a href="#range-vectors">range-vector result
+format</a>.</p>
+<p>The following example evaluates the expression <code>up</code> over a 30-second range with
+a query resolution of 15 seconds.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> <span class="token string">&apos;http://localhost:9090/api/v1/query_range?query=up&amp;start=2015-07-01T20:10:30.781Z&amp;end=2015-07-01T20:11:00.781Z&amp;step=15s&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;status&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+   <span class="token property">&quot;data&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;resultType&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;matrix&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;result&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+         <span class="token punctuation">{</span>
+            <span class="token property">&quot;metric&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;__name__&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;up&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;job&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;instance&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:9090&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;values&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+               <span class="token punctuation">[</span> <span class="token number">1435781430.781</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+               <span class="token punctuation">[</span> <span class="token number">1435781445.781</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+               <span class="token punctuation">[</span> <span class="token number">1435781460.781</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span> <span class="token punctuation">]</span>
+            <span class="token punctuation">]</span>
+         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span>
+            <span class="token property">&quot;metric&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;__name__&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;up&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;job&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;node&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;instance&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:9091&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;values&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+               <span class="token punctuation">[</span> <span class="token number">1435781430.781</span><span class="token punctuation">,</span> <span class="token string">&quot;0&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+               <span class="token punctuation">[</span> <span class="token number">1435781445.781</span><span class="token punctuation">,</span> <span class="token string">&quot;0&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+               <span class="token punctuation">[</span> <span class="token number">1435781460.781</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span> <span class="token punctuation">]</span>
+            <span class="token punctuation">]</span>
+         <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="formatting-query-expressions">Formatting query expressions</h2>
+<p>The following endpoint formats a PromQL expression in a prettified way:</p>
+<pre class="language-"><code>GET /api/v1/format_query
+POST /api/v1/format_query
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>query=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: Prometheus expression query string.</li>
+</ul>
+<p>You can URL-encode these parameters directly in the request body by using the <code>POST</code> method and
+<code>Content-Type: application/x-www-form-urlencoded</code> header. This is useful when specifying a large
+query that may breach server-side URL character limits.</p>
+<p>The <code>data</code> section of the query result is a string containing the formatted query expression. Note that any comments are removed in the formatted string.</p>
+<p>The following example formats the expression <code>foo/bar</code>:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> <span class="token string">&apos;http://localhost:9090/api/v1/format_query?query=foo/bar&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;status&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+   <span class="token property">&quot;data&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;foo / bar&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="parsing-a-promql-expressions-into-a-abstract-syntax-tree-ast">Parsing a PromQL expressions into a abstract syntax tree (AST)</h2>
+<p>This endpoint is <strong>experimental</strong> and might change in the future. It is currently only meant to be used by Prometheus&apos; own web UI, and the endpoint name and exact format returned may change from one Prometheus version to another. It may also be removed again in case it is no longer needed by the UI.</p>
+<p>The following endpoint parses a PromQL expression and returns it as a JSON-formatted AST (abstract syntax tree) representation:</p>
+<pre class="language-"><code>GET /api/v1/parse_query
+POST /api/v1/parse_query
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>query=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: Prometheus expression query string.</li>
+</ul>
+<p>You can URL-encode these parameters directly in the request body by using the <code>POST</code> method and
+<code>Content-Type: application/x-www-form-urlencoded</code> header. This is useful when specifying a large
+query that may breach server-side URL character limits.</p>
+<p>The <code>data</code> section of the query result is a string containing the AST of the parsed query expression.</p>
+<p>The following example parses the expression <code>foo/bar</code>:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> <span class="token string">&apos;http://localhost:9090/api/v1/parse_query?query=foo/bar&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;data&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;bool&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;lhs&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+         <span class="token property">&quot;matchers&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+               <span class="token property">&quot;name&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;__name__&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;=&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;foo&quot;</span>
+            <span class="token punctuation">}</span>
+         <span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;name&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;foo&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;offset&quot;</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;startOrEnd&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;timestamp&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;vectorSelector&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;matching&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+         <span class="token property">&quot;card&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;one-to-one&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;include&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;labels&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;on&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;op&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;rhs&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+         <span class="token property">&quot;matchers&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+               <span class="token property">&quot;name&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;__name__&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;=&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;value&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;bar&quot;</span>
+            <span class="token punctuation">}</span>
+         <span class="token punctuation">]</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;name&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;bar&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;offset&quot;</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;startOrEnd&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;timestamp&quot;</span> <span class="token operator">:</span> <span class="token null keyword">null</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;vectorSelector&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;binaryExpr&quot;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token property">&quot;status&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;success&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="querying-metadata">Querying metadata</h2>
+<p>Prometheus offers a set of API endpoints to query metadata about series and their labels.</p>
+<p>NOTE: These API endpoints may return metadata for series for which there is no sample within the selected time range, and/or for series whose samples have been marked as deleted via the deletion API endpoint. The exact extent of additionally returned series metadata is an implementation detail that may change in the future.</p>
+<h3 id="finding-series-by-label-matchers">Finding series by label matchers</h3>
+<p>The following endpoint returns the list of time series that match a certain label set.</p>
+<pre class="language-"><code>GET /api/v1/series
+POST /api/v1/series
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>match[]=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>series_selector</span><span class="token punctuation">&gt;</span></span></code>: Repeated series selector argument that selects the
+series to return. At least one <code>match[]</code> argument must be provided.</li>
+<li><code>start=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: Start timestamp.</li>
+<li><code>end=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: End timestamp.</li>
+<li><code>limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Maximum number of returned series. Optional. 0 means disabled.</li>
+</ul>
+<p>You can URL-encode these parameters directly in the request body by using the <code>POST</code> method and
+<code>Content-Type: application/x-www-form-urlencoded</code> header. This is useful when specifying a large
+or dynamic number of series selectors that may breach server-side URL character limits.</p>
+<p>The <code>data</code> section of the query result consists of a list of objects that
+contain the label name/value pairs which identify each series. Note that the
+<code>start</code> and <code>end</code> times are approximate and the result may contain label values
+for series which have no samples in the given interval.</p>
+<p>The following example returns all series that match either of the selectors
+<code>up</code> or <code>process_start_time_seconds{job=&quot;prometheus&quot;}</code>:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -g <span class="token string">&apos;http://localhost:9090/api/v1/series?&apos;</span> --data-urlencode <span class="token string">&apos;match[]=up&apos;</span> --data-urlencode <span class="token string">&apos;match[]=process_start_time_seconds{job=&quot;prometheus&quot;}&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;status&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+   <span class="token property">&quot;data&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+         <span class="token property">&quot;__name__&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;up&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;job&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;instance&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:9090&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+         <span class="token property">&quot;__name__&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;up&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;job&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;node&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;instance&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:9091&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+         <span class="token property">&quot;__name__&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;process_start_time_seconds&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;job&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+         <span class="token property">&quot;instance&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:9090&quot;</span>
+      <span class="token punctuation">}</span>
+   <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="getting-label-names">Getting label names</h3>
+<p>The following endpoint returns a list of label names:</p>
+<pre class="language-"><code>GET /api/v1/labels
+POST /api/v1/labels
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>start=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: Start timestamp. Optional.</li>
+<li><code>end=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: End timestamp. Optional.</li>
+<li><code>match[]=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>series_selector</span><span class="token punctuation">&gt;</span></span></code>: Repeated series selector argument that selects the
+series from which to read the label names. Optional.</li>
+<li><code>limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Maximum number of returned series. Optional. 0 means disabled.</li>
+</ul>
+<p>The <code>data</code> section of the JSON response is a list of string label names. Note
+that the <code>start</code> and <code>end</code> times are approximate and the result may contain
+label names for series which have no samples in the given interval.</p>
+<p>Here is an example.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> <span class="token string">&apos;localhost:9090/api/v1/labels&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;__name__&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;call&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;code&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;config&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;dialer_name&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;endpoint&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;event&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;goversion&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;handler&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;instance&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;interval&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;job&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;le&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;listener_name&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;quantile&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;reason&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;role&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;scrape_job&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;slice&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;version&quot;</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="querying-label-values">Querying label values</h3>
+<p>The following endpoint returns a list of label values for a provided label name:</p>
+<pre class="language-"><code>GET /api/v1/label/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label_name</span><span class="token punctuation">&gt;</span></span>/values
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>start=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: Start timestamp. Optional.</li>
+<li><code>end=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: End timestamp. Optional.</li>
+<li><code>match[]=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>series_selector</span><span class="token punctuation">&gt;</span></span></code>: Repeated series selector argument that selects the
+series from which to read the label values. Optional.</li>
+<li><code>limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Maximum number of returned series. Optional. 0 means disabled.</li>
+</ul>
+<p>The <code>data</code> section of the JSON response is a list of string label values. Note
+that the <code>start</code> and <code>end</code> times are approximate and the result may contain
+label values for series which have no samples in the given interval.</p>
+<p>This example queries for all label values for the <code>http_status_code</code> label:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/label/http_status_code/values
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;status&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+   <span class="token property">&quot;data&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">&quot;200&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;504&quot;</span>
+   <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Label names can optionally be encoded using the Values Escaping method, and is necessary if a name includes the <code>/</code> character. To encode a name in this way:</p>
+<ul>
+<li>Prepend the label with <code>U__</code>.</li>
+<li>Letters, numbers, and colons appear as-is.</li>
+<li>Convert single underscores to double underscores.</li>
+<li><p>For all other characters, use the UTF-8 codepoint as a hex integer, surrounded
+by underscores.  So <code>` becomes</code><em>20</em><code>and a</code>.<code>becomes</code><em>2e</em>`.</p>
+<p>More information about text escaping can be found in the original UTF-8 <a href="https://github.com/prometheus/proposals/blob/main/proposals/2023-08-21-utf8.md#text-escaping" target="_blank">Proposal document</a>.</p>
+</li>
+</ul>
+<p>This example queries for all label values for the <code>http.status_code</code> label:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/label/U__http_2e_status_code/values
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;status&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+   <span class="token property">&quot;data&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">&quot;200&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;404&quot;</span>
+   <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="querying-exemplars">Querying exemplars</h2>
+<p>This is <strong>experimental</strong> and might change in the future.
+The following endpoint returns a list of exemplars for a valid PromQL query for a specific time range:</p>
+<pre class="language-"><code>GET /api/v1/query_exemplars
+POST /api/v1/query_exemplars
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>query=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: Prometheus expression query string.</li>
+<li><code>start=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: Start timestamp.</li>
+<li><code>end=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: End timestamp.</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -g <span class="token string">&apos;http://localhost:9090/api/v1/query_exemplars?query=test_exemplar_metric_total&amp;start=2020-09-14T15:22:25.479Z&amp;end=2020-09-14T15:23:25.479Z&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;seriesLabels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;__name__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;test_exemplar_metric_total&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;localhost:8090&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;service&quot;</span><span class="token operator">:</span> <span class="token string">&quot;bar&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;exemplars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;trace_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;EpTxMJ40fUus7aGY&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1600096945.479</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">&quot;seriesLabels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">&quot;__name__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;test_exemplar_metric_total&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;localhost:8090&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;service&quot;</span><span class="token operator">:</span> <span class="token string">&quot;foo&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;exemplars&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;trace_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Olp9XHlq763ccsfa&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;19&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1600096955.479</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token property">&quot;trace_id&quot;</span><span class="token operator">:</span> <span class="token string">&quot;hCtjygkIHwAN9vs4&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20&quot;</span><span class="token punctuation">,</span>
+                    <span class="token property">&quot;timestamp&quot;</span><span class="token operator">:</span> <span class="token number">1600096965.489</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="expression-query-result-formats">Expression query result formats</h2>
+<p>Expression queries may return the following response values in the <code>result</code>
+property of the <code>data</code> section. <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sample_value</span><span class="token punctuation">&gt;</span></span></code> placeholders are numeric
+sample values. JSON does not support special float values such as <code>NaN</code>, <code>Inf</code>,
+and <code>-Inf</code>, so sample values are transferred as quoted JSON strings rather than
+raw numbers.</p>
+<p>The keys <code>&quot;histogram&quot;</code> and <code>&quot;histograms&quot;</code> only show up if native histograms
+are present in the response. Their placeholder <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>histogram</span><span class="token punctuation">&gt;</span></span></code> is explained
+in detail in its own section below.</p>
+<h3 id="range-vectors">Range vectors</h3>
+<p>Range vectors are returned as result type <code>matrix</code>. The corresponding
+<code>result</code> property has the following format:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;metric&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;&lt;label_name&gt;&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;label_value&gt;&quot;</span><span class="token punctuation">,</span> ... <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;values&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span> &lt;unix_time&gt;<span class="token punctuation">,</span> <span class="token string">&quot;&lt;sample_value&gt;&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span> ... <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;histograms&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span> &lt;unix_time&gt;<span class="token punctuation">,</span> &lt;histogram&gt; <span class="token punctuation">]</span><span class="token punctuation">,</span> ... <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  ...
+<span class="token punctuation">]</span>
+</code></pre>
+<p>Each series could have the <code>&quot;values&quot;</code> key, or the <code>&quot;histograms&quot;</code> key, or both.
+For a given timestamp, there will only be one sample of either float or histogram type.</p>
+<p>Series are returned sorted by <code>metric</code>. Functions such as <a href="functions.html#sort"><code>sort</code></a>
+and <a href="functions.html#sort_by_label"><code>sort_by_label</code></a> have no effect for range vectors.</p>
+<h3 id="instant-vectors">Instant vectors</h3>
+<p>Instant vectors are returned as result type <code>vector</code>. The corresponding
+<code>result</code> property has the following format:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;metric&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">&quot;&lt;label_name&gt;&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;label_value&gt;&quot;</span><span class="token punctuation">,</span> ... <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> &lt;unix_time&gt;<span class="token punctuation">,</span> <span class="token string">&quot;&lt;sample_value&gt;&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;histogram&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> &lt;unix_time&gt;<span class="token punctuation">,</span> &lt;histogram&gt; <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  ...
+<span class="token punctuation">]</span>
+</code></pre>
+<p>Each series could have the <code>&quot;value&quot;</code> key, or the <code>&quot;histogram&quot;</code> key, but not both.</p>
+<p>Series are not guaranteed to be returned in any particular order unless a function
+such as <a href="functions.html#sort"><code>sort</code></a> or <a href="functions.html#sort_by_label"><code>sort_by_label</code></a>
+is used.</p>
+<h3 id="scalars">Scalars</h3>
+<p>Scalar results are returned as result type <code>scalar</code>. The corresponding
+<code>result</code> property has the following format:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">[</span> &lt;unix_time&gt;<span class="token punctuation">,</span> <span class="token string">&quot;&lt;scalar_value&gt;&quot;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h3 id="strings">Strings</h3>
+<p>String results are returned as result type <code>string</code>. The corresponding
+<code>result</code> property has the following format:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">[</span> &lt;unix_time&gt;<span class="token punctuation">,</span> <span class="token string">&quot;&lt;string_value&gt;&quot;</span> <span class="token punctuation">]</span>
+</code></pre>
+<h3 id="native-histograms">Native histograms</h3>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>histogram</span><span class="token punctuation">&gt;</span></span></code> placeholder used above is formatted as follows.</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;count&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;count_of_observations&gt;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;sum&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;sum_of_observations&gt;&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;buckets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">[</span> &lt;boundary_rule&gt;<span class="token punctuation">,</span> <span class="token string">&quot;&lt;left_boundary&gt;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&lt;right_boundary&gt;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&lt;count_in_bucket&gt;&quot;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span> ... <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>boundary_rule</span><span class="token punctuation">&gt;</span></span></code> placeholder is an integer between 0 and 3 with the
+following meaning:</p>
+<ul>
+<li>0: &#x201C;open left&#x201D; (left boundary is exclusive, right boundary in inclusive)</li>
+<li>1: &#x201C;open right&#x201D; (left boundary is inclusive, right boundary in exclusive)</li>
+<li>2: &#x201C;open both&#x201D; (both boundaries are exclusive)</li>
+<li>3: &#x201C;closed both&#x201D; (both boundaries are inclusive)</li>
+</ul>
+<p>Note that with the currently implemented bucket schemas, positive buckets are
+&#x201C;open left&#x201D;, negative buckets are &#x201C;open right&#x201D;, and the zero bucket (with a
+negative left boundary and a positive right boundary) is &#x201C;closed both&#x201D;.</p>
+<h2 id="scrape-pools">Scrape pools</h2>
+<p>The following endpoint returns a list of all configured scrape pools:</p>
+<pre class="language-"><code>GET /api/v1/scrape_pools
+</code></pre><p>The <code>data</code> section of the JSON response is a list of string scrape pool names.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/scrape_pools
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;scrapePools&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;node_exporter&quot;</span><span class="token punctuation">,</span>
+      <span class="token string">&quot;blackbox&quot;</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><em>New in v2.42</em></p>
+<h2 id="targets">Targets</h2>
+<p>The following endpoint returns an overview of the current state of the
+Prometheus target discovery:</p>
+<pre class="language-"><code>GET /api/v1/targets
+</code></pre><p>Both the active and dropped targets are part of the response by default.
+Dropped targets are subject to <code>keep_dropped_targets</code> limit, if set.
+<code>labels</code> represents the label set after relabeling has occurred.
+<code>discoveredLabels</code> represent the unmodified labels retrieved during service discovery before relabeling has occurred.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/targets
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;activeTargets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;discoveredLabels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;__address__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9090&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__metrics_path__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/metrics&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__scheme__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9090&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapePool&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapeUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://127.0.0.1:9090/metrics&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;globalUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://example-prometheus:9090/metrics&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastError&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastScrape&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-01-17T15:07:44.723715405+01:00&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastScrapeDuration&quot;</span><span class="token operator">:</span> <span class="token number">0.050688943</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;health&quot;</span><span class="token operator">:</span> <span class="token string">&quot;up&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapeInterval&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1m&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapeTimeout&quot;</span><span class="token operator">:</span> <span class="token string">&quot;10s&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;droppedTargets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;discoveredLabels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;__address__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9100&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__metrics_path__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/metrics&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__scheme__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__scrape_interval__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1m&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__scrape_timeout__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;10s&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapePool&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The <code>state</code> query parameter allows the caller to filter by active or dropped targets,
+(e.g., <code>state=active</code>, <code>state=dropped</code>, <code>state=any</code>).
+Note that an empty array is still returned for targets that are filtered out.
+Other values are ignored.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> <span class="token string">&apos;http://localhost:9090/api/v1/targets?state=active&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;activeTargets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;discoveredLabels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;__address__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9090&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__metrics_path__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/metrics&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__scheme__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9090&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapePool&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapeUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://127.0.0.1:9090/metrics&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;globalUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://example-prometheus:9090/metrics&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastError&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastScrape&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-01-17T15:07:44.723715405+01:00&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastScrapeDuration&quot;</span><span class="token operator">:</span> <span class="token number">50688943</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;health&quot;</span><span class="token operator">:</span> <span class="token string">&quot;up&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;droppedTargets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The <code>scrapePool</code> query parameter allows the caller to filter by scrape pool name.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> <span class="token string">&apos;http://localhost:9090/api/v1/targets?scrapePool=node_exporter&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;activeTargets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;discoveredLabels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;__address__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9091&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__metrics_path__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/metrics&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;__scheme__&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node_exporter&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9091&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node_exporter&quot;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapePool&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node_exporter&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;scrapeUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://127.0.0.1:9091/metrics&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;globalUrl&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://example-prometheus:9091/metrics&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastError&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastScrape&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2017-01-17T15:07:44.723715405+01:00&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;lastScrapeDuration&quot;</span><span class="token operator">:</span> <span class="token number">50688943</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;health&quot;</span><span class="token operator">:</span> <span class="token string">&quot;up&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;droppedTargets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="relabel-steps">Relabel steps</h2>
+<p>This endpoint is <strong>experimental</strong> and might change in the future. It is currently only meant to be used by Prometheus&apos; own web UI, and the endpoint name and exact format returned may change from one Prometheus version to another. It may also be removed again in case it is no longer needed by the UI.</p>
+<p>The following endpoint returns a step-by-step list of relabeling rules and their effects on a given target&apos;s label set.</p>
+<pre class="language-"><code>GET /api/v1/targets/relabel_steps
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>scrapePool=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: The scrape pool name of the target, used to determine the relabeling rules to apply. Required.</li>
+<li><code>labels=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: A JSON object containing the label set of the target before any relabeling is applied. Required.</li>
+</ul>
+<p>The following example returns the relabeling steps for a discovered target in the <code>prometheus</code> scrape pool with the label set <code>{&quot;__address__&quot;: &quot;localhost:9090&quot;, &quot;job&quot;: &quot;prometheus&quot;}</code>:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -g <span class="token string">&apos;http://localhost:9090/api/v1/targets/relabel_steps?scrapePool=prometheus&amp;labels={&quot;__address__&quot;:&quot;localhost:9090&quot;,&quot;job&quot;:&quot;prometheus&quot;}&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;data&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;steps&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+         <span class="token punctuation">{</span>
+            <span class="token property">&quot;keep&quot;</span> <span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;output&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;__address__&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:9090&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;env&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;development&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;job&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;rule&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;action&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;replace&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;regex&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;(.*)&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;replacement&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;development&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;separator&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;;&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;target_label&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;env&quot;</span>
+            <span class="token punctuation">}</span>
+         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token punctuation">{</span>
+            <span class="token property">&quot;keep&quot;</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;output&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;rule&quot;</span> <span class="token operator">:</span> <span class="token punctuation">{</span>
+               <span class="token property">&quot;action&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;drop&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;regex&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;localhost:.*&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;replacement&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;$1&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;separator&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;;&quot;</span><span class="token punctuation">,</span>
+               <span class="token property">&quot;source_labels&quot;</span> <span class="token operator">:</span> <span class="token punctuation">[</span>
+                  <span class="token string">&quot;__address__&quot;</span>
+               <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+         <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+   <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token property">&quot;status&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;success&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="rules">Rules</h2>
+<p>The <code>/rules</code> API endpoint returns a list of alerting and recording rules that
+are currently loaded. In addition it returns the currently active alerts fired
+by the Prometheus instance of each alerting rule.</p>
+<p>As the <code>/rules</code> endpoint is fairly new, it does not have the same stability
+guarantees as the overarching API v1.</p>
+<pre class="language-"><code>GET /api/v1/rules
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>type=alert|record</code>: return only the alerting rules (e.g. <code>type=alert</code>) or the recording rules (e.g. <code>type=record</code>). When the parameter is absent or empty, no filtering is done.</li>
+<li><code>rule_name[]=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: only return rules with the given rule name. If the parameter is repeated, rules with any of the provided names are returned. If we&apos;ve filtered out all the rules of a group, the group is not returned. When the parameter is absent or empty, no filtering is done.</li>
+<li><code>rule_group[]=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: only return rules with the given rule group name. If the parameter is repeated, rules with any of the provided rule group names are returned. When the parameter is absent or empty, no filtering is done.</li>
+<li><code>file[]=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: only return rules with the given filepath. If the parameter is repeated, rules with any of the provided filepaths are returned. When the parameter is absent or empty, no filtering is done.</li>
+<li><code>exclude_alerts=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bool</span><span class="token punctuation">&gt;</span></span></code>: only return rules, do not return active alerts.</li>
+<li><code>match[]=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label_selector</span><span class="token punctuation">&gt;</span></span></code>: only return rules that have configured labels that satisfy the label selectors. If the parameter is repeated, rules that match any of the sets of label selectors are returned. Note that matching is on the labels in the definition of each rule, not on the values after template expansion (for alerting rules). Optional.</li>
+<li><code>group_limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: The <code>group_limit</code> parameter allows you to specify a limit for the number of rule groups that is returned in a single response. If the total number of rule groups exceeds the specified <code>group_limit</code> value, the response will include a <code>groupNextToken</code> property. You can use the value of this <code>groupNextToken</code> property in subsequent requests in the <code>group_next_token</code> parameter to paginate over the remaining rule groups. The <code>groupNextToken</code> property will not be present in the final response, indicating that you have retrieved all the available rule groups. Please note that there are no guarantees regarding the consistency of the response if the rule groups are being modified during the pagination process.</li>
+<li><code>group_next_token</code>: the pagination token that was returned in previous request when the <code>group_limit</code> property is set. The pagination token is used to iteratively paginate over a large number of rule groups. To use the <code>group_next_token</code> parameter, the <code>group_limit</code> parameter also need to be present. If a rule group that coincides with the next token is removed while you are paginating over the rule groups, a response with status code 400 will be returned.</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/rules
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;groups&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;alerts&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                            <span class="token punctuation">{</span>
+                                <span class="token property">&quot;activeAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018-07-04T20:27:12.60602144+02:00&quot;</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;annotations&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                                    <span class="token property">&quot;summary&quot;</span><span class="token operator">:</span> <span class="token string">&quot;High request latency&quot;</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                                    <span class="token property">&quot;alertname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;HighRequestLatency&quot;</span><span class="token punctuation">,</span>
+                                    <span class="token property">&quot;severity&quot;</span><span class="token operator">:</span> <span class="token string">&quot;page&quot;</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;firing&quot;</span><span class="token punctuation">,</span>
+                                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1e+00&quot;</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;annotations&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;summary&quot;</span><span class="token operator">:</span> <span class="token string">&quot;High request latency&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;duration&quot;</span><span class="token operator">:</span> <span class="token number">600</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;health&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ok&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                            <span class="token property">&quot;severity&quot;</span><span class="token operator">:</span> <span class="token string">&quot;page&quot;</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;HighRequestLatency&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token string">&quot;job:request_latency_seconds:mean5m{job=\&quot;myjob\&quot;} &gt; 0.5&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;alerting&quot;</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">{</span>
+                        <span class="token property">&quot;health&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ok&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;job:http_inprogress_requests:sum&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;query&quot;</span><span class="token operator">:</span> <span class="token string">&quot;sum by (job) (http_inprogress_requests)&quot;</span><span class="token punctuation">,</span>
+                        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;recording&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;file&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/rules.yaml&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;interval&quot;</span><span class="token operator">:</span> <span class="token number">60</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;limit&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;example&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="alerts">Alerts</h2>
+<p>The <code>/alerts</code> endpoint returns a list of all active alerts.</p>
+<p>As the <code>/alerts</code> endpoint is fairly new, it does not have the same stability
+guarantees as the overarching API v1.</p>
+<pre class="language-"><code>GET /api/v1/alerts
+</code></pre><pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/alerts
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;alerts&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;activeAt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2018-07-04T20:27:12.60602144+02:00&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;annotations&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token property">&quot;alertname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my-alert&quot;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;firing&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1e+00&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="querying-target-metadata">Querying target metadata</h2>
+<p>The following endpoint returns metadata about metrics currently scraped from targets.
+The endpoint has the limitation that only metadata scraped from targets directly is returned, metadata sent over Remote-Write or OTLP to Prometheus is not included in this endpoint and will not show up on the UI in &quot;Explore Metrics&quot;.
+This is <strong>experimental</strong> and might change in the future.</p>
+<pre class="language-"><code>GET /api/v1/targets/metadata
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>match_target=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label_selectors</span><span class="token punctuation">&gt;</span></span></code>: Label selectors that match targets by their label sets. All targets are selected if left empty.</li>
+<li><code>metric=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: A metric name to retrieve metadata for. All metric metadata is retrieved if left empty.</li>
+<li><code>limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Maximum number of targets to match.</li>
+</ul>
+<p>The <code>data</code> section of the query result consists of a list of objects that
+contain metric metadata and the target label set.</p>
+<p>The following example returns all metadata entries for the <code>go_goroutines</code> metric
+from the first two targets with label <code>job=&quot;prometheus&quot;</code>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -G http://localhost:9091/api/v1/targets/metadata <span class="token punctuation">\</span>
+    --data-urlencode <span class="token string">&apos;metric=go_goroutines&apos;</span> <span class="token punctuation">\</span>
+    --data-urlencode <span class="token string">&apos;match_target={job=&quot;prometheus&quot;}&apos;</span> <span class="token punctuation">\</span>
+    --data-urlencode <span class="token string">&apos;limit=2&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9090&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gauge&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Number of goroutines that currently exist.&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9091&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gauge&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Number of goroutines that currently exist.&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The following example returns metadata for all metrics for all targets with
+label <code>instance=&quot;127.0.0.1:9090&quot;</code>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -G http://localhost:9091/api/v1/targets/metadata <span class="token punctuation">\</span>
+    --data-urlencode <span class="token string">&apos;match_target={instance=&quot;127.0.0.1:9090&quot;}&apos;</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token comment">// ...</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9090&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;metric&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus_treecache_zookeeper_failures_total&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;counter&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;The total number of ZooKeeper failures.&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token property">&quot;target&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;instance&quot;</span><span class="token operator">:</span> <span class="token string">&quot;127.0.0.1:9090&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;metric&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus_tsdb_reloads_total&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;counter&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Number of times the database reloaded block data from disk.&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="querying-metric-metadata">Querying metric metadata</h2>
+<p>It returns metadata about metrics currently scraped from targets. However, it does not provide any target information.
+This is considered <strong>experimental</strong> and might change in the future.</p>
+<pre class="language-"><code>GET /api/v1/metadata
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Maximum number of metrics to return.</li>
+<li><code>limit_per_metric=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Maximum number of metadata to return per metric.</li>
+<li><code>metric=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code>: A metric name to filter metadata for. All metric metadata is retrieved if left empty.</li>
+</ul>
+<p>The <code>data</code> section of the query result consists of an object where each key is a metric name and each value is a list of unique metadata objects, as exposed for that metric name across all targets.</p>
+<p>The following example returns two metrics. Note that the metric <code>http_requests_total</code> has more than one object in the list. At least one target has a value for <code>HELP</code> that do not match with the rest.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -G http://localhost:9090/api/v1/metadata?limit<span class="token operator">=</span><span class="token number">2</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;cortex_ring_tokens&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gauge&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Number of tokens in the ring&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;http_requests_total&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;counter&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Number of HTTP requests&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;counter&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Amount of HTTP requests&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The following example returns only one metadata entry for each metric.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -G http://localhost:9090/api/v1/metadata?limit_per_metric<span class="token operator">=</span><span class="token number">1</span>
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;cortex_ring_tokens&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;gauge&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Number of tokens in the ring&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;http_requests_total&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;counter&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Number of HTTP requests&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The following example returns metadata only for the metric <code>http_requests_total</code>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -G http://localhost:9090/api/v1/metadata?metric<span class="token operator">=</span>http_requests_total
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;http_requests_total&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;counter&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Number of HTTP requests&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;counter&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;help&quot;</span><span class="token operator">:</span> <span class="token string">&quot;Amount of HTTP requests&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="alertmanagers">Alertmanagers</h2>
+<p>The following endpoint returns an overview of the current state of the
+Prometheus alertmanager discovery:</p>
+<pre class="language-"><code>GET /api/v1/alertmanagers
+</code></pre><p>Both the active and dropped Alertmanagers are part of the response.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/alertmanagers
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;activeAlertmanagers&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://127.0.0.1:9090/api/v1/alerts&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;droppedAlertmanagers&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://127.0.0.1:9093/api/v1/alerts&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="status">Status</h2>
+<p>Following status endpoints expose current Prometheus configuration.</p>
+<h3 id="config">Config</h3>
+<p>The following endpoint returns currently loaded configuration file:</p>
+<pre class="language-"><code>GET /api/v1/status/config
+</code></pre><p>The config is returned as dumped YAML file. Due to limitation of the YAML
+library, YAML comments are not included.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/status/config
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;yaml&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;content of the loaded config file in YAML&gt;&quot;</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="flags">Flags</h3>
+<p>The following endpoint returns flag values that Prometheus was configured with:</p>
+<pre class="language-"><code>GET /api/v1/status/flags
+</code></pre><p>All values are of the result type <code>string</code>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/status/flags
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;alertmanager.notification-queue-capacity&quot;</span><span class="token operator">:</span> <span class="token string">&quot;10000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;alertmanager.timeout&quot;</span><span class="token operator">:</span> <span class="token string">&quot;10s&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;log.level&quot;</span><span class="token operator">:</span> <span class="token string">&quot;info&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;query.lookback-delta&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5m&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;query.max-concurrency&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20&quot;</span><span class="token punctuation">,</span>
+    ...
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><em>New in v2.2</em></p>
+<h3 id="runtime-information">Runtime Information</h3>
+<p>The following endpoint returns various runtime information properties about the Prometheus server:</p>
+<pre class="language-"><code>GET /api/v1/status/runtimeinfo
+</code></pre><p>The returned values are of different types, depending on the nature of the runtime property.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/status/runtimeinfo
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;startTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-11-02T17:23:59.301361365+01:00&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;CWD&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;hostname&quot;</span> <span class="token operator">:</span> <span class="token string">&quot;DESKTOP-717H17Q&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;serverTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2025-01-05T18:27:33Z&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;reloadConfigSuccess&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;lastConfigTime&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-11-02T17:23:59+01:00&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;timeSeriesCount&quot;</span><span class="token operator">:</span> <span class="token number">873</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;corruptionCount&quot;</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;goroutineCount&quot;</span><span class="token operator">:</span> <span class="token number">48</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;GOMAXPROCS&quot;</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;GOGC&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;GODEBUG&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;storageRetention&quot;</span><span class="token operator">:</span> <span class="token string">&quot;15d&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>NOTE: The exact returned runtime properties may change without notice between Prometheus versions.</p>
+<p><em>New in v2.14</em></p>
+<h3 id="build-information">Build Information</h3>
+<p>The following endpoint returns various build information properties about the Prometheus server:</p>
+<pre class="language-"><code>GET /api/v1/status/buildinfo
+</code></pre><p>All values are of the result type <code>string</code>.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/status/buildinfo
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.13.1&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;revision&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cb7cbad5f9a2823a622aaa668833ca04f50a0ea7&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;branch&quot;</span><span class="token operator">:</span> <span class="token string">&quot;master&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;buildUser&quot;</span><span class="token operator">:</span> <span class="token string">&quot;julius@desktop&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;buildDate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20191102-16:19:59&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;goVersion&quot;</span><span class="token operator">:</span> <span class="token string">&quot;go1.13.1&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>NOTE: The exact returned build properties may change without notice between Prometheus versions.</p>
+<p><em>New in v2.14</em></p>
+<h3 id="tsdb-stats">TSDB Stats</h3>
+<p>The following endpoint returns various cardinality statistics about the Prometheus TSDB:</p>
+<pre class="language-"><code>GET /api/v1/status/tsdb
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>limit=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>number</span><span class="token punctuation">&gt;</span></span></code>: Limit the number of returned items to a given number for each set of statistics. By default, 10 items are returned. The maximum allowed limit is 10000.</li>
+</ul>
+<p>The <code>data</code> section of the query result consists of:</p>
+<ul>
+<li><strong>headStats</strong>: This provides the following data about the head block of the TSDB:<ul>
+<li><strong>numSeries</strong>: The number of series.</li>
+<li><strong>chunkCount</strong>: The number of chunks.</li>
+<li><strong>minTime</strong>: The current minimum timestamp in milliseconds.</li>
+<li><strong>maxTime</strong>: The current maximum timestamp in milliseconds.</li>
+</ul>
+</li>
+<li><strong>seriesCountByMetricName:</strong>  This will provide a list of metrics names and their series count.</li>
+<li><strong>labelValueCountByLabelName:</strong> This will provide a list of the label names and their value count.</li>
+<li><strong>memoryInBytesByLabelName</strong> This will provide a list of the label names and memory used in bytes. Memory usage is calculated by adding the length of all values for a given label name.</li>
+<li><strong>seriesCountByLabelPair</strong> This will provide a list of label value pairs and their series count.</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/status/tsdb
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;headStats&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;numSeries&quot;</span><span class="token operator">:</span> <span class="token number">508</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;chunkCount&quot;</span><span class="token operator">:</span> <span class="token number">937</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;minTime&quot;</span><span class="token operator">:</span> <span class="token number">1591516800000</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;maxTime&quot;</span><span class="token operator">:</span> <span class="token number">1598896800143</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;seriesCountByMetricName&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;net_conntrack_dialer_conn_failed_total&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">20</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;prometheus_http_request_duration_seconds_bucket&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">20</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;labelValueCountByLabelName&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;__name__&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">211</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;event&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">3</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;memoryInBytesByLabelName&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;__name__&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">8266</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;instance&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">28</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;seriesCountByLabelValuePair&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;job=prometheus&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">425</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;instance=localhost:9090&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token number">425</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><em>New in v3.6.0</em></p>
+<h3 id="tsdb-blocks">TSDB Blocks</h3>
+<p><strong>NOTE</strong>: This endpoint is <strong>experimental</strong> and might change in the future. The endpoint name and the exact format of the returned data may change between Prometheus versions. The <strong>exact metadata returned</strong> by this endpoint is an implementation detail and may change in future Prometheus versions.</p>
+<p>The following endpoint returns the list of currently loaded TSDB blocks and their metadata.</p>
+<pre class="language-"><code>GET /api/v1/status/tsdb/blocks
+</code></pre><p>This endpoint returns the following information for each block:</p>
+<ul>
+<li><code>ulid</code>: Unique ID of the block.</li>
+<li><code>minTime</code>: Minimum timestamp (in milliseconds) of the block.</li>
+<li><code>maxTime</code>: Maximum timestamp (in milliseconds) of the block.</li>
+<li><code>stats</code>:<ul>
+<li><code>numSeries</code>: Number of series in the block.</li>
+<li><code>numSamples</code>: Number of samples in the block.</li>
+<li><code>numChunks</code>: Number of chunks in the block.</li>
+</ul>
+</li>
+<li><code>compaction</code>:<ul>
+<li><code>level</code>: The compaction level of the block.</li>
+<li><code>sources</code>: List of ULIDs of source blocks used to compact this block.</li>
+</ul>
+</li>
+<li><code>version</code>: The block version.</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/status/tsdb/blocks
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;blocks&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        <span class="token property">&quot;ulid&quot;</span><span class="token operator">:</span> <span class="token string">&quot;01JZ8JKZY6XSK3PTDP9ZKRWT60&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;minTime&quot;</span><span class="token operator">:</span> <span class="token number">1750860620060</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;maxTime&quot;</span><span class="token operator">:</span> <span class="token number">1750867200000</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;stats&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;numSamples&quot;</span><span class="token operator">:</span> <span class="token number">13701</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;numSeries&quot;</span><span class="token operator">:</span> <span class="token number">716</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;numChunks&quot;</span><span class="token operator">:</span> <span class="token number">716</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;compaction&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token property">&quot;level&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;sources&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;01JZ8JKZY6XSK3PTDP9ZKRWT60&quot;</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><em>New in v2.15</em></p>
+<h3 id="wal-replay-stats">WAL Replay Stats</h3>
+<p>The following endpoint returns information about the WAL replay:</p>
+<pre class="language-"><code>GET /api/v1/status/walreplay
+</code></pre><ul>
+<li><strong>read</strong>: The number of segments replayed so far.</li>
+<li><strong>total</strong>: The total number segments needed to be replayed.</li>
+<li><strong>progress</strong>: The progress of the replay (0 - 100%).</li>
+<li><strong>state</strong>: The state of the replay. Possible states:<ul>
+<li><strong>waiting</strong>: Waiting for the replay to start.</li>
+<li><strong>in progress</strong>: The replay is in progress.</li>
+<li><strong>done</strong>: The replay has finished.</li>
+</ul>
+</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/status/walreplay
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;min&quot;</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;max&quot;</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;current&quot;</span><span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;state&quot;</span><span class="token operator">:</span> <span class="token string">&quot;in progress&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>NOTE: This endpoint is available before the server has been marked ready and is updated in real time to facilitate monitoring the progress of the WAL replay.</p>
+<p><em>New in v2.28</em></p>
+<h2 id="tsdb-admin-apis">TSDB Admin APIs</h2>
+<p>These are APIs that expose database functionalities for the advanced user. These APIs are not enabled unless the <code>--web.enable-admin-api</code> is set.</p>
+<h3 id="snapshot">Snapshot</h3>
+<p>Snapshot creates a snapshot of all current data into <code>snapshots/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>datetime</span><span class="token punctuation">&gt;</span></span>-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rand</span><span class="token punctuation">&gt;</span></span></code> under the TSDB&apos;s data directory and returns the directory as response.
+It will optionally skip snapshotting data that is only present in the head block, and which has not yet been compacted to disk.</p>
+<pre class="language-"><code>POST /api/v1/admin/tsdb/snapshot
+PUT /api/v1/admin/tsdb/snapshot
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>skip_head=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bool</span><span class="token punctuation">&gt;</span></span></code>: Skip data present in the head block. Optional.</li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -XPOST http://localhost:9090/api/v1/admin/tsdb/snapshot
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20171210T211224Z-2be650b6d019eb54&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The snapshot now exists at <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>data-dir</span><span class="token punctuation">&gt;</span></span>/snapshots/20171210T211224Z-2be650b6d019eb54</code></p>
+<p><em>New in v2.1 and supports PUT from v2.9</em></p>
+<h3 id="delete-series">Delete Series</h3>
+<p>DeleteSeries deletes data for a selection of series in a time range. The actual data still exists on disk and is cleaned up in future compactions or can be explicitly cleaned up by hitting the <a href="#clean-tombstones">Clean Tombstones</a> endpoint.</p>
+<p>If successful, a <code>204</code> is returned.</p>
+<pre class="language-"><code>POST /api/v1/admin/tsdb/delete_series
+PUT /api/v1/admin/tsdb/delete_series
+</code></pre><p>URL query parameters:</p>
+<ul>
+<li><code>match[]=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>series_selector</span><span class="token punctuation">&gt;</span></span></code>: Repeated label matcher argument that selects the series to delete. At least one <code>match[]</code> argument must be provided.</li>
+<li><code>start=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: Start timestamp. Optional and defaults to minimum possible time.</li>
+<li><code>end=<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rfc3339</span> <span class="token attr-name">|</span> <span class="token attr-name">unix_timestamp</span><span class="token punctuation">&gt;</span></span></code>: End timestamp. Optional and defaults to maximum possible time.</li>
+</ul>
+<p>Not mentioning both start and end times would clear all the data for the matched series in the database.</p>
+<p>Example:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -X POST <span class="token punctuation">\</span>
+  -g <span class="token string">&apos;http://localhost:9090/api/v1/admin/tsdb/delete_series?match[]=up&amp;match[]=process_start_time_seconds{job=&quot;prometheus&quot;}&apos;</span>
+</code></pre>
+<p>NOTE: This endpoint marks samples from series as deleted, but will not necessarily prevent associated series metadata from still being returned in metadata queries for the affected time range (even after cleaning tombstones). The exact extent of metadata deletion is an implementation detail that may change in the future.</p>
+<p><em>New in v2.1 and supports PUT from v2.9</em></p>
+<h3 id="clean-tombstones">Clean Tombstones</h3>
+<p>CleanTombstones removes the deleted data from disk and cleans up the existing tombstones. This can be used after deleting series to free up space.</p>
+<p>If successful, a <code>204</code> is returned.</p>
+<pre class="language-"><code>POST /api/v1/admin/tsdb/clean_tombstones
+PUT /api/v1/admin/tsdb/clean_tombstones
+</code></pre><p>This takes no parameters or body.</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> -XPOST http://localhost:9090/api/v1/admin/tsdb/clean_tombstones
+</code></pre>
+<p><em>New in v2.1 and supports PUT from v2.9</em></p>
+<h2 id="remote-write-receiver">Remote Write Receiver</h2>
+<p>Prometheus can be configured as a receiver for the Prometheus remote write
+protocol. This is not considered an efficient way of ingesting samples. Use it
+with caution for specific low-volume use cases. It is not suitable for
+replacing the ingestion via scraping and turning Prometheus into a push-based
+metrics collection system.</p>
+<p>Enable the remote write receiver by setting
+<code>--web.enable-remote-write-receiver</code>. When enabled, the remote write receiver
+endpoint is <code>/api/v1/write</code>. Find more details <a href="../storage.html#overview">here</a>.</p>
+<p><em>New in v2.33</em></p>
+<h2 id="otlp-receiver">OTLP Receiver</h2>
+<p>Prometheus can be configured as a receiver for the OTLP Metrics protocol. This
+is not considered an efficient way of ingesting samples. Use it
+with caution for specific low-volume use cases. It is not suitable for
+replacing the ingestion via scraping.</p>
+<p>Enable the OTLP receiver by setting
+<code>--web.enable-otlp-receiver</code>. When enabled, the OTLP receiver
+endpoint is <code>/api/v1/otlp/v1/metrics</code>.</p>
+<p><em>New in v2.47</em></p>
+<h3 id="otlp-delta">OTLP Delta</h3>
+<p>Prometheus can convert incoming metrics from delta temporality to their cumulative equivalent.
+This is done using <a href="https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/processor/deltatocumulativeprocessor" target="_blank">deltatocumulative</a> from the OpenTelemetry Collector.</p>
+<p>To enable, pass <code>--enable-feature=otlp-deltatocumulative</code>.</p>
+<p><em>New in v3.2</em></p>
+<h2 id="notifications">Notifications</h2>
+<p>The following endpoints provide information about active status notifications concerning the Prometheus server itself.
+Notifications are used in the web UI.</p>
+<p>These endpoints are <strong>experimental</strong>. They may change in the future.</p>
+<h3 id="active-notifications">Active Notifications</h3>
+<p>The <code>/api/v1/notifications</code> endpoint returns a list of all currently active notifications.</p>
+<pre class="language-"><code>GET /api/v1/notifications
+</code></pre><p>Example:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/notifications
+</code></pre>
+<pre class="language-"><code>{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;text&quot;: &quot;Prometheus is shutting down and gracefully stopping all operations.&quot;,
+      &quot;date&quot;: &quot;2024-10-07T12:33:08.551376578+02:00&quot;,
+      &quot;active&quot;: true
+    }
+  ]
+}
+</code></pre><p><em>New in v3.0</em></p>
+<h3 id="live-notifications">Live Notifications</h3>
+<p>The <code>/api/v1/notifications/live</code> endpoint streams live notifications as they occur, using <a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events" target="_blank">Server-Sent Events</a>. Deleted notifications are sent with <code>active: false</code>. Active notifications will be sent when connecting to the endpoint.</p>
+<pre class="language-"><code>GET /api/v1/notifications/live
+</code></pre><p>Example:</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/notifications/live
+</code></pre>
+<pre class="language-"><code>data: {
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;text&quot;: &quot;Prometheus is shutting down and gracefully stopping all operations.&quot;,
+      &quot;date&quot;: &quot;2024-10-07T12:33:08.551376578+02:00&quot;,
+      &quot;active&quot;: true
+    }
+  ]
+}
+</code></pre><p><strong>Note:</strong> The <code>/notifications/live</code> endpoint will return a <code>204 No Content</code> response if the maximum number of subscribers has been reached. You can set the maximum number of listeners with the flag <code>--web.max-notifications-subscribers</code>, which defaults to 16.</p>
+<pre class="language-"><code>GET /api/v1/notifications/live
+204 No Content
+</code></pre><p><em>New in v3.0</em></p>
+<h3 id="features">Features</h3>
+<p>The following endpoint returns a list of enabled features in the Prometheus server:</p>
+<pre class="language-"><code>GET /api/v1/features
+</code></pre><p>This endpoint provides information about which features are currently enabled or disabled in the Prometheus instance. Features are organized into categories such as <code>api</code>, <code>promql</code>, <code>promql_functions</code>, etc.</p>
+<p>The <code>data</code> section contains a map where each key is a feature category, and each value is a map of feature names to their enabled status (boolean).</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">curl</span> http://localhost:9090/api/v1/features
+</code></pre>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;status&quot;</span><span class="token operator">:</span> <span class="token string">&quot;success&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;data&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;api&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;admin&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;exclude_alerts&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;otlp_receiver&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;delta_conversion&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;native_delta_ingestion&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;prometheus&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;agent_mode&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;auto_reload_config&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;promql&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;anchored&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;at_modifier&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;promql_functions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;abs&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;absent&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;promql_operators&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;!=&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;!~&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;concurrent_rule_eval&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;keep_firing_for&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;scrape&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;start_timestamp_zero_ingestion&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;extra_metrics&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;service_discovery&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;azure&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;consul&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;templating&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;args&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;externalURL&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;tsdb&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;delayed_compaction&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;exemplar_storage&quot;</span><span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>All feature names use <code>snake_case</code> naming convention</li>
+<li>Features set to <code>false</code> may be omitted from the response</li>
+<li>Clients should treat absent features as equivalent to <code>false</code></li>
+<li>Clients must ignore unknown feature names and categories for forward compatibility</li>
+</ul>
+<p><em>New in v3.8</em></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="basics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Querying Basics">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTTP API","sort_rank":7,"level":"1.4.1","depth":2,"next":{"title":"Querying Basics","level":"1.4.2","depth":2,"path":"querying/basics.md","ref":"querying/basics.md","articles":[]},"previous":{"title":"Querying","level":"1.4","depth":1,"ref":"","articles":[{"title":"HTTP API","level":"1.4.1","depth":2,"path":"querying/api.md","ref":"querying/api.md","articles":[]},{"title":"Querying Basics","level":"1.4.2","depth":2,"path":"querying/basics.md","ref":"querying/basics.md","articles":[]},{"title":"Query Examples","level":"1.4.3","depth":2,"path":"querying/examples.md","ref":"querying/examples.md","articles":[]},{"title":"Query Functions","level":"1.4.4","depth":2,"path":"querying/functions.md","ref":"querying/functions.md","articles":[]},{"title":"Querying","level":"1.4.5","depth":2,"path":"querying/index.md","ref":"querying/index.md","articles":[]},{"title":"Operators","level":"1.4.6","depth":2,"path":"querying/operators.md","ref":"querying/operators.md","articles":[]},{"title":"Remote Read API","level":"1.4.7","depth":2,"path":"querying/remote_read_api.md","ref":"querying/remote_read_api.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"querying/api.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

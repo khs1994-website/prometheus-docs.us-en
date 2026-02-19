@@ -1,0 +1,757 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Writing HTTP Service Discovery · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="installation.html" />
+    
+    
+    <link rel="prev" href="getting_started.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="command-line/">
+            
+                <a href="command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="command-line/prometheus.html">
+            
+                <a href="command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="command-line/promtool.html">
+            
+                <a href="command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="configuration/alerting_rules.html">
+            
+                <a href="configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration/">
+            
+                <a href="configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="configuration/https.html">
+            
+                <a href="configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="configuration/promtool.html">
+            
+                <a href="configuration/promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="configuration/recording_rules.html">
+            
+                <a href="configuration/recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="configuration/template_examples.html">
+            
+                <a href="configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="configuration/template_reference.html">
+            
+                <a href="configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="configuration/unit_testing_rules.html">
+            
+                <a href="configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="querying/api.html">
+            
+                <a href="querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="querying/basics.html">
+            
+                <a href="querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="querying/examples.html">
+            
+                <a href="querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="querying/functions.html">
+            
+                <a href="querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="querying/">
+            
+                <a href="querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="querying/operators.html">
+            
+                <a href="querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="querying/remote_read_api.html">
+            
+                <a href="querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="feature_flags.html">
+            
+                <a href="feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="getting_started.html">
+            
+                <a href="getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="http_sd.html">
+            
+                <a href="http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="management_api.html">
+            
+                <a href="management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="prometheus_agent.html">
+            
+                <a href="prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="stability.html">
+            
+                <a href="stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Writing HTTP Service Discovery</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Prometheus provides a generic <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#http_sd_config" target="_blank">HTTP Service Discovery</a>,
+that enables it to discover targets over an HTTP endpoint.</p>
+<p>The HTTP Service Discovery is complementary to the supported service
+discovery mechanisms, and is an alternative to <a href="https://prometheus.io/docs/guides/file-sd/#use-file-based-service-discovery-to-discover-scrape-targets" target="_blank">File-based Service Discovery</a>.</p>
+<h2 id="comparison-between-file-based-sd-and-http-sd">Comparison between File-Based SD and HTTP SD</h2>
+<p>Here is a table comparing our two generic Service Discovery implementations.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>File SD</th>
+<th>HTTP SD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Event Based</td>
+<td>Yes, via inotify</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Update frequency</td>
+<td>Instant, thanks to inotify</td>
+<td>Following refresh_interval</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Yaml or JSON</td>
+<td>JSON</td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>Local file</td>
+<td>HTTP/HTTPS</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>File-Based security</td>
+<td>TLS, Basic auth, Authorization header, OAuth2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requirements-of-http-sd-endpoints">Requirements of HTTP SD endpoints</h2>
+<p>If you implement an HTTP SD endpoint, here are a few requirements you should be
+aware of.</p>
+<p>The response is consumed as is, unmodified. On each refresh interval (default: 1
+minute), Prometheus will perform a GET request to the HTTP SD endpoint. The GET
+request contains a <code>X-Prometheus-Refresh-Interval-Seconds</code> HTTP header with the
+refresh interval.</p>
+<p>The SD endpoint must answer with an HTTP 200 response, with the HTTP Header
+<code>Content-Type: application/json</code>. The answer must be UTF-8 formatted.
+If no targets should be transmitted, HTTP 200 must also be emitted, with
+an empty list <code>[]</code>. Target lists are unordered.</p>
+<p>Prometheus caches target lists. If an error occurs while fetching an updated
+targets list, Prometheus keeps using the current targets list. The targets list
+is not saved across restart. The <code>prometheus_sd_refresh_failures_total</code> counter
+metric tracks the number of refresh failures and the <code>prometheus_sd_refresh_duration_seconds</code>
+bucket can be used to track HTTP SD refresh attempts or performance.</p>
+<p>The whole list of targets must be returned on every scrape. There is no support
+for incremental updates. A Prometheus instance does not send its hostname and it
+is not possible for a SD endpoint to know if the SD requests is the first one
+after a restart or not.</p>
+<p>The URL to the HTTP SD is not considered secret. The authentication and any API
+keys should be passed with the appropriate authentication mechanisms. Prometheus
+supports TLS authentication, basic authentication, OAuth2, and authorization
+headers.</p>
+<h2 id="httpsd-format">HTTP_SD format</h2>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;targets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">&quot;&lt;host&gt;&quot;</span><span class="token punctuation">,</span> ... <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;&lt;labelname&gt;&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;labelvalue&gt;&quot;</span><span class="token punctuation">,</span> ...
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  ...
+<span class="token punctuation">]</span>
+</code></pre>
+<p>Examples:</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;targets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;10.0.10.2:9100&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;10.0.10.3:9100&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;10.0.10.4:9100&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;10.0.10.5:9100&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;__meta_datacenter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;london&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;__meta_prometheus_job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;targets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;10.0.40.2:9100&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;10.0.40.3:9100&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;__meta_datacenter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;london&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;__meta_prometheus_job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;alertmanager&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">&quot;targets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;10.0.40.2:9093&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;10.0.40.3:9093&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;labels&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;__meta_datacenter&quot;</span><span class="token operator">:</span> <span class="token string">&quot;newyork&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;__meta_prometheus_job&quot;</span><span class="token operator">:</span> <span class="token string">&quot;alertmanager&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="getting_started.html" class="navigation navigation-prev " aria-label="Previous page: Getting Started">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="installation.html" class="navigation navigation-next " aria-label="Next page: Installation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Writing HTTP Service Discovery","nav_title":"HTTP SD","sort_rank":7,"level":"1.8","depth":1,"next":{"title":"Installation","level":"1.9","depth":1,"path":"installation.md","ref":"installation.md","articles":[]},"previous":{"title":"Getting Started","level":"1.7","depth":1,"path":"getting_started.md","ref":"getting_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"http_sd.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1886 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Promtool · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="prometheus.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="prometheus.html">
+            
+                <a href="prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="promtool.html">
+            
+                <a href="promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../configuration/alerting_rules.html">
+            
+                <a href="../configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../configuration/">
+            
+                <a href="../configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../configuration/https.html">
+            
+                <a href="../configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../configuration/promtool.html">
+            
+                <a href="../configuration/promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../configuration/recording_rules.html">
+            
+                <a href="../configuration/recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../configuration/template_examples.html">
+            
+                <a href="../configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../configuration/template_reference.html">
+            
+                <a href="../configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../configuration/unit_testing_rules.html">
+            
+                <a href="../configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../querying/api.html">
+            
+                <a href="../querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../querying/basics.html">
+            
+                <a href="../querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../querying/examples.html">
+            
+                <a href="../querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../querying/functions.html">
+            
+                <a href="../querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../querying/">
+            
+                <a href="../querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../querying/operators.html">
+            
+                <a href="../querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../querying/remote_read_api.html">
+            
+                <a href="../querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../feature_flags.html">
+            
+                <a href="../feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../federation.html">
+            
+                <a href="../federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../getting_started.html">
+            
+                <a href="../getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http_sd.html">
+            
+                <a href="../http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../management_api.html">
+            
+                <a href="../management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../prometheus_agent.html">
+            
+                <a href="../prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../stability.html">
+            
+                <a href="../stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../storage.html">
+            
+                <a href="../storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Promtool</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Tooling for the Prometheus monitoring system.</p>
+<h2 id="flags">Flags</h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">-h</code>, <code class="text-nowrap">--help</code></td>
+<td>Show context-sensitive help (also try --help-long and --help-man).</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--version</code></td>
+<td>Show application version.</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--experimental</code></td>
+<td>Enable experimental commands.</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--enable-feature</code> <code class="text-nowrap">...</code></td>
+<td>Comma separated feature names to enable. Valid options: promql-experimental-functions, promql-delayed-name-removal, promql-duration-expr, promql-extended-range-selectors. See <a href="https://prometheus.io/docs/prometheus/latest/feature_flags/" target="_blank">https://prometheus.io/docs/prometheus/latest/feature_flags/</a> for more details</td>
+</tr>
+</tbody>
+</table>
+<h2 id="commands">Commands</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>help</td>
+<td>Show help.</td>
+</tr>
+<tr>
+<td>check</td>
+<td>Check the resources for validity.</td>
+</tr>
+<tr>
+<td>query</td>
+<td>Run query against a Prometheus server.</td>
+</tr>
+<tr>
+<td>debug</td>
+<td>Fetch debug information.</td>
+</tr>
+<tr>
+<td>push</td>
+<td>Push to a Prometheus server.</td>
+</tr>
+<tr>
+<td>test</td>
+<td>Unit testing.</td>
+</tr>
+<tr>
+<td>tsdb</td>
+<td>Run tsdb commands.</td>
+</tr>
+<tr>
+<td>promql</td>
+<td>PromQL formatting and editing. Requires the --experimental flag.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promtool-help"><code>promtool help</code></h3>
+<p>Show help.</p>
+<h4 id="arguments">Arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>command</td>
+<td>Show help on command.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promtool-check"><code>promtool check</code></h3>
+<p>Check the resources for validity.</p>
+<h4 id="flags">Flags</h4>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--query.lookback-delta</code></td>
+<td>The server&apos;s maximum query lookback duration.</td>
+<td><code>5m</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-check-service-discovery"><code>promtool check service-discovery</code></h5>
+<p>Perform service discovery for the given job name and report the results, including relabeling.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--timeout</code></td>
+<td>The time to wait for discovery results.</td>
+<td><code>30s</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config-file</td>
+<td>The prometheus config file.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>job</td>
+<td>The job to run service discovery for.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-check-config"><code>promtool check config</code></h5>
+<p>Check if the config files are valid or not.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--syntax-only</code></td>
+<td>Only check the config file syntax, ignoring file and content validation referenced in the config</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--lint</code></td>
+<td>Linting checks to apply to the rules/scrape configs specified in the config. Available options are: all, duplicate-rules, none, too-long-scrape-interval. Use --lint=none to disable linting</td>
+<td><code>duplicate-rules</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--lint-fatal</code></td>
+<td>Make lint errors exit with exit code 3.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--ignore-unknown-fields</code></td>
+<td>Ignore unknown fields in the rule groups read by the config files. This is useful when you want to extend rule files with custom metadata. Ensure that those fields are removed before loading them into the Prometheus server as it performs strict checks by default.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--agent</code></td>
+<td>Check config file for Prometheus in Agent mode.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config-files</td>
+<td>The config files to check.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-check-web-config"><code>promtool check web-config</code></h5>
+<p>Check if the web config files are valid or not.</p>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>web-config-files</td>
+<td>The config files to check.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-check-healthy"><code>promtool check healthy</code></h5>
+<p>Check if the Prometheus server is healthy.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--http.config.file</code></td>
+<td>HTTP client configuration file, see details at <a href="https://prometheus.io/docs/prometheus/latest/configuration/promtool" target="_blank">https://prometheus.io/docs/prometheus/latest/configuration/promtool</a></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--url</code></td>
+<td>The URL for the Prometheus server.</td>
+<td><code>http://localhost:9090</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-check-ready"><code>promtool check ready</code></h5>
+<p>Check if the Prometheus server is ready.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--http.config.file</code></td>
+<td>HTTP client configuration file, see details at <a href="https://prometheus.io/docs/prometheus/latest/configuration/promtool" target="_blank">https://prometheus.io/docs/prometheus/latest/configuration/promtool</a></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--url</code></td>
+<td>The URL for the Prometheus server.</td>
+<td><code>http://localhost:9090</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-check-rules"><code>promtool check rules</code></h5>
+<p>Check if the rule files are valid or not.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--lint</code></td>
+<td>Linting checks to apply. Available options are: all, duplicate-rules, none. Use --lint=none to disable linting</td>
+<td><code>duplicate-rules</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--lint-fatal</code></td>
+<td>Make lint errors exit with exit code 3.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--ignore-unknown-fields</code></td>
+<td>Ignore unknown fields in the rule files. This is useful when you want to extend rule files with custom metadata. Ensure that those fields are removed before loading them into the Prometheus server as it performs strict checks by default.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rule-files</td>
+<td>The rule files to check, default is read from standard input.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-check-metrics"><code>promtool check metrics</code></h5>
+<p>Pass Prometheus metrics over stdin to lint them for consistency and correctness, and optionally perform cardinality analysis.</p>
+<p>examples:</p>
+<p>$ cat metrics.prom | promtool check metrics</p>
+<p>$ curl -s <a href="http://localhost:9090/metrics" target="_blank">http://localhost:9090/metrics</a> | promtool check metrics <code>--extended</code></p>
+<p>$ curl -s <a href="http://localhost:9100/metrics" target="_blank">http://localhost:9100/metrics</a> | promtool check metrics <code>--extended</code> <code>--lint</code>=none</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--extended</code></td>
+<td>Print extended information related to the cardinality of the metrics.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--lint</code></td>
+<td>Linting checks to apply for metrics. Available options are: all, none. Use --lint=none to disable metrics linting.</td>
+<td><code>all</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="promtool-query"><code>promtool query</code></h3>
+<p>Run query against a Prometheus server.</p>
+<h4 id="flags">Flags</h4>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">-o</code>, <code class="text-nowrap">--format</code></td>
+<td>Output format of the query.</td>
+<td><code>promql</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--http.config.file</code></td>
+<td>HTTP client configuration file, see details at <a href="https://prometheus.io/docs/prometheus/latest/configuration/promtool" target="_blank">https://prometheus.io/docs/prometheus/latest/configuration/promtool</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-query-instant"><code>promtool query instant</code></h5>
+<p>Run instant query.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--time</code></td>
+<td>Query evaluation time (RFC3339 or Unix timestamp).</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>Prometheus server to query.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>expr</td>
+<td>PromQL query expression.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-query-range"><code>promtool query range</code></h5>
+<p>Run range query.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--header</code></td>
+<td>Extra headers to send to server.</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--start</code></td>
+<td>Query range start time (RFC3339 or Unix timestamp).</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--end</code></td>
+<td>Query range end time (RFC3339 or Unix timestamp).</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--step</code></td>
+<td>Query step size (duration).</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>Prometheus server to query.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>expr</td>
+<td>PromQL query expression.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-query-series"><code>promtool query series</code></h5>
+<p>Run series query.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--match</code> <code class="text-nowrap">...</code></td>
+<td>Series selector. Can be specified multiple times.</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--start</code></td>
+<td>Start time (RFC3339 or Unix timestamp).</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--end</code></td>
+<td>End time (RFC3339 or Unix timestamp).</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>Prometheus server to query.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-query-labels"><code>promtool query labels</code></h5>
+<p>Run labels query.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--start</code></td>
+<td>Start time (RFC3339 or Unix timestamp).</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--end</code></td>
+<td>End time (RFC3339 or Unix timestamp).</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--match</code> <code class="text-nowrap">...</code></td>
+<td>Series selector. Can be specified multiple times.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>Prometheus server to query.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Label name to provide label values for.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-query-analyze"><code>promtool query analyze</code></h5>
+<p>Run queries against your Prometheus to analyze the usage pattern of certain metrics.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--server</code></td>
+<td>Prometheus server to query.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--type</code></td>
+<td>Type of metric: histogram.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--duration</code></td>
+<td>Time frame to analyze.</td>
+<td><code>1h</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--time</code></td>
+<td>Query time (RFC3339 or Unix timestamp), defaults to now.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--match</code> <code class="text-nowrap">...</code></td>
+<td>Series selector. Can be specified multiple times.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promtool-debug"><code>promtool debug</code></h3>
+<p>Fetch debug information.</p>
+<h5 id="promtool-debug-pprof"><code>promtool debug pprof</code></h5>
+<p>Fetch profiling debug information.</p>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>Prometheus server to get pprof files from.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-debug-metrics"><code>promtool debug metrics</code></h5>
+<p>Fetch metrics debug information.</p>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>Prometheus server to get metrics from.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-debug-all"><code>promtool debug all</code></h5>
+<p>Fetch all debug information.</p>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>Prometheus server to get all debug information from.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promtool-push"><code>promtool push</code></h3>
+<p>Push to a Prometheus server.</p>
+<h4 id="flags">Flags</h4>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--http.config.file</code></td>
+<td>HTTP client configuration file, see details at <a href="https://prometheus.io/docs/prometheus/latest/configuration/promtool" target="_blank">https://prometheus.io/docs/prometheus/latest/configuration/promtool</a></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-push-metrics"><code>promtool push metrics</code></h5>
+<p>Push metrics to a prometheus remote write (for testing purpose only).</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--label</code></td>
+<td>Label to attach to metrics. Can be specified multiple times.</td>
+<td><code>job=promtool</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--timeout</code></td>
+<td>The time to wait for pushing metrics.</td>
+<td><code>30s</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--header</code></td>
+<td>Prometheus remote write header.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--protobuf_message</code></td>
+<td>Protobuf message to use when writing (prometheus.WriteRequest or io.prometheus.write.v2.Request).</td>
+<td><code>prometheus.WriteRequest</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>remote-write-url</td>
+<td>Prometheus remote write url to push metrics.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>metric-files</td>
+<td>The metric files to push, default is read from standard input.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promtool-test"><code>promtool test</code></h3>
+<p>Unit testing.</p>
+<h4 id="flags">Flags</h4>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--junit</code></td>
+<td>File path to store JUnit XML test results.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-test-rules"><code>promtool test rules</code></h5>
+<p>Unit tests for rules.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--run</code> <code class="text-nowrap">...</code></td>
+<td>If set, will only run test groups whose names match the regular expression. Can be specified multiple times.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--debug</code></td>
+<td>Enable unit test debugging.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--diff</code></td>
+<td>[Experimental] Print colored differential output between expected &amp; received output.</td>
+<td><code>false</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--ignore-unknown-fields</code></td>
+<td>Ignore unknown fields in the test files. This is useful when you want to extend rule files with custom metadata. Ensure that those fields are removed before loading them into the Prometheus server as it performs strict checks by default.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>test-rule-file</td>
+<td>The unit test file.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promtool-tsdb"><code>promtool tsdb</code></h3>
+<p>Run tsdb commands.</p>
+<h5 id="promtool-tsdb-bench"><code>promtool tsdb bench</code></h5>
+<p>Run benchmarks.</p>
+<h5 id="promtool-tsdb-bench-write"><code>promtool tsdb bench write</code></h5>
+<p>Run a write performance benchmark.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--out</code></td>
+<td>Set the output path.</td>
+<td><code>benchout</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--metrics</code></td>
+<td>Number of metrics to read.</td>
+<td><code>10000</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--scrapes</code></td>
+<td>Number of scrapes to simulate.</td>
+<td><code>3000</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>file</td>
+<td>Input file with samples data, default is (../../tsdb/testdata/20kseries.json).</td>
+<td><code>../../tsdb/testdata/20kseries.json</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-tsdb-analyze"><code>promtool tsdb analyze</code></h5>
+<p>Analyze churn, label pair cardinality and compaction efficiency.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--limit</code></td>
+<td>How many items to show in each list.</td>
+<td><code>20</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--extended</code></td>
+<td>Run extended analysis.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--match</code></td>
+<td>Series selector to analyze. Only 1 set of matchers is supported now.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>db path</td>
+<td>Database path (default is data/).</td>
+<td><code>data/</code></td>
+</tr>
+<tr>
+<td>block id</td>
+<td>Block to analyze (default is the last block).</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-tsdb-list"><code>promtool tsdb list</code></h5>
+<p>List tsdb blocks.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">-r</code>, <code class="text-nowrap">--human-readable</code></td>
+<td>Print human readable values.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>db path</td>
+<td>Database path (default is data/).</td>
+<td><code>data/</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-tsdb-dump"><code>promtool tsdb dump</code></h5>
+<p>Dump data (series+samples or optionally just series) from a TSDB.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--sandbox-dir-root</code></td>
+<td>Root directory where a sandbox directory will be created, this sandbox is used in case WAL replay generates chunks (default is the database path). The sandbox is cleaned up at the end.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--min-time</code></td>
+<td>Minimum timestamp to dump, in milliseconds since the Unix epoch.</td>
+<td><code>-9223372036854775808</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--max-time</code></td>
+<td>Maximum timestamp to dump, in milliseconds since the Unix epoch.</td>
+<td><code>9223372036854775807</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--match</code> <code class="text-nowrap">...</code></td>
+<td>Series selector. Can be specified multiple times.</td>
+<td><code>{__name__=~&apos;(?s:.*)&apos;}</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--format</code></td>
+<td>Output format of the dump (prom (default) or seriesjson).</td>
+<td><code>prom</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>db path</td>
+<td>Database path (default is data/).</td>
+<td><code>data/</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-tsdb-dump-openmetrics"><code>promtool tsdb dump-openmetrics</code></h5>
+<p>[Experimental] Dump samples from a TSDB into OpenMetrics text format, excluding native histograms and staleness markers, which are not representable in OpenMetrics.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--sandbox-dir-root</code></td>
+<td>Root directory where a sandbox directory will be created, this sandbox is used in case WAL replay generates chunks (default is the database path). The sandbox is cleaned up at the end.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--min-time</code></td>
+<td>Minimum timestamp to dump, in milliseconds since the Unix epoch.</td>
+<td><code>-9223372036854775808</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--max-time</code></td>
+<td>Maximum timestamp to dump, in milliseconds since the Unix epoch.</td>
+<td><code>9223372036854775807</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--match</code> <code class="text-nowrap">...</code></td>
+<td>Series selector. Can be specified multiple times.</td>
+<td><code>{__name__=~&apos;(?s:.*)&apos;}</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>db path</td>
+<td>Database path (default is data/).</td>
+<td><code>data/</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-tsdb-create-blocks-from"><code>promtool tsdb create-blocks-from</code></h5>
+<p>[Experimental] Import samples from input and produce TSDB blocks. Please refer to the storage docs for more details.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">-r</code>, <code class="text-nowrap">--human-readable</code></td>
+<td>Print human readable values.</td>
+</tr>
+<tr>
+<td><code class="text-nowrap">-q</code>, <code class="text-nowrap">--quiet</code></td>
+<td>Do not print created blocks.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-tsdb-create-blocks-from-openmetrics"><code>promtool tsdb create-blocks-from openmetrics</code></h5>
+<p>Import samples from OpenMetrics input and produce TSDB blocks. Please refer to the storage docs for more details.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--label</code></td>
+<td>Label to attach to metrics. Can be specified multiple times. Example --label=label_name=label_value</td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Default</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>input file</td>
+<td>OpenMetrics file to read samples from.</td>
+<td></td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>output directory</td>
+<td>Output directory for generated blocks.</td>
+<td><code>data/</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-tsdb-create-blocks-from-rules"><code>promtool tsdb create-blocks-from rules</code></h5>
+<p>Create blocks of data for new recording rules.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">--http.config.file</code></td>
+<td>HTTP client configuration file, see details at <a href="https://prometheus.io/docs/prometheus/latest/configuration/promtool" target="_blank">https://prometheus.io/docs/prometheus/latest/configuration/promtool</a></td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--url</code></td>
+<td>The URL for the Prometheus API with the data where the rule will be backfilled from.</td>
+<td><code>http://localhost:9090</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--start</code></td>
+<td>The time to start backfilling the new rule from. Must be a RFC3339 formatted date or Unix timestamp. Required.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--end</code></td>
+<td>If an end time is provided, all recording rules in the rule files provided will be backfilled to the end time. Default will backfill up to 3 hours ago. Must be a RFC3339 formatted date or Unix timestamp.</td>
+<td></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--output-dir</code></td>
+<td>Output directory for generated blocks.</td>
+<td><code>data/</code></td>
+</tr>
+<tr>
+<td><code class="text-nowrap">--eval-interval</code></td>
+<td>How frequently to evaluate rules when backfilling if a value is not set in the recording rule files.</td>
+<td><code>60s</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rule-files</td>
+<td>A list of one or more files containing recording rules to be backfilled. All recording rules listed in the files will be backfilled. Alerting rules are not evaluated.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="promtool-promql"><code>promtool promql</code></h3>
+<p>PromQL formatting and editing. Requires the <code>--experimental</code> flag.</p>
+<h5 id="promtool-promql-format"><code>promtool promql format</code></h5>
+<p>Format PromQL query to pretty printed form.</p>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>PromQL query.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-promql-label-matchers"><code>promtool promql label-matchers</code></h5>
+<p>Edit label matchers contained within an existing PromQL query.</p>
+<h5 id="promtool-promql-label-matchers-set"><code>promtool promql label-matchers set</code></h5>
+<p>Set a label matcher in the query.</p>
+<h6 id="flags">Flags</h6>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="text-nowrap">-t</code>, <code class="text-nowrap">--type</code></td>
+<td>Type of the label matcher to set.</td>
+<td><code>=</code></td>
+</tr>
+</tbody>
+</table>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>PromQL query.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Name of the label matcher to set.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Value of the label matcher to set.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h5 id="promtool-promql-label-matchers-delete"><code>promtool promql label-matchers delete</code></h5>
+<p>Delete a label from the query.</p>
+<h6 id="arguments">Arguments</h6>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>PromQL query.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Name of the label to delete.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="prometheus.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Prometheus">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Promtool","level":"1.2.3","depth":2,"next":{"title":"Configuration","level":"1.3","depth":1,"ref":"","articles":[{"title":"Alerting Rules","level":"1.3.1","depth":2,"path":"configuration/alerting_rules.md","ref":"configuration/alerting_rules.md","articles":[]},{"title":"Configuration","level":"1.3.2","depth":2,"path":"configuration/index.md","ref":"configuration/index.md","articles":[]},{"title":"HTTPS And Authentication","level":"1.3.3","depth":2,"path":"configuration/https.md","ref":"configuration/https.md","articles":[]},{"title":"HTTP Configuration For Promtool","level":"1.3.4","depth":2,"path":"configuration/promtool.md","ref":"configuration/promtool.md","articles":[]},{"title":"Defining Recording Rules","level":"1.3.5","depth":2,"path":"configuration/recording_rules.md","ref":"configuration/recording_rules.md","articles":[]},{"title":"Template Examples","level":"1.3.6","depth":2,"path":"configuration/template_examples.md","ref":"configuration/template_examples.md","articles":[]},{"title":"Template Reference","level":"1.3.7","depth":2,"path":"configuration/template_reference.md","ref":"configuration/template_reference.md","articles":[]},{"title":"Unit Testing For Rules","level":"1.3.8","depth":2,"path":"configuration/unit_testing_rules.md","ref":"configuration/unit_testing_rules.md","articles":[]}]},"previous":{"title":"Prometheus","level":"1.2.2","depth":2,"path":"command-line/prometheus.md","ref":"command-line/prometheus.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"command-line/promtool.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

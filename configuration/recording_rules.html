@@ -1,0 +1,775 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Defining Recording Rules · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="template_examples.html" />
+    
+    
+    <link rel="prev" href="promtool.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../command-line/">
+            
+                <a href="../command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../command-line/prometheus.html">
+            
+                <a href="../command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../command-line/promtool.html">
+            
+                <a href="../command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="alerting_rules.html">
+            
+                <a href="alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="https.html">
+            
+                <a href="https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="promtool.html">
+            
+                <a href="promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="recording_rules.html">
+            
+                <a href="recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="template_examples.html">
+            
+                <a href="template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="template_reference.html">
+            
+                <a href="template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="unit_testing_rules.html">
+            
+                <a href="unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../querying/api.html">
+            
+                <a href="../querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../querying/basics.html">
+            
+                <a href="../querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../querying/examples.html">
+            
+                <a href="../querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../querying/functions.html">
+            
+                <a href="../querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../querying/">
+            
+                <a href="../querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../querying/operators.html">
+            
+                <a href="../querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../querying/remote_read_api.html">
+            
+                <a href="../querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../feature_flags.html">
+            
+                <a href="../feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../federation.html">
+            
+                <a href="../federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../getting_started.html">
+            
+                <a href="../getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../http_sd.html">
+            
+                <a href="../http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../installation.html">
+            
+                <a href="../installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../management_api.html">
+            
+                <a href="../management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../migration.html">
+            
+                <a href="../migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../prometheus_agent.html">
+            
+                <a href="../prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../stability.html">
+            
+                <a href="../stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../storage.html">
+            
+                <a href="../storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Defining Recording Rules</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="configuring-rules">Configuring rules</h2>
+<p>Prometheus supports two types of rules which may be configured and then
+evaluated at regular intervals: recording rules and <a href="alerting_rules.html">alerting
+rules</a>. To include rules in Prometheus, create a file
+containing the necessary rule statements and have Prometheus load the file via
+the <code>rule_files</code> field in the <a href="configuration.md">Prometheus configuration</a>.
+Rule files use YAML.</p>
+<p>The rule files can be reloaded at runtime by sending <code>SIGHUP</code> to the Prometheus
+process. The changes are only applied if all rule files are well-formatted.</p>
+<h2 id="syntax-checking-rules">Syntax-checking rules</h2>
+<p>To quickly check whether a rule file is syntactically correct without starting
+a Prometheus server, you can use Prometheus&apos;s <code>promtool</code> command-line utility
+tool:</p>
+<pre class="language-"><code class="lang-bash">promtool check rules /path/to/example.rules.yml
+</code></pre>
+<p>The <code>promtool</code> binary is part of the <code>prometheus</code> archive offered on the
+project&apos;s <a href="https://prometheus.io/download/" target="_blank">download page</a>.</p>
+<p>When the file is syntactically valid, the checker prints a textual
+representation of the parsed rules to standard output and then exits with
+a <code>0</code> return status.</p>
+<p>If there are any syntax errors or invalid input arguments, it prints an error
+message to standard error and exits with a <code>1</code> return status.</p>
+<h2 id="recording-rules">Recording rules</h2>
+<p>Recording rules allow you to precompute frequently needed or computationally
+expensive expressions and save their result as a new set of time series.
+Querying the precomputed result will then often be much faster than executing
+the original expression every time it is needed. This is especially useful for
+dashboards, which need to query the same expression repeatedly every time they
+refresh.</p>
+<p>Recording and alerting rules exist in a rule group. Rules within a group are
+run sequentially at a regular interval, with the same evaluation time.
+The names of recording rules must be
+<a href="https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels" target="_blank">valid metric names</a>.
+The names of alerting rules must be
+<a href="https://prometheus.io/docs/concepts/data_model/#metric-names-and-labels" target="_blank">valid label values</a>.</p>
+<p>The syntax of a rule file is:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">groups</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;rule_group<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<p>A simple example rules file would be:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">groups</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> example
+    <span class="token key atrule">rules</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">record</span><span class="token punctuation">:</span> code<span class="token punctuation">:</span>prometheus_http_requests_total<span class="token punctuation">:</span>sum
+      <span class="token key atrule">expr</span><span class="token punctuation">:</span> sum by (code) (prometheus_http_requests_total)
+</code></pre>
+<h3 id="rulegroup"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rule_group</span><span class="token punctuation">&gt;</span></span></code></h3>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># The name of the group. Must be unique within a file.</span>
+<span class="token key atrule">name</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># How often rules in the group are evaluated.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">interval</span><span class="token punctuation">:</span> &lt;duration<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = global.evaluation_interval <span class="token punctuation">]</span>
+
+<span class="token comment"># Limit the number of alerts an alerting rule and series a recording</span>
+<span class="token comment"># rule can produce. 0 is no limit.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">limit</span><span class="token punctuation">:</span> &lt;int<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = 0 <span class="token punctuation">]</span>
+
+<span class="token comment"># Offset the rule evaluation timestamp of this particular group by the specified duration into the past.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">query_offset</span><span class="token punctuation">:</span> &lt;duration<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = global.rule_query_offset <span class="token punctuation">]</span>
+
+<span class="token comment"># Labels to add or overwrite before storing the result for its rules.</span>
+<span class="token comment"># Labels defined in &lt;rule&gt; will override the key if it has a collision.</span>
+<span class="token key atrule">labels</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;labelname&gt;</span><span class="token punctuation">:</span> &lt;labelvalue<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token key atrule">rules</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token punctuation">-</span> &lt;rule<span class="token punctuation">&gt;</span> <span class="token punctuation">...</span> <span class="token punctuation">]</span>
+</code></pre>
+<h3 id="rule"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>rule</span><span class="token punctuation">&gt;</span></span></code></h3>
+<p>The syntax for recording rules is:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># The name of the time series to output to. Must be a valid metric name.</span>
+<span class="token key atrule">record</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># The PromQL expression to evaluate. Every evaluation cycle this is</span>
+<span class="token comment"># evaluated at the current time, and the result recorded as a new set of</span>
+<span class="token comment"># time series with the metric name as given by &apos;record&apos;.</span>
+<span class="token key atrule">expr</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># Labels to add or overwrite before storing the result.</span>
+<span class="token key atrule">labels</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;labelname&gt;</span><span class="token punctuation">:</span> &lt;labelvalue<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<p>The syntax for alerting rules is:</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># The name of the alert. Must be a valid label value.</span>
+<span class="token key atrule">alert</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># The PromQL expression to evaluate. Every evaluation cycle this is</span>
+<span class="token comment"># evaluated at the current time, and all resultant time series become</span>
+<span class="token comment"># pending/firing alerts.</span>
+<span class="token key atrule">expr</span><span class="token punctuation">:</span> &lt;string<span class="token punctuation">&gt;</span>
+
+<span class="token comment"># Alerts are considered firing once they have been returned for this long.</span>
+<span class="token comment"># Alerts which have not yet fired for long enough are considered pending.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">for</span><span class="token punctuation">:</span> &lt;duration<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = 0s <span class="token punctuation">]</span>
+
+<span class="token comment"># How long an alert will continue firing after the condition that triggered it</span>
+<span class="token comment"># has cleared.</span>
+<span class="token punctuation">[</span> <span class="token key atrule">keep_firing_for</span><span class="token punctuation">:</span> &lt;duration<span class="token punctuation">&gt;</span> <span class="token punctuation">|</span> default = 0s <span class="token punctuation">]</span>
+
+<span class="token comment"># Labels to add or overwrite for each alert.</span>
+<span class="token key atrule">labels</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;labelname&gt;</span><span class="token punctuation">:</span> &lt;tmpl_string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># Annotations to add to each alert.</span>
+<span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+  <span class="token punctuation">[</span> <span class="token key atrule">&lt;labelname&gt;</span><span class="token punctuation">:</span> &lt;tmpl_string<span class="token punctuation">&gt;</span> <span class="token punctuation">]</span>
+</code></pre>
+<p>See also the
+<a href="https://prometheus.io/docs/practices/rules/#recording-rules" target="_blank">best practices for naming metrics created by recording rules</a>.</p>
+<h2 id="limiting-alerts-and-series">Limiting alerts and series</h2>
+<p>A limit for alerts produced by alerting rules and series produced recording rules
+can be configured per-group. When the limit is exceeded, <em>all</em> series produced
+by the rule are discarded, and if it&apos;s an alerting rule, <em>all</em> alerts for
+the rule, active, pending, or inactive, are cleared as well. The event will be
+recorded as an error in the evaluation, and as such no stale markers are
+written.</p>
+<h2 id="rule-query-offset">Rule query offset</h2>
+<p>This is useful to ensure the underlying metrics have been received and stored in Prometheus. Metric availability delays are more likely to occur when Prometheus is running as a remote write target due to the nature of distributed systems, but can also occur when there&apos;s anomalies with scraping and/or short evaluation intervals.</p>
+<h2 id="failed-rule-evaluations-due-to-slow-evaluation">Failed rule evaluations due to slow evaluation</h2>
+<p>If a rule group hasn&apos;t finished evaluating before its next evaluation is supposed to start (as defined by the <code>evaluation_interval</code>), the next evaluation will be skipped. Subsequent evaluations of the rule group will continue to be skipped until the initial evaluation either completes or times out. When this happens, there will be a gap in the metric produced by the recording rule. The <code>rule_group_iterations_missed_total</code> metric will be incremented for each missed iteration of the rule group.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="promtool.html" class="navigation navigation-prev " aria-label="Previous page: HTTP Configuration For Promtool">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="template_examples.html" class="navigation navigation-next " aria-label="Next page: Template Examples">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Defining Recording Rules","nav_title":"Recording rules","sort_rank":2,"level":"1.3.5","depth":2,"next":{"title":"Template Examples","level":"1.3.6","depth":2,"path":"configuration/template_examples.md","ref":"configuration/template_examples.md","articles":[]},"previous":{"title":"HTTP Configuration For Promtool","level":"1.3.4","depth":2,"path":"configuration/promtool.md","ref":"configuration/promtool.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"configuration/recording_rules.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,868 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Prometheus 3.0 migration guide · prometheus 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="prometheus_agent.html" />
+    
+    
+    <link rel="prev" href="management_api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Command Line
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="command-line/">
+            
+                <a href="command-line/">
+            
+                    
+                    Command Line
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="command-line/prometheus.html">
+            
+                <a href="command-line/prometheus.html">
+            
+                    
+                    Prometheus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="command-line/promtool.html">
+            
+                <a href="command-line/promtool.html">
+            
+                    
+                    Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Configuration
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="configuration/alerting_rules.html">
+            
+                <a href="configuration/alerting_rules.html">
+            
+                    
+                    Alerting Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration/">
+            
+                <a href="configuration/">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="configuration/https.html">
+            
+                <a href="configuration/https.html">
+            
+                    
+                    HTTPS And Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="configuration/promtool.html">
+            
+                <a href="configuration/promtool.html">
+            
+                    
+                    HTTP Configuration For Promtool
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="configuration/recording_rules.html">
+            
+                <a href="configuration/recording_rules.html">
+            
+                    
+                    Defining Recording Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="configuration/template_examples.html">
+            
+                <a href="configuration/template_examples.html">
+            
+                    
+                    Template Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="configuration/template_reference.html">
+            
+                <a href="configuration/template_reference.html">
+            
+                    
+                    Template Reference
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="configuration/unit_testing_rules.html">
+            
+                <a href="configuration/unit_testing_rules.html">
+            
+                    
+                    Unit Testing For Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Querying
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="querying/api.html">
+            
+                <a href="querying/api.html">
+            
+                    
+                    HTTP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="querying/basics.html">
+            
+                <a href="querying/basics.html">
+            
+                    
+                    Querying Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="querying/examples.html">
+            
+                <a href="querying/examples.html">
+            
+                    
+                    Query Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="querying/functions.html">
+            
+                <a href="querying/functions.html">
+            
+                    
+                    Query Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="querying/">
+            
+                <a href="querying/">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="querying/operators.html">
+            
+                <a href="querying/operators.html">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="querying/remote_read_api.html">
+            
+                <a href="querying/remote_read_api.html">
+            
+                    
+                    Remote Read API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="feature_flags.html">
+            
+                <a href="feature_flags.html">
+            
+                    
+                    Feature Flags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="federation.html">
+            
+                <a href="federation.html">
+            
+                    
+                    Federation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="getting_started.html">
+            
+                <a href="getting_started.html">
+            
+                    
+                    Getting Started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="http_sd.html">
+            
+                <a href="http_sd.html">
+            
+                    
+                    Writing HTTP Service Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="management_api.html">
+            
+                <a href="management_api.html">
+            
+                    
+                    Management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="migration.html">
+            
+                <a href="migration.html">
+            
+                    
+                    Prometheus 3.0 migration guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="prometheus_agent.html">
+            
+                <a href="prometheus_agent.html">
+            
+                    
+                    Prometheus Agent Mode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="stability.html">
+            
+                <a href="stability.html">
+            
+                    
+                    API Stability Guarantees
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Prometheus 3.0 migration guide</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>In line with our <a href="https://prometheus.io/docs/prometheus/latest/stability/" target="_blank">stability promise</a>,
+the Prometheus 3.0 release contains a number of backwards incompatible changes.
+This document offers guidance on migrating from Prometheus 2.x to Prometheus 3.0 and newer versions.</p>
+<h2 id="flags">Flags</h2>
+<ul>
+<li><p>The following feature flags have been removed and they have been added to the
+default behavior of Prometheus v3:</p>
+<ul>
+<li><code>promql-at-modifier</code></li>
+<li><code>promql-negative-offset</code></li>
+<li><code>new-service-discovery-manager</code></li>
+<li><code>expand-external-labels</code><ul>
+<li>Environment variable references <code>${var}</code> or <code>$var</code> in external label values
+are replaced according to the values of the current environment variables.</li>
+<li>References to undefined variables are replaced by the empty string.
+The <code>$</code> character can be escaped by using <code>$$</code>.</li>
+</ul>
+</li>
+<li><code>no-default-scrape-port</code><ul>
+<li>Prometheus v3 will no longer add ports to scrape targets according to the
+specified scheme. Target will now appear in labels as configured.</li>
+<li>If you rely on scrape targets like
+<code>https://example.com/metrics</code> or <code>http://example.com/metrics</code> to be
+represented as <code>https://example.com/metrics:443</code> and
+<code>http://example.com/metrics:80</code> respectively, add them to your target URLs</li>
+</ul>
+</li>
+<li><code>agent</code><ul>
+<li>Instead use the dedicated <code>--agent</code> CLI flag.</li>
+</ul>
+</li>
+<li><code>remote-write-receiver</code><ul>
+<li>Instead use the dedicated <code>--web.enable-remote-write-receiver</code> CLI flag to enable the remote write receiver.</li>
+</ul>
+</li>
+<li><code>auto-gomemlimit</code><ul>
+<li>Prometheus v3 will automatically set <code>GOMEMLIMIT</code> to match the Linux
+container memory limit. If there is no container limit, or the process is
+running outside of containers, the system memory total is used. To disable
+this, <code>--no-auto-gomemlimit</code> is available.</li>
+</ul>
+</li>
+<li><code>auto-gomaxprocs</code><ul>
+<li>Prometheus v3 will automatically set <code>GOMAXPROCS</code> to match the Linux
+container CPU quota. To disable this, <code>--no-auto-gomaxprocs</code> is available.</li>
+</ul>
+</li>
+</ul>
+<p>Prometheus v3 will log a warning if you continue to pass these to
+<code>--enable-feature</code>.</p>
+</li>
+<li><p>Starting from v3.9, the feature flag <code>native-histograms</code> is a no-op. Native
+histograms are a stable feature now, but scraping them has to be enabled via
+the <code>scrape_native_histograms</code> global or per-scrape configuration option
+(added in v3.8).</p>
+</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<ul>
+<li>The scrape job level configuration option <code>scrape_classic_histograms</code> has
+been renamed to <code>always_scrape_classic_histograms</code>. If you use the
+<code>scrape_native_histograms</code> scrape configuration option to ingest native
+histograms and you also want to ingest classic histograms that an endpoint
+might expose along with native histograms, be sure to add this configuration
+or change your configuration from the old name.</li>
+<li>The <code>http_config.enable_http2</code> in <code>remote_write</code> items default has been
+changed to <code>false</code>. In Prometheus v2 the remote write http client would
+default to use http2. In order to parallelize multiple remote write queues
+across multiple sockets its preferable to not default to http2.
+If you prefer to use http2 for remote write you must now set
+<code>http_config.enable_http2: true</code> in your <code>remote_write</code> configuration section.</li>
+</ul>
+<h2 id="promql">PromQL</h2>
+<h3 id="regular-expressions-match-newlines">Regular expressions match newlines</h3>
+<p>The <code>.</code> pattern in regular expressions in PromQL matches newline characters.
+With this change a regular expressions like <code>.*</code> matches strings that include
+<code>\n</code>. This applies to matchers in queries and relabel configs.</p>
+<p>For example, the following regular expressions now match the accompanying
+strings, whereas in Prometheus v2 these combinations didn&apos;t match.</p>
+<pre class="language-"><code>- `.*` additionally matches `foo\n` and `Foo\nBar`
+- `foo.?bar` additionally matches `foo\nbar`
+- `foo.+bar` additionally matches `foo\nbar`
+</code></pre><p>If you want Prometheus v3 to behave like v2, you will have to change your
+regular expressions by replacing all <code>.</code> patterns with <code>[^\n]</code>, e.g.
+<code>foo[^\n]*</code>.</p>
+<h3 id="range-selectors-and-lookback-exclude-samples-coinciding-with-the-left-boundary">Range selectors and lookback exclude samples coinciding with the left boundary</h3>
+<p>Lookback and range selectors are now left-open and right-closed (previously
+left-closed and right-closed), which makes their behavior more consistent. This
+change affects queries where the left boundary of a range or the lookback delta
+coincides with the timestamp of one or more samples.</p>
+<p>For example, assume we are querying a timeseries with evenly spaced samples
+exactly 1 minute apart. Before Prometheus v3, a range query with <code>5m</code> would
+usually return 5 samples. But if the query evaluation aligns perfectly with a
+scrape, it would return 6 samples. In Prometheus v3 queries like this will
+always return 5 samples given even spacing.</p>
+<p>This change will typically affect subqueries because their evaluation timing is
+naturally perfectly evenly spaced and aligned with timestamps that are multiples
+of the subquery resolution. Furthermore, query frontends often align subqueries
+to multiples of the step size. In combination, this easily creates a situation
+of perfect mutual alignment, often unintended and unknown by the user, so that
+the new behavior might come as a surprise. Before Prometheus V3, a subquery of
+<code>foo[1m:1m]</code> on such a system might have always returned two points, allowing
+for rate calculations. In Prometheus V3, however, such a subquery will only
+return one point, which is insufficient for a rate or increase calculation,
+resulting in No Data returned.</p>
+<p>Such queries will need to be rewritten to extend the window to properly cover
+more than one point. In this example, <code>foo[2m:1m]</code> would always return two
+points no matter the query alignment. The exact form of the rewritten query may
+depend on the intended results and there is no universal drop-in replacement for
+queries whose behavior has changed.</p>
+<p>Tests are similarly more likely to affected. To fix those either adjust the
+expected number of samples or extend the range.</p>
+<h3 id="holtwinters-function-renamed">holt_winters function renamed</h3>
+<p>The <code>holt_winters</code> function has been renamed to <code>double_exponential_smoothing</code>
+and is now guarded by the <code>promql-experimental-functions</code> feature flag.
+If you want to keep using <code>holt_winters</code>, you have to do both of these things:</p>
+<ul>
+<li>Rename <code>holt_winters</code> to <code>double_exponential_smoothing</code> in your queries.</li>
+<li>Pass <code>--enable-feature=promql-experimental-functions</code> in your Prometheus
+CLI invocation.</li>
+</ul>
+<h2 id="scrape-protocols">Scrape protocols</h2>
+<p>Prometheus v3 is more strict concerning the Content-Type header received when
+scraping. Prometheus v2 would default to the standard Prometheus text protocol
+if the target being scraped did not specify a Content-Type header or if the
+header was unparsable or unrecognised. This could lead to incorrect data being
+parsed in the scrape. Prometheus v3 will now fail the scrape in such cases.</p>
+<p>If a scrape target is not providing the correct Content-Type header the
+fallback protocol can be specified using the <code>fallback_scrape_protocol</code>
+parameter. See <a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config" target="_blank">Prometheus scrape_config documentation.</a></p>
+<p>This is a breaking change as scrapes that may have succeeded with Prometheus v2
+may now fail if this fallback protocol is not specified.</p>
+<h2 id="miscellaneous">Miscellaneous</h2>
+<h3 id="tsdb-format-and-downgrade">TSDB format and downgrade</h3>
+<p>The TSDB format has been changed slightly in Prometheus v2.55 in preparation for changes
+to the index format. Consequently, a Prometheus v3 TSDB can only be read by a
+Prometheus v2.55 or newer. Keep that in mind when upgrading to v3 -- you will be only
+able to downgrade to v2.55, not lower, without losing your TSDB persistent data.</p>
+<p>As an extra safety measure, you could optionally consider upgrading to v2.55 first and
+confirm Prometheus works as expected, before upgrading to v3.</p>
+<h3 id="tsdb-storage-contract">TSDB storage contract</h3>
+<p>TSDB compatible storage is now expected to return results matching the specified
+selectors. This might impact some third party implementations, most likely
+implementing <code>remote_read</code>.</p>
+<p>This contract is not explicitly enforced, but can cause undefined behavior.</p>
+<h3 id="utf-8-names">UTF-8 names</h3>
+<p>Prometheus v3 supports UTF-8 in metric and label names. This means metric and
+label names can change after upgrading according to what is exposed by
+endpoints. Furthermore, metric and label names that would have previously been
+flagged as invalid no longer will be.</p>
+<p>Users wishing to preserve the original validation behavior can update their
+Prometheus yaml configuration to specify the legacy validation scheme:</p>
+<pre class="language-"><code>global:
+  metric_name_validation_scheme: legacy
+</code></pre><p>Or on a per-scrape basis:</p>
+<pre class="language-"><code>scrape_configs:
+  - job_name: job1
+    metric_name_validation_scheme: utf8
+  - job_name: job2
+    metric_name_validation_scheme: legacy
+</code></pre><h3 id="log-message-format">Log message format</h3>
+<p>Prometheus v3 has adopted <code>log/slog</code> over the previous <code>go-kit/log</code>. This
+results in a change of log message format. An example of the old log format is:</p>
+<pre class="language-"><code>ts=2024-10-23T22:01:06.074Z caller=main.go:627 level=info msg=&quot;No time or size retention was set so using the default time retention&quot; duration=15d
+ts=2024-10-23T22:01:06.074Z caller=main.go:671 level=info msg=&quot;Starting Prometheus Server&quot; mode=server version=&quot;(version=, branch=, revision=91d80252c3e528728b0f88d254dd720f6be07cb8-modified)&quot;
+ts=2024-10-23T22:01:06.074Z caller=main.go:676 level=info build_context=&quot;(go=go1.23.0, platform=linux/amd64, user=, date=, tags=unknown)&quot;
+ts=2024-10-23T22:01:06.074Z caller=main.go:677 level=info host_details=&quot;(Linux 5.15.0-124-generic #134-Ubuntu SMP Fri Sep 27 20:20:17 UTC 2024 x86_64 gigafips (none))&quot;
+</code></pre><p>a similar sequence in the new log format looks like this:</p>
+<pre class="language-"><code>time=2024-10-24T00:03:07.542+02:00 level=INFO source=/home/user/go/src/github.com/prometheus/prometheus/cmd/prometheus/main.go:640 msg=&quot;No time or size retention was set so using the default time retention&quot; duration=15d
+time=2024-10-24T00:03:07.542+02:00 level=INFO source=/home/user/go/src/github.com/prometheus/prometheus/cmd/prometheus/main.go:681 msg=&quot;Starting Prometheus Server&quot; mode=server version=&quot;(version=, branch=, revision=7c7116fea8343795cae6da42960cacd0207a2af8)&quot;
+time=2024-10-24T00:03:07.542+02:00 level=INFO source=/home/user/go/src/github.com/prometheus/prometheus/cmd/prometheus/main.go:686 msg=&quot;operational information&quot; build_context=&quot;(go=go1.23.0, platform=linux/amd64, user=, date=, tags=unknown)&quot; host_details=&quot;(Linux 5.15.0-124-generic #134-Ubuntu SMP Fri Sep 27 20:20:17 UTC 2024 x86_64 gigafips (none))&quot; fd_limits=&quot;(soft=1048576, hard=1048576)&quot; vm_limits=&quot;(soft=unlimited, hard=unlimited)&quot;
+</code></pre><h3 id="le-and-quantile-label-values"><code>le</code> and <code>quantile</code> label values</h3>
+<p>In Prometheus v3, the values of the <code>le</code> label of classic histograms and the
+<code>quantile</code> label of summaries are normalized upon ingestion. In Prometheus v2
+the value of these labels depended on the scrape protocol (protobuf vs text
+format) in some situations. This led to label values changing based on the
+scrape protocol. E.g. a metric exposed as <code>my_classic_hist{le=&quot;1&quot;}</code> would be
+ingested as <code>my_classic_hist{le=&quot;1&quot;}</code> via the text format, but as
+<code>my_classic_hist{le=&quot;1.0&quot;}</code> via protobuf. This changed the identity of the
+metric and caused problems when querying the metric.
+In Prometheus v3 these label values will always be normalized to a float like
+representation. I.e. the above example will always result in
+<code>my_classic_hist{le=&quot;1.0&quot;}</code> being ingested into prometheus, no matter via which
+protocol. The effect of this change is that alerts, recording rules and
+dashboards that directly reference label values as whole numbers such as
+<code>le=&quot;1&quot;</code> will stop working.</p>
+<p>Ways to deal with this change either globally or on a per metric basis:</p>
+<ul>
+<li>Fix references to integer <code>le</code>, <code>quantile</code> label values, but otherwise do
+nothing and accept that some queries that span the transition time will produce
+inaccurate or unexpected results.
+<em>This is the recommended solution.</em></li>
+<li>Use <code>metric_relabel_config</code> to retain the old labels when scraping targets.
+This should <strong>only</strong> be applied to metrics that currently produce such labels.</li>
+</ul>
+<pre class="language-"><code class="lang-yaml">    <span class="token key atrule">metric_relabel_configs</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">source_labels</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> quantile
+        <span class="token key atrule">target_label</span><span class="token punctuation">:</span> quantile
+        <span class="token key atrule">regex</span><span class="token punctuation">:</span> (\d+)\.0+
+      <span class="token punctuation">-</span> <span class="token key atrule">source_labels</span><span class="token punctuation">:</span>
+          <span class="token punctuation">-</span> le
+          <span class="token punctuation">-</span> __name__
+        <span class="token key atrule">target_label</span><span class="token punctuation">:</span> le
+        <span class="token key atrule">regex</span><span class="token punctuation">:</span> (\d+)\.0+;.<span class="token important">*_bucket</span>
+</code></pre>
+<h3 id="disallow-configuring-alertmanager-with-the-v1-api">Disallow configuring Alertmanager with the v1 API</h3>
+<p>Prometheus 3 no longer supports Alertmanager&apos;s v1 API. Effectively Prometheus 3
+requires <a href="https://github.com/prometheus/alertmanager/releases/tag/v0.16.0" target="_blank">Alertmanager 0.16.0</a> or later. Users with older Alertmanager
+versions or configurations that use <code>alerting: alertmanagers: [api_version: v1]</code>
+need to upgrade Alertmanager and change their configuration to use <code>api_version: v2</code>.</p>
+<h2 id="prometheus-20-migration-guide">Prometheus 2.0 migration guide</h2>
+<p>For the migration guide from Prometheus 1.8 to 2.0 please refer to the <a href="https://prometheus.io/docs/prometheus/2.55/migration/" target="_blank">Prometheus v2.55 documentation</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="management_api.html" class="navigation navigation-prev " aria-label="Previous page: Management API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="prometheus_agent.html" class="navigation navigation-next " aria-label="Next page: Prometheus Agent Mode">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Prometheus 3.0 migration guide","nav_title":"Migration","sort_rank":10,"level":"1.11","depth":1,"next":{"title":"Prometheus Agent Mode","level":"1.12","depth":1,"path":"prometheus_agent.md","ref":"prometheus_agent.md","articles":[]},"previous":{"title":"Management API","level":"1.10","depth":1,"path":"management_api.md","ref":"management_api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"prometheus 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"migration.md","mtime":"2026-02-19T02:44:34.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-02-19T02:45:02.316Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
