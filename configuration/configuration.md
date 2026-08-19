@@ -1590,6 +1590,8 @@ Available meta labels:
 
 * `__meta_docker_container_id`: the id of the container
 * `__meta_docker_container_name`: the name of the container
+* `__meta_docker_container_image`: the image of the container
+* `__meta_docker_container_image_id`: the SHA256 hash of the image of the container
 * `__meta_docker_container_network_mode`: the network mode of the container
 * `__meta_docker_container_label_<labelname>`: each label of the container, with any unsupported characters converted to an underscore
 * `__meta_docker_network_id`: the ID of the network
@@ -2469,7 +2471,7 @@ Available meta labels:
 * `__meta_kubernetes_service_annotation_<annotationname>`: Each annotation from the service object.
 * `__meta_kubernetes_service_annotationpresent_<annotationname>`: "true" for each annotation of the service object.
 * `__meta_kubernetes_service_cluster_ip`: The cluster IP address of the service. (Does not apply to services of type ExternalName)
-* `__meta_kubernetes_service_loadbalancer_ip`: The IP address of the loadbalancer. (Applies to services of type LoadBalancer)
+* `__meta_kubernetes_service_loadbalancer_ip`: The IP address of the load balancer, taken from `status.loadBalancer.ingress` (comma-separated when there are multiple). Falls back to the deprecated `spec.loadBalancerIP`. (Applies to services of type LoadBalancer)
 * `__meta_kubernetes_service_external_name`: The DNS name of the service. (Applies to services of type ExternalName)
 * `__meta_kubernetes_service_label_<labelname>`: Each label from the service object, with any unsupported characters converted to an underscore.
 * `__meta_kubernetes_service_labelpresent_<labelname>`: `true` for each label of the service object, with any unsupported characters converted to an underscore.
